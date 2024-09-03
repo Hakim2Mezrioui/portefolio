@@ -1,0 +1,51 @@
+section {
+  display: flex;
+  justify-content: center;
+}
+
+section p {
+  width: 500px;
+}
+
+section ul {
+  display: flex;
+  list-style-type: none;
+  gap: 0.5em;
+}
+
+.explore {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: space-between; */
+}
+
+.content h1 {
+  font-size: 64px;
+  margin-bottom: .5em;
+}
+
+.content h3 {
+  font-size: 32;
+  margin-bottom: .9em;
+}
+
+.content p {
+  font-size: 20;
+  width: 400px;
+}
+
+.content  i {
+  font-size: 32px;
+}
+
+.see-project-link {
+  font-size: 20px;
+  color: black;
+}
+
