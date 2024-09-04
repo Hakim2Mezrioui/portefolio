@@ -228,3 +228,14 @@ section ul {
     bottom: 0.2em;
   }
 }
+
+.tilt-card {
+  width: 300px;
+  height: 200px;
+  background-color: #e3e3e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
