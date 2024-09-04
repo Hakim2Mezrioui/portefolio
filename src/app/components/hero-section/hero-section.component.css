@@ -3,11 +3,8 @@ section {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 6.4em);
+  /* width: 100wv; */
   gap: 150px;
-}
-
-section p {
-  width: 500px;
 }
 
 section ul {
@@ -21,6 +18,12 @@ section ul {
   margin-top: 5em;
   display: flex;
   justify-content: space-between;
+  align-items: end;
+  position: relative;
+}
+
+.explore ul {
+  position: relative;
 }
 
 .content {
@@ -30,27 +33,198 @@ section ul {
   width: 500px;
 }
 
-.content h1 {
+.wel {
+  width: 2em;
+}
+
+.content h2 {
   font-size: 64px;
   margin-bottom: 0.5em;
+  position: relative;
+  animation: start-welcome 1s ease forwards;
+  /* font-weight: bold; */
+  /* overflow: hidden; */
+  /* background-color: red; */
+  /* display: none; */
 }
 
 .content h3 {
   font-size: 32;
   margin-bottom: 0.9em;
+  position: relative;
+  left: -10em;
+  animation: start-my-name 1s ease forwards;
+}
+
+.para {
+  position: relative;
+  overflow: hidden;
+}
+
+.para::after {
+  content: "";
+  height: 8em;
+  width: 1px;
+  background-color: black;
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
 .content p {
   font-size: 20;
   text-align: justify;
-  /* width: 400px; */
+  width: 500px;
+  position: relative;
+  left: 32em;
+  animation: start-para 1s ease forwards;
+  padding-left: 0.8em;
 }
 
 .content i {
   font-size: 32px;
 }
 
+.projects-link {
+  overflow: hidden;
+}
+
 .see-project-link {
   font-size: 20px;
   color: black;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.see-project-link a {
+  position: relative;
+  background-color: red;
+  animation: start-see-project 1s ease forwards;
+}
+
+.content h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 100%;
+  background: black;
+}
+
+.line-welcome {
+  width: 10em;
+  height: 1px;
+  background-color: black;
+}
+
+.welcome-word {
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-word::before {
+  content: "";
+  width: 18.3em;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+}
+
+.my-name-word {
+  position: relative;
+  overflow: hidden;
+}
+
+.my-name-word::before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 2.3em;
+  background-color: black;
+}
+
+.icons {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  height: 2em;
+  bottom: 0.7em;
+}
+
+.icons:after {
+  content: "";
+  width: 7.85em;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+}
+
+.icons-link {
+  position: relative;
+  bottom: 3em;
+  animation: start-icons-link 1s ease forwards;
+}
+
+.projects-link {
+  position: relative;
+  bottom: 0.7em;
+  /* overflow: hidden; */
+}
+
+.projects-link::after {
+  content: "";
+  width: 9em;
+  height: 2px;
+  position: absolute;
+  background-color: black;
+  left: 0;
+  bottom: 0;
+}
+
+.projects-link a {
+  position: relative;
+  animation: start-projects-link 1s ease forwards;
+}
+
+@keyframes start-welcome {
+  from {
+    top: -3em;
+  }
+  to {
+    top: 0em;
+  }
+}
+@keyframes start-my-name {
+  from {
+    left: -9em;
+  }
+  to {
+    left: 0.2em;
+  }
+}
+@keyframes start-para {
+  from {
+    left: 32em;
+  }
+  to {
+    left: -0.4em;
+  }
+}
+@keyframes start-icons-link {
+  from {
+    bottom: -3em;
+  }
+  to {
+    bottom: 0em;
+  }
+}
+
+@keyframes start-projects-link {
+  from {
+    bottom: -3em;
+  }
+  to {
+    bottom: 0.2em;
+  }
 }
