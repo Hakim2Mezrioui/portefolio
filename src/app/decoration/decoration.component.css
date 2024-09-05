@@ -1,0 +1,75 @@
+.decoration {
+  position: fixed;
+  bottom: calc(0em - 50px);
+  height: 17em;
+  width: 25em;
+  overflow: hidden;
+}
+
+.carre {
+  width: 84px;
+  height: 84px;
+  border: 1px solid black;
+  transform: rotate(17deg);
+  position: relative;
+}
+
+.carre1 {
+  bottom: calc(84px - 140px);
+  left: -10px;
+  animation: float 5s ease infinite;
+}
+.carre2 {
+  bottom: calc(74px - 140px);
+  left: -10px;
+  animation: float 5s .4s ease infinite;
+}
+.carre3 {
+  bottom: calc(226px - 140px);
+  left: 77px;
+  animation: float 5s .4s ease infinite;
+}
+
+.carre4 {
+  bottom: calc(215px - 140px);
+  left: 76px;
+  animation: float 5s .9s ease infinite;
+}
+
+.carre5 {
+  bottom: calc(367px - 140px);
+  left: 163px;
+  animation: float 5s .2s ease infinite;
+}
+.carre6 {
+  bottom: calc(356px - 140px);
+  left: 162px;
+  animation: float 5s .6s ease infinite;
+}
+.carre7 {
+  bottom: calc(508px - 140px);
+  left: 251px;
+  animation: float 5s .3s ease infinite;
+}
+.carre8 {
+  bottom: calc(618px - 140px);
+  left: 23px;
+  animation: float 5s .4s ease infinite;
+}
+.carre9 {
+  bottom: calc(675px - 140px);
+  left: 110px;
+  animation: float 5s .3s ease infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(17deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(17deg);
+  }
+  100% {
+    transform: translateY(0) rotate(17deg);
+  }
+}

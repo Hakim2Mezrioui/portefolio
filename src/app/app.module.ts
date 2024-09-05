@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { IconsLinkComponent } from './components/icons-link/icons-link.component';
+import { DecorationComponent } from './decoration/decoration.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { IconsLinkComponent } from './components/icons-link/icons-link.component
     HeaderComponent,
     HeroSectionComponent,
     IconsLinkComponent,
+    DecorationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
