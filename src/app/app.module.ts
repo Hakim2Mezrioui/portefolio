@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { IconsLinkComponent } from './components/icons-link/icons-link.component';
-import { DecorationComponent } from './decoration/decoration.component';
-
+import { DecorationComponent } from './components/decoration/decoration.component';
+import { SkillsSectionComponent } from './components/skills-section/skills-section.component';
+// import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,8 +16,11 @@ import { DecorationComponent } from './decoration/decoration.component';
     HeroSectionComponent,
     IconsLinkComponent,
     DecorationComponent,
+    SkillsSectionComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,
+
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

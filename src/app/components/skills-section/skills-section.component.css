@@ -1,0 +1,17 @@
+.skills-body {
+    height: 100vh;
+}
+
+.skills-title {
+    position: relative;
+    width: 20em;
+    background-color: red;
+}
+
+.skills-title::after {
+    width: 10em;
+    height: 1px;
+    position: absolute;
+    background-color: black;
+    right: 0;
+}
