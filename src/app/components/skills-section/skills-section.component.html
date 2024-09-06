@@ -1,7 +1,11 @@
 <div class="skills-body">
-  <div class="skills-title">
-    <h2>Technical skills</h2>
+  <div class="skills-title container" >
+    <span></span>
+    <h2>Skills</h2>
   </div>
-  <div class="skills-section">
+  <div class="skills-section container">
+    <div *ngFor="let skill of skillsLanguage" class="skill">
+      <img alt="" [src]="skill"/>
+    </div>
   </div>
 </div>
