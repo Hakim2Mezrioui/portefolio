@@ -18,9 +18,7 @@ import { SkillsSectionComponent } from './components/skills-section/skills-secti
     DecorationComponent,
     SkillsSectionComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule,
-
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

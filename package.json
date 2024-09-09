@@ -20,6 +20,7 @@
     "@angular/router": "^14.0.0",
     "@babel/core": "^7.25.2",
     "@babel/traverse": "^7.25.6",
+    "@fortawesome/angular-fontawesome": "^0.11.1",
     "@types/node": "^14.18.63",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
