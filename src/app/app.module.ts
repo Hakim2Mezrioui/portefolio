@@ -9,6 +9,7 @@ import { IconsLinkComponent } from './components/icons-link/icons-link.component
 import { DecorationComponent } from './components/decoration/decoration.component';
 import { SkillsSectionComponent } from './components/skills-section/skills-section.component';
 import { ProjectComponent } from './components/project/project.component';
+import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProjectComponent } from './components/project/project.component';
     DecorationComponent,
     SkillsSectionComponent,
     ProjectComponent,
+    ProjectsSectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
