@@ -20,28 +20,26 @@
 }
 
 .titleOfSkill {
-    position: relative;
+  position: relative;
 }
 
 .titleOfSkill::before {
-    content: "";
-    position: absolute;
-    width: 2em;
-    height: 2px;
-    left: 0;
-    top: 1.3em;
-    background-color: black;
-
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 1px;
+  left: 0;
+  top: 1.3em;
+  background-color: black;
 }
 .titleOfSkill::after {
-    content: "";
-    position: absolute;
-    width: 4em;
-    height: 2px;
-    left: 0;
-    top: 1.5em;
-    background-color: black;
-
+  content: "";
+  position: absolute;
+  width: 4em;
+  height: 1px;
+  left: 0;
+  top: 1.4em;
+  background-color: black;
 }
 
 .skills {
@@ -135,7 +133,7 @@
   padding: 0.5em 1em;
   align-items: center;
   justify-content: center;
-  border-radius: 0.4em;
+  /* border-radius: 0.4em; */
 }
 
 .skill-item p {

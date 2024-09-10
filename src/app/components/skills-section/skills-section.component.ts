@@ -29,6 +29,14 @@ export class SkillsSectionComponent implements AfterViewInit {
       'Bootstrap',
       'https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg'
     ),
+    new SkillModel(
+      'C-Sharp',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png'
+    ),
+    new SkillModel(
+      'PHP',
+      'https://cdnlogo.com/logos/p/71/php.svg'
+    ),
 
     // 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png',
   ];
@@ -84,9 +92,14 @@ export class SkillsSectionComponent implements AfterViewInit {
       'Figma',
       'https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format'
     ),
+    new SkillModel(
+      'Camtasia',
+      'https://img.softorage.com/software-logo/camtasia.webp'
+    ),
   ];
   othersSkills: SkillModel[] = [
     new SkillModel('Solidworks', '../../../assets/images/solidwork.png'),
+    new SkillModel('Tinkercad', 'https://morseinstitute.org/wp-content/uploads/2017/12/logo-tinkercad-256.png'),
   ];
 
   ngAfterViewInit(): void {

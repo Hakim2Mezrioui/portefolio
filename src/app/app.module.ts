@@ -8,6 +8,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { IconsLinkComponent } from './components/icons-link/icons-link.component';
 import { DecorationComponent } from './components/decoration/decoration.component';
 import { SkillsSectionComponent } from './components/skills-section/skills-section.component';
+import { ProjectComponent } from './components/project/project.component';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SkillsSectionComponent } from './components/skills-section/skills-secti
     IconsLinkComponent,
     DecorationComponent,
     SkillsSectionComponent,
+    ProjectComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
