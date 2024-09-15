@@ -1,5 +1,6 @@
 <div class="projects-body">
-  <app-project [reverse]='true'></app-project>
-  <app-project [reverse]="false"></app-project>
-  <app-project [reverse]="true"></app-project>
+  <app-custom-title title="MY PROJECTS"></app-custom-title>
+  <div *ngFor="let project of projectsList, let i = index">
+    <app-project [projectInfo]="project" [reverse]='i%2 === 1' ></app-project>
+  </div>
 </div>

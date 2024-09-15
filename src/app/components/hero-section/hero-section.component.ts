@@ -8,6 +8,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
+import * as AOS from "aos";
 
 @Component({
   selector: 'app-hero-section',
@@ -19,7 +20,9 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    AOS.init();
+  }
 
   ngAfterViewInit() {
     VanillaTilt.init(this.tiltElement.nativeElement, {

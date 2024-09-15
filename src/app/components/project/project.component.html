@@ -1,44 +1,39 @@
 <div class="container mb-4">
   <div #project class="project">
     <div class="">
-      <img
-        alt=""
-        src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_a_Project.jpg"
+      <!-- <img
+          alt=""
+          src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_a_Project.jpg"
+          width="500"
+          height="300"
+        /> -->
+      <video
+        [src]="projectInfo.demoPath"
         width="500"
-        height="300"
-      />
+        height="500"
+        autoplay
+        loop
+        [attr.data-aos]="reverse ? 'fade-left' : 'fade-right'"
+      ></video>
     </div>
-    <div class="desc-project">
-      <h3 class="title">TITLE OF PROJECT</h3>
+    <div [attr.data-aos]="!reverse ? 'fade-left' : 'fade-right'" class="desc-project">
+      <h3 class="title">{{ projectInfo.title }}</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-        laudantium ullam, recusandae repudiandae aliquam porro veniam corporis,
-        quis quos cupiditate quibusdam harum labore. Beatae harum laborum
-        distinctio dolorum minus numquam.
-        <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-        laudantium ullam, recusandae repudiandae aliquam porro veniam corporis,
-        quis quos cupiditate quibusdam harum labore. Beatae harum laborum
-        distinctio dolorum minus numquam.
+        {{ projectInfo.description }}
       </p>
       <div class="technologies">
-        <span>angular</span>
-        <span>html</span>
-        <span>css</span>
-        <span>javascript</span>
-        <span>typescript</span>
-        <span>mysql</span>
-        <span>laravel</span>
-        <span>php</span>
+        <span *ngFor="let technologie of projectInfo.technologies">{{
+          technologie
+        }}</span>
       </div>
 
       <div class="links">
         <span></span>
         <span>
-          <a>
+          <a [href]="projectInfo.githubLink" target="_blank">
             <i class="bi bi-github"></i>
           </a>
-          <a>
+          <a [href]="projectInfo.demoLink" target="_blank">
             <i class="bi bi-box-arrow-right"></i>
           </a>
         </span>

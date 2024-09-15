@@ -1,65 +1,18 @@
-<div class="skills-body container ps-5">
-  <div class="skills-title">
-    <span></span>
-    <h2 class="title">MY SKILLS</h2>
-  </div>
-  <!--<h3>Languages</h3>
-   <div class="skills-section container">
-    <div *ngFor="let skill of skillsLanguage" class="skill">
-      <img alt="" alt="" [src]="skill" />
-      <p>Javascript</p>
-    </div>
-  </div>
-  <h3>Frameworks</h3>
-  <div class="skills-section container">
-    <div *ngFor="let skill of skillsFramework" class="skill">
-      <img alt="" alt="" [src]="skill" />
-    </div>
-  </div>
-  <h3>Tools</h3>
-  <div class="skills-section container">
-    <div *ngFor="let tool of designeTools" class="skill">
-      <img alt="" [src]="tool" />
-    </div>
-  </div> -->
-  <div class="d-flex justify-content-around">
-    <span></span>
-    <div class="skills">
-      <h3 class="titleOfSkill">Languages</h3>
-      <div class="languages-skills">
-        <div *ngFor="let skill of skillsLanguage" class="skill-item">
-          <img alt="" width="20px" height="20px" [src]="skill.path" />
-          <p>{{ skill.title }}</p>
-        </div>
-      </div>
-      <h3 class="titleOfSkill">Frameworks</h3>
-      <div class="languages-skills">
-        <div *ngFor="let skill of skillsFramework" class="skill-item">
-          <img alt="" width="20px" height="20px" [src]="skill.path" />
-          <p>{{ skill.title }}</p>
-        </div>
-      </div>
-      <h3 class="titleOfSkill">Databases</h3>
-      <div class="languages-skills">
-        <div *ngFor="let skill of databases" class="skill-item">
-          <img alt="" width="20px" height="20px" [src]="skill.path" />
-          <p>{{ skill.title }}</p>
-        </div>
-      </div>
-      <h3 class="titleOfSkill">Designe</h3>
-      <div class="languages-skills">
-        <div *ngFor="let skill of designeTools" class="skill-item">
-          <img alt="" width="20px" height="20px" [src]="skill.path" />
-          <p>{{ skill.title }}</p>
-        </div>
-      </div>
-      <h3 class="titleOfSkill">Others</h3>
-      <div class="languages-skills">
-        <div *ngFor="let skill of othersSkills" class="skill-item">
-          <img alt="" width="20px" height="20px" [src]="skill.path" />
-          <p>{{ skill.title }}</p>
-        </div>
-      </div>
+<div class="skills-body">
+  <app-custom-title title="MY SKILLS"></app-custom-title>
+  <div class="skills-content container">
+    <div class="skills container">
+      <app-skill-item
+        title="Languages"
+        [skills]="skillsLanguage"
+      ></app-skill-item>
+      <app-skill-item
+        title="Frameworks"
+        [skills]="skillsFramework"
+      ></app-skill-item>
+      <app-skill-item title="Databases" [skills]="databases"></app-skill-item>
+      <app-skill-item title="Dsigne" [skills]="designeTools"></app-skill-item>
+      <app-skill-item title="Others" [skills]="othersSkills"></app-skill-item>
     </div>
     <span></span>
   </div>

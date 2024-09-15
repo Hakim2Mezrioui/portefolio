@@ -10,6 +10,12 @@ import { DecorationComponent } from './components/decoration/decoration.componen
 import { SkillsSectionComponent } from './components/skills-section/skills-section.component';
 import { ProjectComponent } from './components/project/project.component';
 import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
+import { MyExpertisesComponent } from './components/my-expertises/my-expertises.component';
+import { CardExpertiseComponent } from './components/card-expertise/card-expertise.component';
+import { CustomTitleComponent } from './components/custom-title/custom-title.component';
+import { SkillItemComponent } from './components/skill-item/skill-item.component';
+import { NgxSmoothScrollModule } from '@boatzako/ngx-smooth-scroll';
+import { ContactMeComponent } from './components/contact-me/contact-me.component';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
@@ -21,8 +27,13 @@ import { ProjectsSectionComponent } from './components/projects-section/projects
     SkillsSectionComponent,
     ProjectComponent,
     ProjectsSectionComponent,
+    MyExpertisesComponent,
+    CardExpertiseComponent,
+    CustomTitleComponent,
+    SkillItemComponent,
+    ContactMeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
   providers: [],
   bootstrap: [AppComponent],
 })

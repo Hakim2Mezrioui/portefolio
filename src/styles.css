@@ -5,3 +5,7 @@
   /* overflow-y: hidden;
   overflow-x: hidden; */
 }
+
+body {
+  background-color: #f1f5f9;
+}

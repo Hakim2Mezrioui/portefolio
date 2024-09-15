@@ -4,6 +4,7 @@
   height: 17em;
   width: 25em;
   overflow: hidden;
+  z-index: 2;
 }
 
 .carre {
