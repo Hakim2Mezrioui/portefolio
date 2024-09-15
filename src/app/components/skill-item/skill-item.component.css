@@ -2,10 +2,6 @@
   display: flex;
 }
 
-.skill h3 {
-  width: 7em;
-}
-
 .skill-item {
   display: flex;
   gap: 1em;
@@ -28,7 +24,7 @@
   top: 0;
   height: 100%;
   width: 3px;
-  transition: all 0.1s ease;
+  transition: all 0.15s ease;
   z-index: -1;
 }
 
@@ -54,6 +50,7 @@
   line-height: 1.5em;
   padding-bottom: 15px;
   position: relative;
+  width: 7em;
 }
 .titleOfSkill:before {
   content: "";
@@ -63,6 +60,7 @@
   height: 5px;
   width: 55px;
   background-color: #111;
+  transition: all .1s ease;
 }
 .titleOfSkill:after {
   content: "";
@@ -73,4 +71,7 @@
   width: 95%;
   max-width: 255px;
   background-color: #333;
+}
+.titleOfSkill:hover::before {
+  width: 90px;
 }

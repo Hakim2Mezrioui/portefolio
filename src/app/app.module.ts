@@ -16,6 +16,7 @@ import { CustomTitleComponent } from './components/custom-title/custom-title.com
 import { SkillItemComponent } from './components/skill-item/skill-item.component';
 import { NgxSmoothScrollModule } from '@boatzako/ngx-smooth-scroll';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
+import { FooterComponent } from './components/footer/footer.component';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ContactMeComponent } from './components/contact-me/contact-me.component
     CustomTitleComponent,
     SkillItemComponent,
     ContactMeComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
   providers: [],

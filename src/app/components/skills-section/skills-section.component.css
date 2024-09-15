@@ -8,8 +8,9 @@
 
 .skills-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  position: absolute;
+  gap: 8em;
   top: calc(50% - 380px / 2);
   left: calc(50% - 1320px / 2);
 }
