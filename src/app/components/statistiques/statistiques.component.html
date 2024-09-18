@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="statistiques">
+    <app-statistique-item
+      *ngFor="let statiqueItem of statiques; let i = index"
+      [statique]="statiqueItem"
+      [attr.data-aos]="
+        i == 0
+          ? 'fade-left'
+          : i == 1
+          ? 'flip-up'
+          : i == 2
+          ? 'flip-down'
+          : 'fade-right'
+      "
+    ></app-statistique-item>
+  </div>
+</div>

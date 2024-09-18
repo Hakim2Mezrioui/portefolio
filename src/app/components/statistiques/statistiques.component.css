@@ -1,0 +1,18 @@
+.statistiques {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  padding-block: 5em;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 600px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: 400px;
+  }
+}

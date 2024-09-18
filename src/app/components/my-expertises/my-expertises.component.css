@@ -108,3 +108,7 @@ h3 em {
   font-style: normal;
   font-weight: 600;
 }
+
+app-card-expertise {
+  z-index: 3;
+}

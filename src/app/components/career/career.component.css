@@ -1,0 +1,31 @@
+.career-body {
+  background-color: #f1f5f9;
+  padding-block: 4em;
+}
+
+.career-content {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+}
+
+.experiences, .education {
+  position: relative;
+}
+
+.experiences::before, .education::before {
+  content: "";
+  position: absolute;
+  left: -2em;
+  top: 1em;
+  background-color: #03346E;
+  height: 95.5%;
+  width: .1em;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  color: #03346E
+}

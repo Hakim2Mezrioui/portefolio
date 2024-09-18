@@ -17,6 +17,10 @@ import { SkillItemComponent } from './components/skill-item/skill-item.component
 import { NgxSmoothScrollModule } from '@boatzako/ngx-smooth-scroll';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CareerCardComponent } from './components/career-card/career-card.component';
+import { CareerComponent } from './components/career/career.component';
+import { StatistiquesComponent } from './components/statistiques/statistiques.component';
+import { StatistiqueItemComponent } from './components/statistique-item/statistique-item.component';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
@@ -34,6 +38,10 @@ import { FooterComponent } from './components/footer/footer.component';
     SkillItemComponent,
     ContactMeComponent,
     FooterComponent,
+    CareerComponent,
+    CareerCardComponent,
+    StatistiquesComponent,
+    StatistiqueItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
   providers: [],

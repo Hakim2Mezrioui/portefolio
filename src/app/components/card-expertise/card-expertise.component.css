@@ -1,13 +1,15 @@
 .card {
   width: 20em;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   border: none;
+  height: 18em;
 }
 
 .bg {
   background-color: white;
-  transition: all .1s ease;
+  transition: all 0.1s ease;
+  height: 18em;
 }
 
 .card-icon {
@@ -30,8 +32,12 @@
 
 .card-body {
   text-align: justify;
+  display: -webkit-box; /* Creates a flexible box */
+  -webkit-box-orient: vertical; /* Sets the box to align vertically */
+  overflow: hidden; /* Hides any overflowing content */
+  text-overflow: ellipsis; /* Adds ellipsis (...) at the end if text overflows */
+  /* background-color: red; */
 }
-
 /* .card::before {
   content: "";
   width: 100%;
@@ -52,12 +58,12 @@
   z-index: -1;
   left: -0.2em;
   bottom: -0.2em;
-  transition: all .1s ease;
+  transition: all 0.1s ease;
 }
 
-.card:hover .bg{
-  transform: translate(.2em, -.2em);
+.card:hover .bg {
+  transform: translate(0.2em, -0.2em);
 }
-.card:hover .backdrop{
-  transform: translate(-.2em, .2em);
+.card:hover .backdrop {
+  transform: translate(-0.2em, 0.2em);
 }

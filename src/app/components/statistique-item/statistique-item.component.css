@@ -1,0 +1,48 @@
+.statistique {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 12em;
+  height: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #f1f5f9;
+}
+
+.title {
+  font-size: 20px;
+}
+
+h1 {
+  font-weight: bold;
+  transition: all .15s ease;
+}
+
+.statistique:hover h1 {
+  transform: scale(1.2);
+}
+
+.icon {
+  /* transform: scale(2.2); */
+  margin: 0 0 -.5em 0;
+  padding: 0;
+}
+
+.statistique::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: .5em;
+  left: -.0;
+  background-color: black;
+  z-index: -1;
+  border-radius: 50%;
+  transition: all .15s ease;
+}
+
+.statistique:hover::before {
+  left: -.5em;
+}

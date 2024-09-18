@@ -2,10 +2,20 @@
   <app-custom-title title="MY EXPERTISES"></app-custom-title>
   <div class="expertises-content">
     <div class="custom-container">
-      <app-card-expertise  data-aos-duration="1000" data-aos="flip-left"></app-card-expertise>
-      <app-card-expertise  data-aos-duration="1000" data-aos="flip-up"></app-card-expertise>
-      <app-card-expertise  data-aos-duration="1000" data-aos="flip-down"></app-card-expertise>
-      <app-card-expertise  data-aos-duration="1000" data-aos="flip-right"></app-card-expertise>
+      <app-card-expertise
+        *ngFor="let expertise of expertises; let i = index"
+        [expertise]="expertise"
+        data-aos-duration="1000"
+        [attr.data-aos]="
+          i == 0
+            ? 'flip-left'
+            : i === 1
+            ? 'flip-up'
+            : i === 2
+            ? 'flip-down'
+            : 'flip-right'
+        "
+      ></app-card-expertise>
     </div>
   </div>
 </div>

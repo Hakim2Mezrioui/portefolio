@@ -1,0 +1,51 @@
+.card-career {
+  width: 30em;
+  padding: 1em 1em;
+  border: 1px solid rgb(205, 205, 205);
+  margin-block: 1em;
+  box-shadow: 0 0 0px 0px;
+  border-radius: 0;
+  transition: all .15s ease;
+  position: relative;
+  z-index: 3;
+  background-color: #f1f5f9;
+}
+
+.card-career:hover {
+  box-shadow: 0 0 10px 0px;
+  border-radius: .3em;
+}
+
+.card-career::before {
+  content: "";
+  position: absolute;
+  left: -2.5em;
+  top: 0;
+  width: 1em;
+  height: 1em;
+  background-color: black;
+  border-radius: 50%;
+  transition: all .15s ease;
+}
+
+.card-career:hover::before {
+  top: 50%;
+}
+
+.date {
+  color: #6EACDA;
+  font-weight: bold;
+  font-size: .8em;
+}
+
+.title {
+  font-weight: bold;
+  color: #03346E;
+  font-size: 1.2em;
+}
+
+.desc {
+  color: #03346E;
+  font-size: .8em;
+}
+

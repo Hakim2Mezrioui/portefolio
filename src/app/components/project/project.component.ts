@@ -27,8 +27,6 @@ export class ProjectComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked(): void {
-    console.log(this.reverse);
-
     if (this.reverse === true) {
       this.rendered2.addClass(
         this.project.nativeElement,

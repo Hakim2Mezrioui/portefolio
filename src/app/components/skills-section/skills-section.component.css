@@ -3,27 +3,28 @@
   width: 100%;
   background-color: white;
   position: relative;
-  padding-top: 6em;
+  /* padding-top: 6em; */
 }
 
 .skills-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8em;
-  top: calc(50% - 380px / 2);
-  left: calc(50% - 1320px / 2);
+  gap: 6em;
+  height: 100%;
+  /* top: calc(50% - 380px / 2);
+  left: calc(50% - 1320px / 2); */
 }
 
-.skills-title {
+/* .skills-title {
   display: flex;
   justify-content: space-between;
   padding-top: 8em;
-}
-
+} */
+/*
 .skills-title h2 {
   position: relative;
-}
+} */
 
 .skill {
   display: flex;
