@@ -3,7 +3,6 @@
 }
 
 .skill-item {
-  display: flex;
   gap: 1em;
   background-color: black;
   width: fit-content;
@@ -38,6 +37,7 @@
 
 .languages-skills {
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
   padding-left: 5em;
   margin-block: 1em;
