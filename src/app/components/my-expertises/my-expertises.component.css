@@ -40,11 +40,14 @@
   .expertises-content {
     top: 0;
   }
-}
-
-@media (max-width: 950px) {
   .expertises-body {
     height: fit-content;
+  }
+}
+
+@media (max-width: 500px) {
+  .custom-container{
+    width: 100%;
   }
 }
 

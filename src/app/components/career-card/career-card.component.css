@@ -32,6 +32,16 @@
   top: 50%;
 }
 
+.header-card {
+  display: flex;
+  gap: 1em;
+}
+
+.header-card img {
+  border-radius: .5em;
+  background-color: white;
+}
+
 .date {
   color: #6EACDA;
   font-weight: bold;
@@ -49,3 +59,11 @@
   font-size: .8em;
 }
 
+@media (max-width: 600px) {
+  .card-career {
+    width: 100%;
+  }
+  .card-career::before {
+    display: none;
+  }
+}

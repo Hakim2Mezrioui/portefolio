@@ -8,6 +8,8 @@
 
 .video {
   z-index: 3;
+  width: 500px;
+  height: fit-content;
 }
 
 .reverse-flex-direction {
@@ -40,7 +42,7 @@
 }
 
 .title {
-  font-size: 40px;
+  font-size: 2em;
   margin-bottom: 0.2em;
 }
 
@@ -57,7 +59,7 @@
   display: flex;
   align-items: center;
   background-color: black;
-  color: white
+  color: white;
 }
 
 .links {
@@ -75,4 +77,27 @@
 
 .links a {
   color: black;
+}
+
+@media (max-width: 1200px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+}
+
+@media (max-width: 770px) {
+  .desc-project {
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 560px) {
+  .video {
+    width: 100%;
+    height: fit-content;
+  }
 }

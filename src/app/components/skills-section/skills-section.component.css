@@ -40,7 +40,6 @@
   justify-content: center;
   flex-direction: column;
   width: fit-content;
-  background-color: red;
 }
 
 .skills-section {
@@ -122,4 +121,19 @@ h3 span {
 h3 em {
   font-style: normal;
   font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .skills-content {
+    gap: 0em;
+    height: fit-content;
+    padding-block: 5em;
+  }
+
+  .skills {
+    height: fit-content;
+  }
+  .skills-body {
+    height: fit-content;
+  }
 }

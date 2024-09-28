@@ -5,6 +5,7 @@
 
 .career-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 5em;
 }
@@ -28,4 +29,10 @@
   font-size: 1.3em;
   margin-bottom: 1em;
   color: #03346E
+}
+
+@media (max-width: 600px) {
+  .education::before, .education::after {
+    display: none;
+  }
 }

@@ -9,14 +9,16 @@
         /> -->
       <video
         [src]="projectInfo.demoPath"
-        width="500"
-        height="500"
         autoplay
         loop
+        class="video"
         [attr.data-aos]="reverse ? 'fade-left' : 'fade-right'"
       ></video>
     </div>
-    <div [attr.data-aos]="!reverse ? 'fade-left' : 'fade-right'" class="desc-project">
+    <div
+      [attr.data-aos]="!reverse ? 'fade-left' : 'fade-right'"
+      class="desc-project"
+    >
       <h3 class="title">{{ projectInfo.title }}</h3>
       <p>
         {{ projectInfo.description }}

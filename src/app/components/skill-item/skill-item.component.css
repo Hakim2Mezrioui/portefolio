@@ -4,8 +4,10 @@
 
 .skill-item {
   gap: 1em;
+  display: flex;
   background-color: black;
   width: fit-content;
+  min-width: fit-content;
   color: white;
   padding: 0.5em 1em;
   align-items: center;
@@ -35,9 +37,8 @@
   margin-bottom: 0;
 }
 
-.languages-skills {
+.my-skills {
   display: flex;
-  flex-wrap: wrap;
   gap: 1em;
   padding-left: 5em;
   margin-block: 1em;
@@ -74,4 +75,13 @@
 }
 .titleOfSkill:hover::before {
   width: 90px;
+}
+
+@media (max-width: 1200px) {
+  .skill {
+    flex-direction: column;
+  }
+  .my-skills {
+    flex-wrap: wrap;
+  }
 }

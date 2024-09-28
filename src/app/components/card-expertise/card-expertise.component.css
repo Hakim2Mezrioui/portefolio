@@ -67,3 +67,10 @@
 .card:hover .backdrop {
   transform: translate(-0.2em, 0.2em);
 }
+
+@media (max-width: 500px) {
+  .card {
+    /* width: 100%; */
+    background-color: red;
+  }
+}
