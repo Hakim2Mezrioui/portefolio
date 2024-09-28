@@ -1,25 +1,40 @@
 <div class="menu-header">
   <ul>
-    <li>
-      <i class="bi bi-house-fill"></i>
-      <span> Home </span>
+    <li (click)="close()">
+      <a href="#home">
+        <i class="bi bi-house-fill"></i>
+        <span> Home </span>
+      </a>
     </li>
-    <li>
-      <!-- <i class="bi bi-gear-fill"></i> -->
-      <i class="bi bi-tools"></i>
-      <span> My skills </span>
+    <li (click)="close()">
+      <a href="#mySkills">
+        <i class="bi bi-tools"></i>
+        <span> My skills </span>
+      </a>
     </li>
-    <li>
-      <i class="bi bi-clipboard2-pulse-fill"></i>
-      <span> My projects </span>
+    <li (click)="close()">
+      <a href="#myExpertises">
+        <i class="bi bi-person-fill fs-6"></i>
+        <span> My expertises </span>
+      </a>
     </li>
-    <li>
-      <i class="bi bi-graph-up-arrow"></i>
-      <span> Career </span>
+    <li (click)="close()">
+      <a href="#myProjects">
+        <i class="bi bi-clipboard2-pulse-fill"></i>
+        <span> My projects </span>
+      </a>
     </li>
-    <li>
-      <i class="bi bi-envelope-at-fill"></i>
-      <span> Contact me </span>
+    <li (click)="close()">
+      <a href="#myCareer">
+        <i class="bi bi-briefcase-fill"></i>
+        <span> Career </span>
+      </a>
+    </li>
+    <li (click)="close()">
+      <a href="#contactMe">
+        <i class="bi bi-envelope-at-fill"></i>
+        <span> Contact me </span>
+      </a>
     </li>
   </ul>
   <app-icons-link></app-icons-link>

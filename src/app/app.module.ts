@@ -22,6 +22,7 @@ import { CareerComponent } from './components/career/career.component';
 import { StatistiquesComponent } from './components/statistiques/statistiques.component';
 import { StatistiqueItemComponent } from './components/statistique-item/statistique-item.component';
 import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
+import { OutsideClickDirective } from './directives/outside-click-directive.directive';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { MenuHeaderComponent } from './components/menu-header/menu-header.compon
     StatistiquesComponent,
     StatistiqueItemComponent,
     MenuHeaderComponent,
+    OutsideClickDirective
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
   providers: [],

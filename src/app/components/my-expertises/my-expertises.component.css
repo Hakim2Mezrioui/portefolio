@@ -9,7 +9,7 @@
   display: flex; */
 }
 
-@media (max-height: 800px) {
+@media (max-height: 820px) {
   .expertises-body {
     height: fit-content;
   }

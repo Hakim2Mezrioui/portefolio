@@ -1,6 +1,6 @@
-<div class="projects-body">
+<div id="myProjects" class="projects-body">
   <app-custom-title title="MY PROJECTS"></app-custom-title>
-  <div *ngFor="let project of projectsList, let i = index">
-    <app-project [projectInfo]="project" [reverse]='i%2 === 1' ></app-project>
+  <div *ngFor="let project of projectsList; let i = index">
+    <app-project [projectInfo]="project" [reverse]="i % 2 === 1"></app-project>
   </div>
 </div>
