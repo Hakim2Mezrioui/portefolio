@@ -74,3 +74,9 @@
     transform: translateY(0) rotate(17deg);
   }
 }
+
+@media (max-width: 1200px) {
+  .decoration {
+    zoom: .7;
+  }
+}

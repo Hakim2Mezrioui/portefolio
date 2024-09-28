@@ -21,6 +21,7 @@ import { CareerCardComponent } from './components/career-card/career-card.compon
 import { CareerComponent } from './components/career/career.component';
 import { StatistiquesComponent } from './components/statistiques/statistiques.component';
 import { StatistiqueItemComponent } from './components/statistique-item/statistique-item.component';
+import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { StatistiqueItemComponent } from './components/statistique-item/statisti
     CareerCardComponent,
     StatistiquesComponent,
     StatistiqueItemComponent,
+    MenuHeaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
   providers: [],

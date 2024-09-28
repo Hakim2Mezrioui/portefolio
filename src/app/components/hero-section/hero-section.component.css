@@ -36,8 +36,10 @@ img {
 @media (max-width: 900px) {
   section {
     flex-direction: column;
-    height: 130vh;
+    height: fit-content;
     gap: 100px;
+    margin-top: 3em;
+    padding-block: 5em;
   }
   section .content {
     width: 100%;
@@ -48,8 +50,25 @@ img {
     width: 100%;
   }
 }
-@media (max-width: 430px) {
 
+@media (max-width: 700px) {
+  /* .content {
+    zoom: 0.7;
+    --webkit-zoom: 0.7;
+  } */
+
+  section {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    margin-top: 0%;
+  }
+}
+
+@media (max-width: 430px) {
   img {
     width: 350px;
     height: 350px;
@@ -291,15 +310,4 @@ section ul {
   justify-content: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-}
-
-@media (max-width: 700px) {
-  /* .content {
-    zoom: 0.7;
-    --webkit-zoom: 0.7;
-  } */
-
-  section {
-    gap: 50px;
-  }
 }

@@ -4,6 +4,7 @@
   align-items: center;
   margin-block: 5em;
   z-index: 3;
+  overflow-y: hidden;
 }
 
 .video {

@@ -9,6 +9,12 @@
   display: flex; */
 }
 
+@media (max-height: 800px) {
+  .expertises-body {
+    height: fit-content;
+  }
+}
+
 .expertises-content {
   position: relative;
   top: calc(100vh / 2 - 289px);
@@ -25,7 +31,7 @@
 
 @media (max-width: 1500px) {
   .custom-container {
-    width: 60em;
+    width: 58em;
     margin: 0 auto;
   }
   .expertises-content {

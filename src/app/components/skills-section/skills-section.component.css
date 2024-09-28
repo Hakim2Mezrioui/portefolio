@@ -4,6 +4,7 @@
   background-color: white;
   position: relative;
   /* padding-top: 6em; */
+  overflow-y: hidden;
 }
 
 .skills-content {
