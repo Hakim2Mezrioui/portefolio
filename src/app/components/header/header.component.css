@@ -31,24 +31,22 @@ nav a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -.2em;
+  bottom: -0.2em;
   height: 2px;
   width: 1em;
   background-color: #011d41;
-  transition: all .1s ease;
+  transition: all 0.1s ease;
 }
 
 nav a:hover::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -.2em;
+  bottom: -0.2em;
   height: 2px;
   width: 100%;
   background-color: #011d41;
-
 }
-
 
 img {
   width: 100px;

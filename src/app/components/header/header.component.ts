@@ -4,6 +4,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   OnInit,
   Renderer2,
   ViewChild,
@@ -25,14 +26,24 @@ export class HeaderComponent implements OnInit {
   showMenuHeader: boolean = false;
   start: boolean = false;
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    const width = event.target.innerWidth;
+    const breakpoint = 1200;
+
+    if (width > breakpoint && this.showMenuHeader) {
+      this.closeMenuHeader();
+    }
+  }
+
   toogle() {
     this.showMenuHeader = !this.showMenuHeader;
     this.start = true;
-    console.log("toggle");
+    console.log('toggle');
   }
 
-  closeMenuHeader(){
+  closeMenuHeader() {
     this.showMenuHeader = false;
-    console.log("closeMenuHeader");
+    console.log('closeMenuHeader');
   }
 }
