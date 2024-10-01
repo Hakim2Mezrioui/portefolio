@@ -31,7 +31,7 @@ export const projects: ProjectModel[] = [
     "IPTV est un site web qui offre des services de télévision sur IP avec plusieurs options d'abonnement. Ce projet vise à fournir une expérience de visionnage de haute qualité avec une gestion simplifiée des abonnements pour les utilisateurs.",
     '../assets/demos/iptv.mp4',
     'https://github.com/Hakim2Mezrioui/iptv',
-    'https://hakim2mezrioui.github.io/iptv/',
+    'https://hakim2mezrioui.github.io/iptv-host/',
     ['React', 'JavaScript', 'HTML', 'CSS', 'FontAwsome', 'PHP', 'Laravel']
   ),
   new ProjectModel(
@@ -64,10 +64,23 @@ export const projects: ProjectModel[] = [
   ),
   new ProjectModel(
     'INFOBIBLIOPHILE',
-    "Infobibliophile est une plateforme unique dédiée à la gestion complète de livres, divisée en une version web et une application mobile. La plateforme web permet aux utilisateurs de gérer efficacement les utilisateurs, les livres, les catégories et autres contenus.",
+    'Infobibliophile est une plateforme unique dédiée à la gestion complète de livres, divisée en une version web et une application mobile. La plateforme web permet aux utilisateurs de gérer efficacement les utilisateurs, les livres, les catégories et autres contenus.',
     '../assets/demos/infobibliophile_plateform.mp4',
     'https://github.com/Hakim2Mezrioui/infobibliophile-app',
     '#',
-    ['Angular', 'TypeScript', 'FLUTTER', 'DART', 'LARAVEL', 'PHP', 'MYSQL', 'SQFLIT', 'Bootstrap', 'FontAwsome', 'HTML', 'CSS']
+    [
+      'Angular',
+      'TypeScript',
+      'FLUTTER',
+      'DART',
+      'LARAVEL',
+      'PHP',
+      'MYSQL',
+      'SQFLIT',
+      'Bootstrap',
+      'FontAwsome',
+      'HTML',
+      'CSS',
+    ]
   ),
 ];

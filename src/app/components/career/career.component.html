@@ -10,10 +10,14 @@
     </div>
     <div class="education">
       <h3 class="title">EXPERIENCE</h3>
+      <app-career-card
+        *ngFor="let experience of experiences"
+        [experience]="experience"
+        data-aos="fade-top"
+      ></app-career-card>
+      <!-- <app-career-card data-aos="fade-top"></app-career-card>
       <app-career-card data-aos="fade-top"></app-career-card>
-      <app-career-card data-aos="fade-top"></app-career-card>
-      <app-career-card data-aos="fade-top"></app-career-card>
-      <app-career-card data-aos="fade-top"></app-career-card>
+      <app-career-card data-aos="fade-top"></app-career-card> -->
     </div>
   </div>
 </div>

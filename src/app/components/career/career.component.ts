@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
+import { CareerModel } from 'src/app/models/careerModel';
+import { experiencesList } from 'src/constants/careerList';
 
 @Component({
   selector: 'app-career',
@@ -8,10 +10,14 @@ import * as Aos from 'aos';
 })
 export class CareerComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.experiences = experiencesList;
+   }
 
   ngOnInit(): void {
     Aos.init();
   }
+
+  experiences!: CareerModel[];
 
 }

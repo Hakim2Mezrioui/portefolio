@@ -2,20 +2,19 @@
   <span class="header-card">
     <span>
       <img
-        src="https://media.licdn.com/dms/image/v2/D4E0BAQGpx-4RLFaaLg/company-logo_200_200/company-logo_200_200/0/1688601837880?e=2147483647&v=beta&t=HXKk00D1u_aheKsdkpahm3aB69-OkNMdpcaDUqcCJ9I"
+        [src]="experience.logo"
         alt="logo"
         width="50"
         height="50"
       />
     </span>
     <span>
-      <h4 class="date">2018-2022</h4>
-      <h3 class="title">High School Degree</h3>
+      <!-- <h4 class="date">2018-2022</h4> -->
+      <h4 class="date">{{ experience.date }}</h4>
+      <h3 class="title">{{ experience.title }}</h3>
     </span>
   </span>
   <p class="desc">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, praesentium
-    vel ipsa, quidem ducimus esse eligendi laudantium expedita veritatis quos
-    suscipit.
+    {{ experience.desc }}
   </p>
 </div>

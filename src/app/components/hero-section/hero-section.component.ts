@@ -8,7 +8,9 @@ import {
   ViewChild,
 } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
-import * as AOS from "aos";
+import * as AOS from 'aos';
+import { HeroSectionModel } from 'src/app/models/heroSectionModel';
+import { heroSectionContent } from 'src/constants/heroSectionContent';
 
 @Component({
   selector: 'app-hero-section',
@@ -18,10 +20,13 @@ import * as AOS from "aos";
 export class HeroSectionComponent implements OnInit, AfterViewInit {
   @ViewChild('tiltElement', { static: false }) tiltElement!: ElementRef;
 
+  heroSectionContent!: HeroSectionModel;
+
   constructor() {}
 
   ngOnInit(): void {
     AOS.init();
+    this.heroSectionContent = heroSectionContent;
   }
 
   ngAfterViewInit() {

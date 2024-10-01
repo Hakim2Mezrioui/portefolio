@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CareerModel } from 'src/app/models/careerModel';
 
 @Component({
   selector: 'app-career-card',
   templateUrl: './career-card.component.html',
-  styleUrls: ['./career-card.component.css']
+  styleUrls: ['./career-card.component.css'],
 })
 export class CareerCardComponent implements OnInit {
+  @Input('experience') experience!: CareerModel;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
