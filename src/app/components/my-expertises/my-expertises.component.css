@@ -53,12 +53,10 @@
 }
 
 @media (max-width: 500px) {
-  .custom-container{
+  .custom-container {
     width: 100%;
-    background-color: red;
   }
 }
-
 
 .title h3 {
   text-align: center;
