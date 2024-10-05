@@ -1,20 +1,15 @@
 <div class="card-career">
   <span class="header-card">
     <span>
-      <img
-        [src]="experience.logo"
-        alt="logo"
-        width="50"
-        height="50"
-      />
+      <img [src]="data.logo" alt="logo" width="50" height="50" />
     </span>
     <span>
       <!-- <h4 class="date">2018-2022</h4> -->
-      <h4 class="date">{{ experience.date }}</h4>
-      <h3 class="title">{{ experience.title }}</h3>
+      <h4 class="date">{{ data.date }}</h4>
+      <h3 class="title">{{ data.title }}</h3>
     </span>
   </span>
   <p class="desc">
-    {{ experience.desc }}
+    {{ data.desc }}
   </p>
 </div>

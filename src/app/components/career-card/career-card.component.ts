@@ -7,7 +7,7 @@ import { CareerModel } from 'src/app/models/careerModel';
   styleUrls: ['./career-card.component.css'],
 })
 export class CareerCardComponent implements OnInit {
-  @Input('experience') experience!: CareerModel;
+  @Input('data') data!: CareerModel;
 
   constructor() {}
 

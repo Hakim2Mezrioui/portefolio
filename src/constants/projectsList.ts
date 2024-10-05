@@ -3,7 +3,10 @@ import { ProjectModel } from 'src/app/models/projectModel';
 export const projects: ProjectModel[] = [
   new ProjectModel(
     'Velvet Table',
-    "Velvet Table est un site web dédié aux restaurants, conçu pour améliorer la gestion et l'interaction avec les clients. Ce site présente les différents plats proposés, permet de passer des commandes en ligne, et facilite la gestion des réservations et des utilisateurs.",
+    `
+    Velvet Table est un site web dédié aux restaurants, conçu pour améliorer la gestion et l'interaction avec les clients. 
+    Ce site présente les différents plats proposés, permet de passer des commandes en ligne, et facilite la gestion des réservations et des utilisateurs.
+    `,
     '../assets/demos/restaurant.mp4',
     'https://github.com/Hakim2Mezrioui/VelvetTable',
     'http://velvettable.42web.io',
@@ -11,7 +14,11 @@ export const projects: ProjectModel[] = [
   ),
   new ProjectModel(
     'StorElec',
-    "Store Elect est un site web e-commerce spécialisé dans la vente de pièces électroniques. Ce site permet aux utilisateurs d'acheter divers produits électroniques tels que les téléphones, les ordinateurs, les smartwatches et les tablettes.",
+    `
+    Store Elect est un site web e-commerce spécialisé dans la vente de pièces électroniques. 
+    Ce site permet aux utilisateurs d'acheter divers produits électroniques tels que les téléphones, 
+    les ordinateurs, les smartwatches et les tablettes.
+    `,
     '../assets/demos/stroeelec.mp4',
     'https://github.com/Hakim2Mezrioui/storElec',
     'https://hakim2mezrioui.github.io/storElec/',
