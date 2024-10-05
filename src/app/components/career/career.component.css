@@ -10,29 +10,32 @@
   gap: 5em;
 }
 
-.experiences, .education {
+.experiences,
+.education {
   position: relative;
 }
 
-.experiences::before, .education::before {
+.experiences::before,
+.education::before {
   content: "";
   position: absolute;
   left: -2em;
   top: 1em;
-  background-color: #03346E;
+  background-color: #03346e;
   height: 95.5%;
-  width: .1em;
+  width: 0.1em;
 }
 
 .title {
   font-weight: bold;
   font-size: 1.3em;
   margin-bottom: 1em;
-  color: #03346E
+  color: #03346e;
 }
 
 @media (max-width: 600px) {
-  .education::before, .education::after {
+  .education::before,
+  .education::after {
     display: none;
   }
 }

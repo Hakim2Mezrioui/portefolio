@@ -63,6 +63,7 @@
 @media (max-width: 600px) {
   .card-career {
     width: 100%;
+    height: fit-content;
   }
   .card-career::before {
     display: none;

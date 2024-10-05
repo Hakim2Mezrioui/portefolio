@@ -74,6 +74,12 @@ img {
     height: 350px;
   }
 }
+@media (max-width: 300px) {
+  img {
+    width: 100%;
+    height: fit-content;
+  }
+}
 
 section ul {
   display: flex;

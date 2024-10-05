@@ -7,6 +7,10 @@
   z-index: 3;
 }
 
+.container {
+  overflow-x: hidden;
+}
+
 @media (max-width: 1000px) {
   .container {
     width: 600px;
@@ -15,5 +19,10 @@
 @media (max-width: 600px) {
   .container {
     width: 400px;
+  }
+}
+@media (max-width: 420px) {
+  .container {
+    width: fit-content;
   }
 }

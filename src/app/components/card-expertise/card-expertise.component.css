@@ -68,9 +68,19 @@
   transform: translate(-0.2em, 0.2em);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .card {
-    /* width: 100%; */
-    background-color: red;
+    zoom: .8;
+  }
+}
+
+@media (max-width: 300px) {
+  .card {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .bg {
+    height: fit-content;
   }
 }

@@ -58,3 +58,15 @@ h3 em {
   font-style: normal;
   font-weight: 600;
 }
+
+@media (max-width: 500px) {
+  .title h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .title h3 {
+    font-size: 30px;
+  }
+}
