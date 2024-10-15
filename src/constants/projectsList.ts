@@ -4,8 +4,7 @@ export const projects: ProjectModel[] = [
   new ProjectModel(
     'Velvet Table',
     `
-    Velvet Table est un site web dédié aux restaurants, conçu pour améliorer la gestion et l'interaction avec les clients.
-    Ce site présente les différents plats proposés, permet de passer des commandes en ligne, et facilite la gestion des réservations et des utilisateurs.
+    Velvet Table is a website dedicated to restaurants, designed to enhance management and interaction with customers. This site showcases the various dishes offered, allows online orders, and facilitates the management of reservations and users.
     `,
     './assets/demos/restaurant.mp4',
     'https://github.com/Hakim2Mezrioui/VelvetTable',
@@ -15,9 +14,7 @@ export const projects: ProjectModel[] = [
   new ProjectModel(
     'StorElec',
     `
-    Store Elect est un site web e-commerce spécialisé dans la vente de pièces électroniques.
-    Ce site permet aux utilisateurs d'acheter divers produits électroniques tels que les téléphones,
-    les ordinateurs, les smartwatches et les tablettes.
+    Store Elect is an e-commerce website specialized in selling electronic components. This site allows users to purchase a variety of electronic products, including phones, computers, smartwatches, and tablets.
     `,
     './assets/demos/stroeelec.mp4',
     'https://github.com/Hakim2Mezrioui/storElec',
@@ -35,7 +32,7 @@ export const projects: ProjectModel[] = [
   ),
   new ProjectModel(
     'IPTV',
-    "IPTV est un site web qui offre des services de télévision sur IP avec plusieurs options d'abonnement. Ce projet vise à fournir une expérience de visionnage de haute qualité avec une gestion simplifiée des abonnements pour les utilisateurs.",
+    'IPTV is a website that offers IP television services with various subscription options. This project aims to provide a high-quality viewing experience along with simplified subscription management for users.',
     './assets/demos/iptv.mp4',
     'https://github.com/Hakim2Mezrioui/iptv',
     'https://hakim2mezrioui.github.io/iptv-host/',
@@ -43,7 +40,7 @@ export const projects: ProjectModel[] = [
   ),
   new ProjectModel(
     "Forum d'emploi",
-    "Il semble que l'ISTA Hay Hassani I organise un événement majeur, le Forum de l'Emploi et du Meeting Professionnel, prévu pour le 30 novembre 2023 à Casablanca.",
+    'It appears that ISTA Hay Hassani I is organizing a major event, the Employment Forum and Professional Meeting, scheduled for November 30, 2023, in Casablanca.',
     './assets/demos/forumEmploi.mp4',
     'https://github.com/Hakim2Mezrioui/gestion-inscription',
     'https://istahh1.com/',
@@ -63,7 +60,7 @@ export const projects: ProjectModel[] = [
   ),
   new ProjectModel(
     'Reseaux Professionnel',
-    "Le reseau professionnel peut être compris comme une carte d'identité numérique qui résume qui nous sommes sur le plan professionnel. Il englobe nos compétences, nos expériences et nos qualités d'une manière concise, permettant aux autres de mieux comprendre notre parcours et nos atouts dans le monde du travail. Ainsi, le profil professionnel devient une composante essentielle pour se démarquer et prospérer dans le monde professionnel actuel.",
+    'This platform provides valuable insights into the importance of professional networks, offering essential information on their benefits, tips for effective networking, and objectives for building and maintaining professional relationships. Users can explore various resources that highlight how a robust network can enhance career opportunities, facilitate collaboration, and foster personal growth. With a focus on actionable advice and strategic networking practices, this website aims to empower individuals to leverage their connections and thrive in their professional journeys.',
     './assets/demos/devResPro.mp4',
     'https://github.com/Hakim2Mezrioui/devResPro',
     'https://hakim2mezrioui.github.io/devResPro/',
@@ -71,7 +68,7 @@ export const projects: ProjectModel[] = [
   ),
   new ProjectModel(
     'INFOBIBLIOPHILE',
-    'Infobibliophile est une plateforme unique dédiée à la gestion complète de livres, divisée en une version web et une application mobile. La plateforme web permet aux utilisateurs de gérer efficacement les utilisateurs, les livres, les catégories et autres contenus.',
+    'Infobibliophile is a unique platform dedicated to the complete management of books, divided into a web version and a mobile application. The web platform enables users to efficiently manage users, books, categories, and other content.',
     './assets/demos/infobibliophile_plateform.mp4',
     'https://github.com/Hakim2Mezrioui/infobibliophile-app',
     '#',

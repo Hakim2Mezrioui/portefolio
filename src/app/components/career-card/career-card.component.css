@@ -43,6 +43,18 @@
   background-color: white;
 }
 
+.dateAndSociete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.societe{
+  font-weight: bold;
+  font-size: .8em;
+  color: #6EACDA;
+}
+
 .date {
   color: #6EACDA;
   font-weight: bold;

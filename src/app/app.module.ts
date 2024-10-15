@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { ToastrModule } from 'ngx-toastr';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
@@ -45,9 +48,18 @@ import { OutsideClickDirective } from './directives/outside-click-directive.dire
     StatistiquesComponent,
     StatistiqueItemComponent,
     MenuHeaderComponent,
-    OutsideClickDirective
+    OutsideClickDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxSmoothScrollModule,
+    FormsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right',
+      closeButton: true,
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

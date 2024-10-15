@@ -1,5 +1,6 @@
 import { StatiqueModel } from 'src/app/models/statiqueModel';
 import { projects } from './projectsList';
+import { databases, designeTools, electronicsSkills, Frameworks, Languages, montageTools, othersSkills } from './skillsList';
 
 export const statiquesList: StatiqueModel[] = [
   new StatiqueModel(
@@ -9,17 +10,17 @@ export const statiquesList: StatiqueModel[] = [
   ),
   new StatiqueModel(
     'SKILLS',
-    '40',
+    `${Languages.length + Frameworks.length + databases.length + designeTools.length + montageTools.length + electronicsSkills.length + othersSkills.length}`,
     'bi bi-lightbulb fs-1' // Icône pour les compétences (idée ou connaissance)
   ),
   new StatiqueModel(
     'CERTIFICATIONS',
-    '13',
+    '20',
     'bi bi-award fs-1' // Icône pour les certifications (trophée)
   ),
   new StatiqueModel(
     'FRAMEWORKS',
-    '5',
+    Frameworks.length.toString(),
     'bi bi-tools fs-1' // Icône pour les frameworks (outils)
   ),
 ];

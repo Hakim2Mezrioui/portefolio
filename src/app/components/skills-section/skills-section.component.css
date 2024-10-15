@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6em;
+  gap: 5em;
   height: 100%;
   /* top: calc(50% - 380px / 2);
   left: calc(50% - 1320px / 2); */

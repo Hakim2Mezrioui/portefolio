@@ -11,8 +11,10 @@ import * as AOS from 'aos';
 import {
   databases,
   designeTools,
+  electronicsSkills,
   Frameworks,
   Languages,
+  montageTools,
   othersSkills,
 } from 'src/constants/skillsList';
 
@@ -28,7 +30,9 @@ export class SkillsSectionComponent implements AfterViewInit, OnInit {
   frameworks!: SkillModel[];
   databases!: SkillModel[];
   designeTools!: SkillModel[];
+  montageTools!: SkillModel[];
   othersSkills!: SkillModel[];
+  electronicsSkills!: SkillModel[];
 
   constructor() {
     this.languages = Languages;
@@ -36,6 +40,8 @@ export class SkillsSectionComponent implements AfterViewInit, OnInit {
     this.databases = databases;
     this.designeTools = designeTools;
     this.othersSkills = othersSkills;
+    this.montageTools = montageTools;
+    this.electronicsSkills = electronicsSkills;
   }
 
   ngOnInit(): void {

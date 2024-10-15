@@ -1,31 +1,31 @@
 <div id="contactMe" class="contact-body">
   <div class="contact-content container">
     <app-custom-title title="CONTACT ME"></app-custom-title>
-    <form>
+    <form (ngSubmit)="sendEmail(f)" #f="ngForm">
       <div class="form-group">
         <span data-aos="fade-right">
-          <input placeholder="First Name" />
+          <input name="firstName" [(ngModel)]="contact.firstName" placeholder="First Name" required />
           <div class="backdrop"></div>
         </span>
         <span data-aos="fade-left">
-          <input placeholder="Last Name" />
+          <input name="lastName" [(ngModel)]="contact.lastName" placeholder="Last Name" required />
           <div class="backdrop"></div>
         </span>
       </div>
       <div class="form-group">
         <span data-aos="fade-bottom">
-          <input placeholder="Email" />
+          <input name="email" [(ngModel)]="contact.email" placeholder="Email" type="email" required />
           <div class="backdrop"></div>
         </span>
       </div>
       <div class="form-group">
         <span data-aos="zoom-in">
-          <textarea placeholder="Message"></textarea>
+          <textarea name="message" [(ngModel)]="contact.message" placeholder="Message" required></textarea>
           <div class="backdrop"></div>
         </span>
       </div>
       <div data-aos="zoom-out" class="form-action">
-        <button>SEND MESSAGE</button>
+        <button type="submit">SEND MESSAGE</button>
       </div>
     </form>
   </div>
