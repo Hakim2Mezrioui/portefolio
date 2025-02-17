@@ -17,7 +17,7 @@ export const experiencesList = [
     `
     Création d'une application avec inscription simplifiée, QR code pour identification et gestion des données.
     `,
-    'https://lh4.googleusercontent.com/proxy/hPT16ClgeD9AQLmvP8ZwIPvnuRH7C1M40GDr8HSvhP76dzzKoZ0GtfZolroz2PUUg03Et-PyXbPQDO4so8A-F2LvEtwAaXV6xHtbC2AmcCVUN7u1zvY',
+    'https://seeklogo.com/images/O/ofppt-logo-B2CAD4E136-seeklogo.com.png',
     'ISTA Hay Hassani I' // Added societe
   ),
   new CareerModel(
@@ -54,14 +54,14 @@ export const educationList = [
     '2022-2023',
     'Technicien spécialisé en développement informatique',
     'Formation en développement d’applications web et mobiles, bases de données et gestion des systèmes informatiques.',
-    'https://lh4.googleusercontent.com/proxy/hPT16ClgeD9AQLmvP8ZwIPvnuRH7C1M40GDr8HSvhP76dzzKoZ0GtfZolroz2PUUg03Et-PyXbPQDO4so8A-F2LvEtwAaXV6xHtbC2AmcCVUN7u1zvY',
+    'https://seeklogo.com/images/O/ofppt-logo-B2CAD4E136-seeklogo.com.png',
     'ISTA Hay Hassani I' // Added societe
   ),
   new CareerModel(
     '2020 – 2021',
     'Technicien Spécialisé Electromécanique des Systèmes Automatisés',
     'Étude et maintenance des systèmes automatisés, ainsi que la gestion des systèmes électromécaniques complexes.',
-    'https://lh4.googleusercontent.com/proxy/hPT16ClgeD9AQLmvP8ZwIPvnuRH7C1M40GDr8HSvhP76dzzKoZ0GtfZolroz2PUUg03Et-PyXbPQDO4so8A-F2LvEtwAaXV6xHtbC2AmcCVUN7u1zvY',
+    'https://seeklogo.com/images/O/ofppt-logo-B2CAD4E136-seeklogo.com.png',
     'ISTA Hay Hassani I' // Added societe
   ),
   new CareerModel(
