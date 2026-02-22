@@ -1,30 +1,157 @@
-.bi {
-  font-size: 1.2em;
+:host {
+  display: inline-block;
+  width: max-content;
 }
 
-ul li:hover {
-  transform: scale(1.1);
-  transform-origin: center;
-  transition: transform .1s;
+.icons {
+  position: relative;
+  width: max-content;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 46px;
 }
 
-ul {
+.icons::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1e293b;
+  box-sizing: border-box;
+}
+
+.icons-inner {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.25rem;
+  width: max-content;
+  position: relative;
+  bottom: -3em;
+  animation: start-icons-link 1s ease forwards;
+}
+
+.icons-group,
+.icons-inner .icon-link {
+  flex-shrink: 0;
+}
+
+@keyframes start-icons-link {
+  from {
+    bottom: -3em;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+.icons-group {
   display: flex;
-  list-style-type: none;
-  gap: 1em;
+  align-items: flex-end;
+}
+
+.icons-group ul {
+  display: flex;
+  list-style: none;
+  gap: 0.2rem;
   padding: 0;
   margin: 0;
-  width: fit-content;
 }
 
-.bi-linkedin {
+.icons-group a,
+.icons .icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.icons .icon-link--email {
+  /* margin-top: -6px; */
+  padding-bottom: .65em;
+}
+
+.icons-group a:hover,
+.icons .icon-link:hover {
+  transform: scale(1.08);
+  background-color: rgba(30, 41, 59, 0.08);
+}
+
+.icons-group a:focus-visible,
+.icons .icon-link:focus-visible {
+  outline: 2px solid #1e293b;
+  outline-offset: 2px;
+}
+
+/* Custom tooltips: above icons, no overlap with the line */
+.icon-link-has-tooltip {
+  position: relative;
+}
+
+.icon-link-has-tooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  background-color: #1e293b;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.icon-link-has-tooltip:hover::before {
+  opacity: 1;
+}
+
+.icons .bi {
+  font-size: 1.35rem;
+  transition: color 0.2s ease;
+}
+
+.icons .bi-linkedin {
   color: #0e76a8;
 }
 
-.bi-file-earmark-person-fill {
-  color: rgb(139, 0, 0);
+.icons-group a:hover .bi-linkedin {
+  color: #0a5f82;
 }
 
-.bi-envelope-fill {
-  color: grey;
+.icons .bi-github.text-dark,
+.icons .bi-github {
+  color: #1e293b;
+}
+
+.icons-group a:hover .bi-github {
+  color: #0f172a;
+}
+
+.icons .bi-file-earmark-person-fill {
+  color: #b91c1c;
+}
+
+.icons-group a:hover .bi-file-earmark-person-fill {
+  color: #991b1b;
+}
+
+.icons .bi-envelope-fill {
+  color: #64748b;
+}
+
+.icons .icon-link:hover .bi-envelope-fill {
+  color: #475569;
 }
