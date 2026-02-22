@@ -1,5 +1,10 @@
 <section id="home">
-  <img alt="profile" src="./assets/images/profile_cv.png" #tiltElement />
+  <div class="hero-image-wrapper">
+    <div class="hero-image-bg" aria-hidden="true"></div>
+    <div class="hero-image-tilt" #tiltElement>
+      <img class="profile-image" alt="Portrait of Hakim Mezrioui" src="./assets/images/profile.png" />
+    </div>
+  </div>
   <div class="content">
     <div class="welcome-word">
       <h2>{{ heroSectionContent.welcom }}</h2>
