@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production --base-href=https://Hakim2Mezrioui.github.io/portefolio/ && npx angular-cli-ghpages --dir=dist/portefolio-app"
+    "deploy": "ng build --configuration production --base-href=https://Hakim2Mezrioui.github.io/portefolio/ && npx angular-cli-ghpages --dir=dist/portefolio-app",
+    "build:firebase": "ng build --configuration production",
+    "deploy:firebase": "npm run build:firebase && npx firebase-tools deploy --only hosting"
   },
   "private": true,
   "dependencies": {
