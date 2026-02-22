@@ -48,13 +48,25 @@ section {
   border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
   background: linear-gradient(135deg, #b8d4ec 0%, #c4b5e0 45%, #d4c8e8 100%);
   z-index: 0;
-  animation: blob-float 10s ease-in-out infinite;
+  animation: blob-float 14s ease-in-out infinite;
   pointer-events: none;
 }
 
 @keyframes blob-float {
+  /* Repos */
   0%, 100% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; transform: translate(-50%, -50%) scale(1); }
-  50% { border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%; transform: translate(-50%, -50%) scale(1.02); }
+  /* Déformation 1 (forme A) – transition longue vers repos */
+  5% { border-radius: 45% 55% 42% 58% / 58% 42% 58% 42%; transform: translate(-50%, -50%) scale(1.03); }
+  22% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; transform: translate(-50%, -50%) scale(1); }
+  /* Déformation 2 (forme B) */
+  30% { border-radius: 52% 48% 58% 42% / 48% 52% 48% 52%; transform: translate(-50%, -50%) scale(1.04); }
+  47% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; transform: translate(-50%, -50%) scale(1); }
+  /* Déformation 3 (forme C) */
+  55% { border-radius: 48% 52% 45% 55% / 55% 45% 52% 48%; transform: translate(-50%, -50%) scale(1.035); }
+  72% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; transform: translate(-50%, -50%) scale(1); }
+  /* Déformation 4 (forme D) */
+  80% { border-radius: 55% 45% 50% 50% / 42% 58% 45% 55%; transform: translate(-50%, -50%) scale(1.03); }
+  92% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; transform: translate(-50%, -50%) scale(1); }
 }
 
 .hero-image-tilt {
@@ -112,7 +124,7 @@ img:not(.profile-image) {
     max-width: 380px;
   }
   .hero-image-bg {
-    animation: blob-float 10s ease-in-out infinite;
+    animation: blob-float 14s ease-in-out infinite;
   }
   .hero-image-tilt {
     transform: none;
