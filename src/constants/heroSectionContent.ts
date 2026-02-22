@@ -2,6 +2,7 @@ import { HeroSectionModel } from 'src/app/models/heroSectionModel';
 export const heroSectionContent = new HeroSectionModel(
   'WELCOME.',
   "I AM HAKIM MEZRIOUI",
+  "Full Stack Software Engineer & IoT Specialist",
   `
   I am a Full Stack Software Engineer and IoT Specialist with a unique dual background in Digital IT and Electromechanics. 
   Currently driving digital transformation initiatives, I specialize in building comprehensive systems—from secure, 
