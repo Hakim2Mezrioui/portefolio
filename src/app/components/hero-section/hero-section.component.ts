@@ -30,11 +30,16 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    VanillaTilt.init(this.tiltElement.nativeElement, {
-      max: 25,
-      speed: 400,
-      glare: true,
-      'max-glare': 0.5,
-    });
+    const isTouchOrSmallScreen =
+      window.matchMedia('(max-width: 900px)').matches ||
+      'ontouchstart' in window;
+    if (!isTouchOrSmallScreen && this.tiltElement?.nativeElement) {
+      VanillaTilt.init(this.tiltElement.nativeElement, {
+        max: 25,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.5,
+      });
+    }
   }
 }
