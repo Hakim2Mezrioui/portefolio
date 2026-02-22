@@ -112,7 +112,7 @@ img:not(.profile-image) {
     max-width: 380px;
   }
   .hero-image-bg {
-    animation: none;
+    animation: blob-float 10s ease-in-out infinite;
   }
   .hero-image-tilt {
     transform: none;

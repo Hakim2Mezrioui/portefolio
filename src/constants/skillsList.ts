@@ -30,7 +30,7 @@ export const Languages: SkillModel[] = [
   ),
   new SkillModel(
     'Java',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Java_logo.svg/1200px-Java_logo.svg.png'
+    'https://cdn-icons-png.flaticon.com/512/5968/5968282.png'
   ),
   new SkillModel(
     'C++',
