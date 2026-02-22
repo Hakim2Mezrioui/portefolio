@@ -80,8 +80,44 @@
 
 .icons-group a:hover,
 .icons .icon-link:hover {
-  transform: scale(1.08);
+  transform: scale(1.08) translateY(-2px);
   background-color: rgba(30, 41, 59, 0.08);
+}
+
+/* Header : pas de bordure en bas, entrée en cascade */
+:host-context(nav) .icons::after {
+  display: none;
+}
+
+:host-context(nav) .icons-inner {
+  animation: none;
+  bottom: 0;
+}
+
+:host-context(nav) .icons-group li {
+  opacity: 0;
+  animation: header-icon-appear 0.45s ease-out forwards;
+}
+
+:host-context(nav) .icons-group li:nth-child(1) { animation-delay: 1.05s; }
+:host-context(nav) .icons-group li:nth-child(2) { animation-delay: 1.2s; }
+:host-context(nav) .icons-group li:nth-child(3) { animation-delay: 1.35s; }
+
+:host-context(nav) .icons-inner > .icon-link--email {
+  opacity: 0;
+  animation: header-icon-appear 0.45s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes header-icon-appear {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .icons-group a:focus-visible,
