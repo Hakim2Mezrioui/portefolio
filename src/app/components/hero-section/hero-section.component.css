@@ -33,6 +33,18 @@ section {
   justify-content: center;
   transform-style: preserve-3d;
   perspective: 1200px;
+  animation: hero-card-circle-reveal 0.9s ease-out forwards;
+}
+
+@keyframes hero-card-circle-reveal {
+  from {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0.6;
+  }
+  to {
+    clip-path: circle(150% at 50% 50%);
+    opacity: 1;
+  }
 }
 
 .hero-image-bg {
@@ -48,8 +60,19 @@ section {
   border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
   background: linear-gradient(135deg, #b8d4ec 0%, #c4b5e0 45%, #d4c8e8 100%);
   z-index: 0;
-  animation: blob-float 14s ease-in-out infinite;
+  animation: blob-grow 0.85s ease-out forwards, blob-float 14s ease-in-out 0.9s infinite;
   pointer-events: none;
+}
+
+@keyframes blob-grow {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes blob-float {
@@ -93,6 +116,17 @@ section {
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.12)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
   transform: translateZ(30px);
   display: block;
+  opacity: 0;
+  animation: profile-image-reveal 0.8s ease-out 0.9s forwards;
+}
+
+@keyframes profile-image-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 img:not(.profile-image) {
@@ -124,7 +158,7 @@ img:not(.profile-image) {
     max-width: 380px;
   }
   .hero-image-bg {
-    animation: blob-float 14s ease-in-out infinite;
+    animation: blob-grow 0.85s ease-out forwards, blob-float 14s ease-in-out 0.9s infinite;
   }
   .hero-image-tilt {
     transform: none;
