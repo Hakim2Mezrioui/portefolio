@@ -5,10 +5,10 @@
       <i [class]="expertise.icon"></i>
     </div>
     <div class="card-title">
-      <h3>{{ expertise.title }}</h3>
+      <h3>{{ expertise.titleKey | translate }}</h3>
     </div>
     <div class="card-body">
-      {{expertise.desc}}
+      {{ expertise.descKey | translate }}
     </div>
 
   </div>

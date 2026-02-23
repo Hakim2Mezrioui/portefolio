@@ -4,23 +4,23 @@ import { databases, designeTools, electronicsSkills, Frameworks, Languages, mont
 
 export const statiquesList: StatiqueModel[] = [
   new StatiqueModel(
-    'PROJECTS',
+    'statiques.projects',
     projects.length.toString(),
-    'bi bi-kanban-fill fs-1' // Icône pour les projets (kanban)
+    'bi bi-kanban-fill fs-1'
   ),
   new StatiqueModel(
-    'SKILLS',
+    'statiques.skills',
     `${Languages.length + Frameworks.length + databases.length + designeTools.length + montageTools.length + electronicsSkills.length + othersSkills.length}`,
-    'bi bi-lightbulb fs-1' // Icône pour les compétences (idée ou connaissance)
+    'bi bi-lightbulb fs-1'
   ),
   new StatiqueModel(
-    'CERTIFICATIONS',
+    'statiques.certifications',
     '20',
-    'bi bi-award fs-1' // Icône pour les certifications (trophée)
+    'bi bi-award fs-1'
   ),
   new StatiqueModel(
-    'FRAMEWORKS',
+    'statiques.frameworks',
     Frameworks.length.toString(),
-    'bi bi-tools fs-1' // Icône pour les frameworks (outils)
+    'bi bi-tools fs-1'
   ),
 ];

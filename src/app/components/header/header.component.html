@@ -1,27 +1,27 @@
 <nav>
   <ul>
     <li>
-      <a href="#home"><i class="bi bi-house-fill fs-6"></i> Home</a>
+      <a href="#home"><i class="bi bi-house-fill fs-6"></i> {{ 'nav.home' | translate }}</a>
     </li>
     <li>
-      <a href="#mySkills"><i class="bi bi-tools fs-6"></i> My skills</a>
+      <a href="#mySkills"><i class="bi bi-tools fs-6"></i> {{ 'nav.mySkills' | translate }}</a>
     </li>
     <li>
       <a href="#myExpertises"
-        ><i class="bi bi-person-fill fs-6"></i> My expertises</a
+        ><i class="bi bi-person-fill fs-6"></i> {{ 'nav.myExpertises' | translate }}</a
       >
     </li>
     <li>
       <a href="#myProjects"
-        ><i class="bi bi-clipboard2-pulse-fill fs-6"></i> My projects</a
+        ><i class="bi bi-clipboard2-pulse-fill fs-6"></i> {{ 'nav.myProjects' | translate }}</a
       >
     </li>
     <li>
-      <a href="#myCareer"><i class="bi bi-briefcase-fill fs-6"></i> Career</a>
+      <a href="#myCareer"><i class="bi bi-briefcase-fill fs-6"></i> {{ 'nav.career' | translate }}</a>
     </li>
     <li>
       <a href="#contactMe"
-        ><i class="bi bi-envelope-at-fill fs-6"></i> Contact me</a
+        ><i class="bi bi-envelope-at-fill fs-6"></i> {{ 'nav.contactMe' | translate }}</a
       >
     </li>
   </ul>
@@ -39,7 +39,14 @@
     class="bi bi-arrow-left fs-3"
   ></i>
   <img alt="logo" src="./assets/images/LOGO_PORFOLIO.png" />
-  <app-icons-link></app-icons-link>
+  <div class="nav-right-group">
+    <app-icons-link></app-icons-link>
+    <span class="nav-group-sep" aria-hidden="true">|</span>
+    <div class="lang-switcher">
+      <button type="button" class="lang-btn" [class.active]="currentLang === 'en'" (click)="setLang('en')" aria-label="English">EN</button>
+      <button type="button" class="lang-btn" [class.active]="currentLang === 'fr'" (click)="setLang('fr')" aria-label="Français">FR</button>
+    </div>
+  </div>
 </nav>
 
 <div #menuHeader>

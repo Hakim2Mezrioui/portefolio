@@ -1,17 +1,17 @@
 <div id="mySkills" class="skills-body">
   <div class="skills-content container">
-    <app-custom-title title="MY SKILLS"></app-custom-title>
+    <app-custom-title [title]="'skills.sectionTitle' | translate"></app-custom-title>
     <div class="skills container">
-      <app-skill-item title="Languages" [skills]="languages"></app-skill-item>
-      <app-skill-item title="Frameworks" [skills]="frameworks"></app-skill-item>
-      <app-skill-item title="Databases" [skills]="databases"></app-skill-item>
-      <app-skill-item title="Dsigne" [skills]="designeTools"></app-skill-item>
-      <app-skill-item title="Montage" [skills]="montageTools"></app-skill-item>
+      <app-skill-item [title]="'skills.languages' | translate" [skills]="languages"></app-skill-item>
+      <app-skill-item [title]="'skills.frameworks' | translate" [skills]="frameworks"></app-skill-item>
+      <app-skill-item [title]="'skills.databases' | translate" [skills]="databases"></app-skill-item>
+      <app-skill-item [title]="'skills.design' | translate" [skills]="designeTools"></app-skill-item>
+      <app-skill-item [title]="'skills.montage' | translate" [skills]="montageTools"></app-skill-item>
       <app-skill-item
-        title="Electronics"
+        [title]="'skills.electronics' | translate"
         [skills]="electronicsSkills"
       ></app-skill-item>
-      <app-skill-item title="Others" [skills]="othersSkills"></app-skill-item>
+      <app-skill-item [title]="'skills.others' | translate" [skills]="othersSkills"></app-skill-item>
     </div>
     <span></span>
   </div>

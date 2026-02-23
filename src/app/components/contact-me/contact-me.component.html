@@ -1,31 +1,31 @@
 <div id="contactMe" class="contact-body">
   <div class="contact-content container">
-    <app-custom-title title="CONTACT ME"></app-custom-title>
+    <app-custom-title [title]="'contact.sectionTitle' | translate"></app-custom-title>
     <form (ngSubmit)="sendEmail(f)" #f="ngForm">
       <div class="form-group">
         <span data-aos="fade-right">
-          <input name="firstName" [(ngModel)]="contact.firstName" placeholder="First Name" required />
+          <input name="firstName" [(ngModel)]="contact.firstName" [placeholder]="'contact.firstName' | translate" required />
           <div class="backdrop"></div>
         </span>
         <span data-aos="fade-left">
-          <input name="lastName" [(ngModel)]="contact.lastName" placeholder="Last Name" required />
+          <input name="lastName" [(ngModel)]="contact.lastName" [placeholder]="'contact.lastName' | translate" required />
           <div class="backdrop"></div>
         </span>
       </div>
       <div class="form-group">
         <span data-aos="fade-bottom">
-          <input name="email" [(ngModel)]="contact.email" placeholder="Email" type="email" required />
+          <input name="email" [(ngModel)]="contact.email" [placeholder]="'contact.email' | translate" type="email" required />
           <div class="backdrop"></div>
         </span>
       </div>
       <div class="form-group">
         <span data-aos="zoom-in">
-          <textarea name="message" [(ngModel)]="contact.message" placeholder="Message" required></textarea>
+          <textarea name="message" [(ngModel)]="contact.message" [placeholder]="'contact.message' | translate" required></textarea>
           <div class="backdrop"></div>
         </span>
       </div>
       <div data-aos="zoom-out" class="form-action">
-        <button type="submit">SEND MESSAGE</button>
+        <button type="submit">{{ 'contact.sendMessage' | translate }}</button>
       </div>
     </form>
   </div>

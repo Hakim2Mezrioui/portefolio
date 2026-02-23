@@ -9,6 +9,7 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
+import { TranslateService } from 'src/app/services/translate.service';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +20,18 @@ export class HeaderComponent implements OnInit {
   @ViewChild('menuHeader') menuHeader!: ElementRef;
   @ViewChild('menuIcon') menuIcon!: ElementRef;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(
+    private renderer: Renderer2,
+    public translate: TranslateService
+  ) {}
+
+  get currentLang() {
+    return this.translate.currentLang;
+  }
+
+  setLang(lang: 'en' | 'fr') {
+    this.translate.setLanguage(lang);
+  }
 
   ngOnInit(): void {}
 

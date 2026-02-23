@@ -19,7 +19,7 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: #1e293b;
   box-sizing: border-box;
 }
@@ -89,9 +89,41 @@
   display: none;
 }
 
+/* Footer : pas de bordure en bas */
+:host-context(.footer-social) .icons::after {
+  display: none;
+}
+
+/* Menu header : pas de bordure en bas, pas d'animation slide */
+:host-context(.menu-header) .icons::after {
+  display: none;
+}
+
+:host-context(.menu-header) .icons {
+  min-height: auto;
+  padding-bottom: 0;
+  overflow: visible;
+}
+
+:host-context(.menu-header) .icons-inner {
+  animation: none;
+  bottom: 0;
+}
+
+:host-context(.footer-social) .icons-inner {
+  animation: none;
+  bottom: 0;
+}
+
 :host-context(nav) .icons-inner {
   animation: none;
   bottom: 0;
+}
+
+:host-context(nav) .icons {
+  min-height: auto;
+  padding-bottom: 0;
+  overflow: visible;
 }
 
 :host-context(nav) .icons-group li {

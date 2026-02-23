@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { TranslateService } from 'src/app/services/translate.service';
 
 @Component({
   selector: 'app-menu-header',
@@ -8,9 +9,17 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class MenuHeaderComponent implements OnInit {
   @Output() isClose = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
+  }
+
+  get currentLang() {
+    return this.translate.currentLang;
+  }
+
+  setLang(lang: 'en' | 'fr') {
+    this.translate.setLanguage(lang);
   }
 
   close() {

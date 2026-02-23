@@ -4,15 +4,14 @@
       <img [src]="data.logo" alt="logo" width="50" height="50" />
     </span>
     <span>
-      <!-- <h4 class="date">2018-2022</h4> -->
        <span class="dateAndSociete">
-        <h4 class="societe">{{data.societe}}</h4>
-         <h4 class="date">{{ data.date }}</h4>
+        <h4 class="societe">{{ data.societeKey | translate }}</h4>
+         <h4 class="date">{{ data.dateKey | translate }}</h4>
        </span>
-      <h3 class="title">{{ data.title }}</h3>
+      <h3 class="title">{{ data.titleKey | translate }}</h3>
     </span>
   </span>
   <p class="desc">
-    {{ data.desc }}
+    {{ data.descKey | translate }}
   </p>
 </div>

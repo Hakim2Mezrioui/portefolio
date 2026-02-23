@@ -1,7 +1,7 @@
 export class ProjectModel {
   constructor(
-    public title: string,
-    public description: string,
+    public titleKey: string,
+    public descriptionKey: string,
     public demoPath: string,
     public githubLink: string,
     public demoLink: string,

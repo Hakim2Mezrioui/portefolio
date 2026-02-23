@@ -30,27 +30,23 @@ import { ExpertiseModel } from 'src/app/models/expertiseModel';
 
 export const expertisesList: ExpertiseModel[] = [
   new ExpertiseModel(
-    'bi bi-palette', // Icon for design
-    'DESIGN',
-    `Specialized in graphic design and creating intuitive user interfaces. Adept with tools like Figma and Adobe XD.
-     Transforming creative ideas into visually appealing and functional designs.`
+    'bi bi-palette',
+    'expertises.cardDesignTitle',
+    'expertises.cardDesignDesc'
   ),
   new ExpertiseModel(
-    'bi bi-code-slash', // Icon for web and mobile development
-    'DEVELOPMENT',
-    `Skilled in building web and mobile applications using Angular, Node.js, and Flutter. Delivering robust
-     solutions for complex projects with focus on performance and user experience.`
+    'bi bi-code-slash',
+    'expertises.cardDevelopmentTitle',
+    'expertises.cardDevelopmentDesc'
   ),
   new ExpertiseModel(
-    'bi bi-motherboard', // Icon for electronics
-    'ELECTRONICS',
-    `Experienced in assembling, maintaining, and troubleshooting electronic systems. Expertise in automated
-     systems, acquired during hands-on work in electromechanics and electronics projects.`
+    'bi bi-motherboard',
+    'expertises.cardElectronicsTitle',
+    'expertises.cardElectronicsDesc'
   ),
   new ExpertiseModel(
-    'bi bi-diagram-3-fill', // Icon for automated systems
-    'AUTOMATED SYSTEMS',
-    `Expertise in designing and maintaining automated systems. Skilled in microcontroller programming and
-     optimizing production processes, ensuring system efficiency and performance.`
+    'bi bi-diagram-3-fill',
+    'expertises.cardAutomatedTitle',
+    'expertises.cardAutomatedDesc'
   ),
 ];

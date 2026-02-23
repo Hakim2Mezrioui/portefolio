@@ -10,7 +10,7 @@ import {
 import VanillaTilt from 'vanilla-tilt';
 import * as AOS from 'aos';
 import { HeroSectionModel } from 'src/app/models/heroSectionModel';
-import { heroSectionContent } from 'src/constants/heroSectionContent';
+import { TranslateService } from 'src/app/services/translate.service';
 
 @Component({
   selector: 'app-hero-section',
@@ -22,11 +22,22 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
   heroSectionContent!: HeroSectionModel;
 
-  constructor() {}
+  constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {
     AOS.init();
-    this.heroSectionContent = heroSectionContent;
+    this.updateContent();
+    this.translate.onLangChange.subscribe(() => this.updateContent());
+  }
+
+  private updateContent(): void {
+    const t = this.translate;
+    this.heroSectionContent = new HeroSectionModel(
+      t.translate('hero.welcome'),
+      t.translate('hero.myName'),
+      t.translate('hero.jobTitle'),
+      t.translate('hero.profile')
+    );
   }
 
   ngAfterViewInit() {

@@ -26,6 +26,7 @@ import { StatistiquesComponent } from './components/statistiques/statistiques.co
 import { StatistiqueItemComponent } from './components/statistique-item/statistique-item.component';
 import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
 import { OutsideClickDirective } from './directives/outside-click-directive.directive';
+import { TranslatePipe } from './pipes/translate.pipe';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { OutsideClickDirective } from './directives/outside-click-directive.dire
     StatistiqueItemComponent,
     MenuHeaderComponent,
     OutsideClickDirective,
+    TranslatePipe,
   ],
   imports: [
     BrowserModule,

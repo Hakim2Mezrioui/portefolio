@@ -4,17 +4,22 @@
   z-index: 3;
   border: none;
   height: 18em;
+  flex-shrink: 0;
 }
 
 .bg {
   background-color: white;
   transition: all 0.1s ease;
-  height: 18em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .card-icon {
   font-size: 3em;
   text-align: center;
+  flex-shrink: 0;
 }
 
 /* .card-icon i {
@@ -28,15 +33,18 @@
   font-weight: bold;
   font-family: calibro;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .card-body {
   text-align: justify;
-  display: -webkit-box; /* Creates a flexible box */
-  -webkit-box-orient: vertical; /* Sets the box to align vertically */
-  overflow: hidden; /* Hides any overflowing content */
-  text-overflow: ellipsis; /* Adds ellipsis (...) at the end if text overflows */
-  /* background-color: red; */
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  min-height: 0;
+  padding: 0 0.5em 0.5em;
+  font-size: 0.95em;
+  line-height: 1.4;
 }
 /* .card::before {
   content: "";

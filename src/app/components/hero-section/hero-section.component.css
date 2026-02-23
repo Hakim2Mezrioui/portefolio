@@ -237,8 +237,7 @@ section ul {
   margin-top: 3em;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  align-items: center;
 }
 
 .explore ul {
@@ -335,7 +334,7 @@ section ul {
 .welcome-word::before {
   content: "";
   width: 18.3em;
-  height: 2px;
+  height: 1px;
   background-color: black;
   position: absolute;
 }
@@ -371,16 +370,15 @@ section ul {
   margin: 4px 0 0px 0;
   padding-left: 0.2em;
   position: relative;
-  animation: start-my-name 1s ease forwards;
+  animation: start-job-title 1s ease forwards;
 }
 
 .icons {
   position: relative;
   overflow: visible;
   padding: 0;
-  bottom: 0.7em;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .icons-link {
@@ -389,14 +387,12 @@ section ul {
 
 .projects-link {
   position: relative;
-  bottom: 0.7em;
-  /* padding-bottom: 0.35em; */
 }
 
 .projects-link::after {
   content: "";
   width: 100%;
-  height: 2px;
+  height: 1px;
   position: absolute;
   background-color: #000000;
   left: 0;
@@ -435,7 +431,15 @@ section ul {
 }
 @keyframes start-my-name {
   from {
-    left: -9em;
+    left: -11em;
+  }
+  to {
+    left: 0.2em;
+  }
+}
+@keyframes start-job-title {
+  from {
+    left: -22em;
   }
   to {
     left: 0.2em;

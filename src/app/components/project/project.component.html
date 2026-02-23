@@ -19,9 +19,9 @@
       [attr.data-aos]="!reverse ? 'fade-left' : 'fade-right'"
       class="desc-project"
     >
-      <h3 class="title">{{ projectInfo.title }}</h3>
+      <h3 class="title">{{ projectInfo.titleKey | translate }}</h3>
       <p>
-        {{ projectInfo.description }}
+        {{ projectInfo.descriptionKey | translate }}
       </p>
       <div class="technologies">
         <span *ngFor="let technologie of projectInfo.technologies">{{

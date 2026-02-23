@@ -1,9 +1,9 @@
 export class CareerModel {
   constructor(
-    public date: string,
-    public title: string,
-    public desc: string,
+    public dateKey: string,
+    public titleKey: string,
+    public descKey: string,
     public logo: string,
-    public societe: string
+    public societeKey: string
   ) {}
 }
