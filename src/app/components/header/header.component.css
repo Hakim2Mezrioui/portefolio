@@ -216,9 +216,11 @@ img {
   position: fixed;
   top: 4.4em;
   left: -100%;
-  transition: left 0.5s ease; /* Transition pour le mouvement */
+  transition: left 0.5s ease;
   z-index: 10;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .menu-active {

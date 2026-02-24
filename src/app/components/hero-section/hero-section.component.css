@@ -146,7 +146,7 @@ img:not(.profile-image) {
     align-items: center;
     height: fit-content;
     min-height: auto;
-    gap: 100px;
+    gap: 50px;
     margin-top: 3em;
     padding-block: 5em;
   }
@@ -174,22 +174,77 @@ img:not(.profile-image) {
   section .content p {
     width: 100%;
   }
-}
-
-@media (max-width: 700px) {
   /* .content {
     zoom: 0.7;
     --webkit-zoom: 0.7;
   } */
 
+}
+
+@media (max-width: 700px) {
   section {
     gap: 50px;
+  }
+
+  .content h2 {
+    font-size: 48px;
   }
 }
 
 @media (max-width: 500px) {
   section {
     margin-top: 0%;
+    gap: 30px;
+    padding: 1.5rem;
+    padding-block: 4em;
+  }
+
+  .content {
+    max-width: 100%;
+    padding-inline: 0.5em;
+  }
+
+  .content h2 {
+    font-size: 38px;
+    margin-bottom: 0.3em;
+  }
+
+  .content h3 {
+    font-size: 22px;
+  }
+
+  .job-title {
+    font-size: 15px;
+  }
+
+  .content p {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .explore {
+    margin-top: 2em;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+
+  .content i {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 382px) {
+  .explore {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-link {
+    text-align: center;
   }
 }
 
@@ -238,6 +293,8 @@ section ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
 .explore ul {
