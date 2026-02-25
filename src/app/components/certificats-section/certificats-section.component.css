@@ -1,0 +1,41 @@
+.certificats-body {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  padding-block: 5em;
+  overflow: hidden;
+}
+
+.certificats-content {
+  margin-top: 2em;
+}
+
+.certificats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.cert-card-wrapper {
+  position: relative;
+}
+
+app-certificat-card {
+  display: block;
+}
+
+@media (max-width: 950px) {
+  .certificats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .certificats-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1em;
+  }
+}

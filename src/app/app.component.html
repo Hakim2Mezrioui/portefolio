@@ -1,3 +1,6 @@
+<app-preloader *ngIf="!isLoaded" (loaded)="onLoaded()"></app-preloader>
+
+<app-scroll-progress></app-scroll-progress>
 <app-header></app-header>
 
 <app-hero-section></app-hero-section>
@@ -6,12 +9,18 @@
 
 <app-my-expertises></app-my-expertises>
 
+<app-certificats-section></app-certificats-section>
+
 <app-projects-section></app-projects-section>
 
 <app-career></app-career>
+
+<app-temoignages-section></app-temoignages-section>
 
 <app-statistiques></app-statistiques>
 
 <app-contact-me></app-contact-me>
 
 <app-footer></app-footer>
+
+<app-scroll-to-top></app-scroll-to-top>

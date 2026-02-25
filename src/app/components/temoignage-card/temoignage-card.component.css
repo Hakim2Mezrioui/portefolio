@@ -1,0 +1,174 @@
+.temo-card {
+  background: white;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  display: flex;
+}
+
+.card-left-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #03346e;
+  transition: width 0.3s ease;
+}
+
+.temo-card:hover .card-left-bar {
+  width: 6px;
+}
+
+.card-content {
+  padding: 1.6em 1.5em 1.4em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1em;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.meta-date {
+  font-size: 0.72em;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.meta-relation {
+  font-size: 0.68em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #03346e;
+  background: rgba(3, 52, 110, 0.08);
+  padding: 0.25em 0.7em;
+  border-radius: 10px;
+}
+
+.quote-block {
+  position: relative;
+  flex: 1;
+}
+
+.quote-bg {
+  position: absolute;
+  right: -0.2em;
+  top: -0.5em;
+  font-size: 5em;
+  color: #03346e;
+  opacity: 0.05;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.quote-text {
+  font-size: 0.88em;
+  line-height: 1.75;
+  color: #333;
+  margin: 0;
+  font-style: italic;
+  position: relative;
+}
+
+.author-section {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  padding-top: 1em;
+  border-top: 1px solid #e9ecef;
+}
+
+.author-avatar {
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #03346e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(3, 52, 110, 0.25);
+}
+
+.author-avatar span {
+  color: white;
+  font-size: 0.95em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.author-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.author-name {
+  font-size: 0.95em;
+  font-weight: 800;
+  margin: 0;
+  color: #03346e;
+}
+
+.author-role {
+  font-size: 0.78em;
+  color: #555;
+  margin: 0.1em 0 0;
+  font-weight: 500;
+}
+
+.author-company {
+  font-size: 0.72em;
+  color: #999;
+  margin: 0.1em 0 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.linkedin-badge {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 8px;
+  background: #0a66c2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95em;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-radius 0.25s ease;
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.25);
+}
+
+.linkedin-badge:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(10, 102, 194, 0.4);
+}
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+@media (max-width: 500px) {
+  .card-content {
+    padding: 1.3em 1.2em 1.2em;
+  }
+
+  .author-avatar {
+    width: 2.8em;
+    height: 2.8em;
+  }
+
+  .quote-bg {
+    font-size: 3.5em;
+  }
+}

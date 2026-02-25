@@ -1,0 +1,20 @@
+<div class="cert-card">
+  <img [src]="certificat.image" [alt]="certificat.titleKey | translate" class="cert-image" />
+  <div class="overlay">
+    <div class="overlay-logo">
+      <img [src]="certificat.logo" [alt]="certificat.platformKey | translate" />
+    </div>
+    <h3 class="overlay-title">{{ certificat.titleKey | translate }}</h3>
+    <p class="overlay-platform">{{ certificat.platformKey | translate }} — {{ certificat.date }}</p>
+    <p class="overlay-desc">{{ certificat.descriptionKey | translate }}</p>
+    <a
+      class="overlay-verify"
+      [href]="certificat.verifyLink"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="bi bi-patch-check-fill"></i>
+      {{ 'certificats.verify' | translate }}
+    </a>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+.temoignages-body {
+  width: 100%;
+  background-color: #f1f5f9;
+  position: relative;
+  padding-block: 5em;
+  overflow: hidden;
+}
+
+.temoignages-content {
+  margin-top: 2em;
+}
+
+
+.temoignages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+app-temoignage-card {
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+app-temoignage-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(3, 52, 110, 0.12);
+}
+
+.temoignages-cta {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.linkedin-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  color: white;
+  background: #03346e;
+  text-decoration: none;
+  font-size: 0.95em;
+  font-weight: 600;
+  padding: 0.8em 2em;
+  border-radius: 4px;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(3, 52, 110, 0.25);
+}
+
+.linkedin-all-link:hover {
+  background-color: #0a66c2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.35);
+}
+
+@media (max-width: 950px) {
+  .temoignages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .temoignages-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1em;
+    gap: 1.5em;
+  }
+
+  .linkedin-all-link {
+    font-size: 0.85em;
+    padding: 0.7em 1.5em;
+  }
+}

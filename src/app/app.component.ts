@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portefolio-app';
+  isLoaded = false;
+
+  onLoaded(): void {
+    this.isLoaded = true;
+  }
 }

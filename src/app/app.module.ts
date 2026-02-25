@@ -17,7 +17,8 @@ import { MyExpertisesComponent } from './components/my-expertises/my-expertises.
 import { CardExpertiseComponent } from './components/card-expertise/card-expertise.component';
 import { CustomTitleComponent } from './components/custom-title/custom-title.component';
 import { SkillItemComponent } from './components/skill-item/skill-item.component';
-import { NgxSmoothScrollModule } from '@boatzako/ngx-smooth-scroll';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CareerCardComponent } from './components/career-card/career-card.component';
@@ -27,7 +28,14 @@ import { StatistiqueItemComponent } from './components/statistique-item/statisti
 import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
 import { OutsideClickDirective } from './directives/outside-click-directive.directive';
 import { TranslatePipe } from './pipes/translate.pipe';
-// import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CertificatCardComponent } from './components/certificat-card/certificat-card.component';
+import { CertificatsSectionComponent } from './components/certificats-section/certificats-section.component';
+import { TemoignageCardComponent } from './components/temoignage-card/temoignage-card.component';
+import { TemoignagesSectionComponent } from './components/temoignages-section/temoignages-section.component';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { ScrollProgressComponent } from './components/scroll-progress/scroll-progress.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,15 +59,25 @@ import { TranslatePipe } from './pipes/translate.pipe';
     MenuHeaderComponent,
     OutsideClickDirective,
     TranslatePipe,
+    CertificatCardComponent,
+    CertificatsSectionComponent,
+    TemoignageCardComponent,
+    TemoignagesSectionComponent,
+    ScrollToTopComponent,
+    ScrollProgressComponent,
+    PreloaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxSmoothScrollModule,
     FormsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-top-right',
       closeButton: true,
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      registrationStrategy: 'registerWhenStable:30000'
     }),
   ],
   providers: [],

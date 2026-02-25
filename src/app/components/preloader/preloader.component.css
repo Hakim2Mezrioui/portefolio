@@ -1,0 +1,56 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #03346e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8em;
+}
+
+.logo-text {
+  font-size: 3em;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.15em;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.loader-bar {
+  width: 8em;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  height: 100%;
+  background: white;
+  border-radius: 3px;
+  animation: fill 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes fill {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
+}

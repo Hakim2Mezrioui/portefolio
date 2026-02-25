@@ -11,7 +11,7 @@
     background-color: #333;
     color: #fff;
     padding: 40px 0;
-    z-index: 3;
+    z-index: 1000;
     position: relative;
     /* border-radius: 10px; */
     overflow-x: hidden;
@@ -101,7 +101,7 @@
     margin: 0;
 }
 
-@media (max-width: 1200px) { /* 768px */
+@media (max-width: 1200px) {
     .footer-content {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 20px;
@@ -112,5 +112,12 @@
     .footer-menu li {
       display: block;
       margin-bottom: 10px;
+    }
+    .footer-logo {
+      text-align: center;
+    }
+    .footer-social {
+      display: flex;
+      justify-content: center;
     }
 }

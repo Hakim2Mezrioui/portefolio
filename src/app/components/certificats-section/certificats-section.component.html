@@ -1,0 +1,16 @@
+<div id="myCertificats" class="certificats-body">
+  <app-custom-title [title]="'certificats.sectionTitle' | translate"></app-custom-title>
+  <div class="certificats-content">
+    <div class="certificats-grid">
+      <div
+        class="cert-card-wrapper"
+        *ngFor="let cert of certificats; let i = index"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        [attr.data-aos-delay]="i * 100"
+      >
+        <app-certificat-card [certificat]="cert"></app-certificat-card>
+      </div>
+    </div>
+  </div>
+</div>
