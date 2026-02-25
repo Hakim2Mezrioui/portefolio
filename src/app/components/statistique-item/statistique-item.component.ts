@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { StatiqueModel } from 'src/app/models/statiqueModel';
 
 @Component({
@@ -6,14 +6,6 @@ import { StatiqueModel } from 'src/app/models/statiqueModel';
   templateUrl: './statistique-item.component.html',
   styleUrls: ['./statistique-item.component.css']
 })
-export class StatistiqueItemComponent implements OnInit {
-  @Input("statique") statique!: StatiqueModel;
-
-  constructor() {
-    console.log(this.statique);
-  }
-
-  ngOnInit(): void {
-  }
-
+export class StatistiqueItemComponent {
+  @Input() statique!: StatiqueModel;
 }

@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 import { title } from 'process';
 import { SkillModel } from 'src/app/models/SkillModel';
-import * as AOS from 'aos';
 import {
   databases,
   designeTools,
@@ -45,7 +44,6 @@ export class SkillsSectionComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-    AOS.init();
   }
 
   ngAfterViewInit(): void {

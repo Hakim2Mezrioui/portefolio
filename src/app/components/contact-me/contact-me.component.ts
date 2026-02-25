@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import * as Aos from 'aos';
 import emailjs from 'emailjs-com';
 import { ToastrService } from 'ngx-toastr';
 
@@ -9,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.css'],
 })
-export class ContactMeComponent implements OnInit {
+export class ContactMeComponent {
   contact: {
     firstName: string;
     lastName: string;
@@ -23,10 +22,6 @@ export class ContactMeComponent implements OnInit {
   };
 
   constructor(private toastr: ToastrService) {}
-
-  ngOnInit(): void {
-    Aos.init();
-  }
 
   sendEmail(f: NgForm) {
     // Check if the form is valid

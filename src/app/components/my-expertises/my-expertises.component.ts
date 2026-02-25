@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import * as Aos from 'aos';
+import { Component } from '@angular/core';
 import { ExpertiseModel } from 'src/app/models/expertiseModel';
 import { expertisesList } from 'src/constants/expertisesList';
 
@@ -8,14 +7,10 @@ import { expertisesList } from 'src/constants/expertisesList';
   templateUrl: './my-expertises.component.html',
   styleUrls: ['./my-expertises.component.css']
 })
-export class MyExpertisesComponent implements OnInit {
+export class MyExpertisesComponent {
 
   constructor() {
     this.expertises = expertisesList;
-  }
-
-  ngOnInit(): void {
-    Aos.init();
   }
 
   expertises!: ExpertiseModel[];

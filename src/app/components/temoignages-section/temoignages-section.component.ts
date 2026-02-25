@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import * as Aos from 'aos';
+import { Component } from '@angular/core';
 import { TemoignageModel } from 'src/app/models/temoignageModel';
 import { temoignagesList } from 'src/constants/temoignagesList';
 
@@ -8,10 +7,6 @@ import { temoignagesList } from 'src/constants/temoignagesList';
   templateUrl: './temoignages-section.component.html',
   styleUrls: ['./temoignages-section.component.css'],
 })
-export class TemoignagesSectionComponent implements OnInit {
+export class TemoignagesSectionComponent {
   temoignages: TemoignageModel[] = temoignagesList;
-
-  ngOnInit(): void {
-    Aos.init();
-  }
 }

@@ -8,7 +8,6 @@ import {
   ViewChild,
 } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
-import * as AOS from 'aos';
 import { HeroSectionModel } from 'src/app/models/heroSectionModel';
 import { TranslateService } from 'src/app/services/translate.service';
 
@@ -25,7 +24,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {
-    AOS.init();
     this.updateContent();
     this.translate.onLangChange.subscribe(() => this.updateContent());
   }

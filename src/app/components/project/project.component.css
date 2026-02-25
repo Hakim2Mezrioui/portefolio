@@ -4,19 +4,28 @@
   align-items: center;
   margin-block: 5em;
   z-index: 3;
-  overflow-y: hidden;
 }
 
-.video {
+.video-wrapper {
   z-index: 3;
   width: 500px;
   height: fit-content;
 }
 
-video {
+.video {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.reverse-flex-direction .video {
+  border-radius: 0 10px 10px 0;
+}
+
+.reverse-flex-direction .desc-project {
+  border-radius: 10px 0 0 10px;
 }
 
 .reverse-flex-direction {
@@ -24,7 +33,6 @@ video {
 }
 
 .desc-project {
-  border: 1px solid;
   padding: 2.5em;
   height: 426px;
   width: 625px;
@@ -33,24 +41,27 @@ video {
   justify-content: space-between;
   background-color: white;
   z-index: 3;
+  text-align: justify;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.desc-project:hover {
+  box-shadow: 0 8px 32px rgba(3, 52, 110, 0.12);
 }
 
 .desc-project p {
-  line-height: 1.2em;
+  line-height: 1.6em;
   margin-bottom: 2em;
-}
-
-.desc-project {
-  text-align: justify;
-}
-
-.desc-project span {
-  background-color: lightgray;
+  color: #444;
+  font-size: 0.92em;
 }
 
 .title {
-  font-size: 2em;
-  margin-bottom: 0.2em;
+  font-size: 1.8em;
+  margin-bottom: 0.3em;
+  color: #03346e;
 }
 
 .technologies {
@@ -58,50 +69,93 @@ video {
   gap: 0.4em;
   flex-wrap: wrap;
 }
+
 .technologies span {
-  border-radius: 1em;
-  padding: 0.5em 1.4em;
-  height: 35px;
+  border-radius: 2em;
+  padding: 0.4em 1.1em;
+  font-size: 0.8em;
+  font-weight: 600;
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: black;
-  color: white;
+  background-color: rgba(3, 52, 110, 0.08);
+  color: #03346e;
+  transition: background-color 0.2s ease;
+}
+
+.technologies span:hover {
+  background-color: rgba(3, 52, 110, 0.16);
 }
 
 .links {
   display: flex;
-  justify-content: space-between;
-  margin-top: 1em;
-  font-size: 1.5em;
-}
-
-.links span:nth-child(2) {
-  display: flex;
-  gap: 0.5em;
-  background-color: white;
+  justify-content: flex-end;
+  margin-top: 1.2em;
+  gap: 0.8em;
 }
 
 .links a {
-  color: black;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  text-decoration: none;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-github {
+  background: #24292e;
+  color: white;
+}
+
+.link-github:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(36, 41, 46, 0.3);
+  color: white;
+}
+
+.link-demo {
+  background: #03346e;
+  color: white;
+}
+
+.link-demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(3, 52, 110, 0.3);
+  color: white;
 }
 
 @media (max-width: 1200px) {
-    /* justify-content: center; */
-    /* align-items: center; */
   .project {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    max-width: 625px;
   }
 
   .video {
-    width: 100%;
-    max-width: 625px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .reverse-flex-direction .video {
+    border-radius: 10px 10px 0 0;
   }
 
   .desc-project {
     max-width: 625px;
     width: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .reverse-flex-direction .desc-project {
+    border-radius: 0 0 10px 10px;
   }
 }
 
@@ -109,12 +163,22 @@ video {
   .desc-project {
     width: 100%;
     height: fit-content;
+    padding: 2em;
   }
 }
 
 @media (max-width: 560px) {
-  .video {
+  .video-wrapper {
     width: 100%;
     height: fit-content;
+  }
+
+  .title {
+    font-size: 1.4em;
+  }
+
+  .links a {
+    font-size: 0.78em;
+    padding: 0.45em 1em;
   }
 }

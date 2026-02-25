@@ -1,17 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
-import * as Aos from 'aos';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-custom-title',
   templateUrl: './custom-title.component.html',
   styleUrls: ['./custom-title.component.css'],
 })
-export class CustomTitleComponent implements OnInit {
+export class CustomTitleComponent {
   @Input('title') title!: string;
 
   constructor() {}
-
-  ngOnInit(): void {
-    Aos.init()
-  }
 }

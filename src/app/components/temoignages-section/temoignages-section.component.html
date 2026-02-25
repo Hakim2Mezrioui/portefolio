@@ -5,12 +5,9 @@
       <app-temoignage-card
         *ngFor="let temo of temoignages; let i = index"
         [temoignage]="temo"
-        data-aos="fade-up"
-        data-aos-duration="800"
-        [attr.data-aos-delay]="i * 150"
       ></app-temoignage-card>
     </div>
-    <div class="temoignages-cta" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+    <div class="temoignages-cta" data-aos="fade-up">
       <a
         class="linkedin-all-link"
         href="https://www.linkedin.com/in/hakim-mezrioui/details/recommendations/"

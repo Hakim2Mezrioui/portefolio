@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import * as Aos from 'aos';
+import { Component, Input } from '@angular/core';
 import { SkillModel } from 'src/app/models/SkillModel';
 
 @Component({
@@ -7,13 +6,9 @@ import { SkillModel } from 'src/app/models/SkillModel';
   templateUrl: './skill-item.component.html',
   styleUrls: ['./skill-item.component.css'],
 })
-export class SkillItemComponent implements OnInit {
+export class SkillItemComponent {
   @Input('skills') skills!: SkillModel[];
   @Input('title') title!: String;
 
   constructor() {}
-
-  ngOnInit(): void {
-    Aos.init();
-  }
 }

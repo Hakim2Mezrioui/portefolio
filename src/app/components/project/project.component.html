@@ -1,44 +1,33 @@
 <div class="container mb-4">
   <div #project class="project">
-    <div class="video">
-      <!-- <img
-          alt=""
-          src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_a_Project.jpg"
-          width="500"
-          height="300"
-        /> -->
+    <div
+      class="video-wrapper"
+      [attr.data-aos]="reverse ? 'slide-right' : 'slide-left'"
+      data-aos-duration="500"
+      data-aos-easing="ease-out-cubic"
+    >
       <video
         [src]="projectInfo.demoPath"
         autoplay
         loop
+        muted
+        playsinline
         class="video"
-        [attr.data-aos]="reverse ? 'fade-left' : 'fade-right'"
       ></video>
     </div>
-    <div
-      [attr.data-aos]="!reverse ? 'fade-left' : 'fade-right'"
-      class="desc-project"
-    >
+    <div class="desc-project">
       <h3 class="title">{{ projectInfo.titleKey | translate }}</h3>
-      <p>
-        {{ projectInfo.descriptionKey | translate }}
-      </p>
+      <p>{{ projectInfo.descriptionKey | translate }}</p>
       <div class="technologies">
-        <span *ngFor="let technologie of projectInfo.technologies">{{
-          technologie
-        }}</span>
+        <span *ngFor="let technologie of projectInfo.technologies">{{ technologie }}</span>
       </div>
-
       <div class="links">
-        <span></span>
-        <span>
-          <a [href]="projectInfo.githubLink" target="_blank">
-            <i class="bi bi-github"></i>
-          </a>
-          <a [href]="projectInfo.demoLink" target="_blank">
-            <i class="bi bi-box-arrow-right"></i>
-          </a>
-        </span>
+        <a class="link-github" [href]="projectInfo.githubLink" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+        <a class="link-demo" [href]="projectInfo.demoLink" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-box-arrow-up-right"></i> Demo
+        </a>
       </div>
     </div>
   </div>

@@ -3,21 +3,11 @@
   <div class="career-content container">
     <div class="experiences">
       <h3 class="title">{{ 'career.education' | translate }}</h3>
-      <app-career-card [data]="education" *ngFor="let education of educations"  data-aos="fade-top"></app-career-card>
-      <!-- <app-career-card data-aos="fade-top"></app-career-card>
-      <app-career-card data-aos="fade-top"></app-career-card>
-      <app-career-card data-aos="fade-top"></app-career-card> -->
+      <app-career-card [data]="education" *ngFor="let education of educations"></app-career-card>
     </div>
     <div class="education">
       <h3 class="title">{{ 'career.experience' | translate }}</h3>
-      <app-career-card
-        *ngFor="let experience of experiences"
-        [data]="experience"
-        data-aos="fade-top"
-      ></app-career-card>
-      <!-- <app-career-card data-aos="fade-top"></app-career-card>
-      <app-career-card data-aos="fade-top"></app-career-card>
-      <app-career-card data-aos="fade-top"></app-career-card> -->
+      <app-career-card *ngFor="let experience of experiences" [data]="experience"></app-career-card>
     </div>
   </div>
 </div>
