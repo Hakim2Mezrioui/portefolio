@@ -135,5 +135,23 @@ export const certificatsList: CertificatModel[] = [
     'https://www.sololearn.com/en/certificates/CC-TIHHC6M0', // verifyLink
     'https://blob.sololearn.com/avatars/sololearn.png', // logo (à remplacer par votre lien/chemin)
     '../assets/certificats/sololearn-angular.png.png' // image (à remplacer par votre lien/chemin)
+  ),
+  new CertificatModel(
+    'Python Essentials 1',
+    'Cisco / Python Institute',
+    'Maîtrise des bases de Python 3 : conception, développement, débogage de programmes, pensée algorithmique et utilisation de la bibliothèque standard.',
+    'certificats.pythonCiscoDesc', // descriptionKey → clé de traduction
+    'https://www.credly.com/badges/dc1ad7d7-386e-47f6-9708-5ddda8821e98/linked_in_profile', // verifyLink (Scannez le QR code de votre certificat pour obtenir le lien exact)
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1280px-Cisco_logo_blue_2016.svg.png', // logo (à remplacer par votre lien/chemin)
+    '../assets/certificats/python-cisco.jpg' // image (à remplacer par votre lien/chemin)
+  ),
+  new CertificatModel(
+    '1 Minute Typing Test - 73 WPM',
+    'typing.com',
+    'Validation d\'une vitesse de frappe performante de 73 mots par minute (WPM) avec une précision de 97 %.',
+    'certificats.typingDesc', // descriptionKey → clé de traduction
+    'https://www.typing.com/apiv1/student/tests/388929822/173295640/certificate?language=en&product_id=typing', // verifyLink
+    'https://pbs.twimg.com/profile_images/1489346106165272577/PrPRCB4k_400x400.jpg', // logo (à remplacer par votre lien/chemin)
+    '../assets/certificats/typing-certificate.png' // image (à remplacer par votre lien/chemin)
   )
 ];

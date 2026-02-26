@@ -5,6 +5,7 @@ export class ProjectModel {
     public demoPath: string,
     public githubLink: string,
     public demoLink: string,
-    public technologies: string[]
+    public technologies: string[],
+    public posterPath: string
   ) {}
 }

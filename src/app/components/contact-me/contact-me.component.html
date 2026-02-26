@@ -1,6 +1,9 @@
 <div id="contactMe" class="contact-body">
   <div class="contact-content container">
-    <app-custom-title [title]="'contact.sectionTitle' | translate"></app-custom-title>
+    <app-custom-title
+      [title]="'contact.sectionTitle' | translate"
+      [subtitle]="'contact.subtitle' | translate">
+    </app-custom-title>
     <form (ngSubmit)="sendEmail(f)" #f="ngForm">
       <div class="form-group">
         <span data-aos="fade-right">

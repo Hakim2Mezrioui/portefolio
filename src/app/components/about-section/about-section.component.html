@@ -1,5 +1,8 @@
 <div id="myAbout" class="about-body">
-  <app-custom-title [title]="'about.sectionTitle' | translate"></app-custom-title>
+  <app-custom-title
+    [title]="'about.sectionTitle' | translate"
+    [subtitle]="'Who I am'">
+  </app-custom-title>
   <div class="about-content" data-aos="fade-up">
     <p class="about-intro">{{ 'about.intro' | translate }}</p>
     <a class="about-cta" href="#contactMe">{{ 'about.cta' | translate }}</a>

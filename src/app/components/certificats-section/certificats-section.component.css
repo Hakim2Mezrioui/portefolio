@@ -1,13 +1,16 @@
 .certificats-body {
   width: 100%;
-  background-color: white;
+  background-color: transparent;
   position: relative;
+  z-index: 2;
   padding-block: 5em;
   overflow: hidden;
 }
 
 .certificats-content {
   margin-top: 2em;
+  position: relative;
+  z-index: 1;
 }
 
 .certificats-grid {
@@ -21,6 +24,7 @@
 
 .cert-card-wrapper {
   position: relative;
+  z-index: 2;
 }
 
 app-certificat-card {

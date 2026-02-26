@@ -1,6 +1,9 @@
 <div id="mySkills" class="skills-body">
   <div class="skills-content container">
-    <app-custom-title [title]="'skills.sectionTitle' | translate"></app-custom-title>
+    <app-custom-title
+      [title]="'skills.sectionTitle' | translate"
+      [subtitle]="'Skills I Use'">
+    </app-custom-title>
     <div class="skills container">
       <app-skill-item [title]="'skills.languages' | translate" [skills]="languages"></app-skill-item>
       <app-skill-item [title]="'skills.frameworks' | translate" [skills]="frameworks"></app-skill-item>

@@ -29,9 +29,27 @@ export class ProjectComponent implements AfterViewInit {
       );
     }
 
-    const video = this.project.nativeElement.querySelector('video');
+    const video: HTMLVideoElement | null =
+      this.project.nativeElement.querySelector('video');
     if (video) {
-      video.addEventListener('loadeddata', () => AOS.refresh());
+      const tryPlay = () => {
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.then === 'function') {
+          playPromise.catch((err) => {
+            console.warn('Autoplay prevented or failed:', err);
+          });
+        }
+      };
+
+      if (video.readyState >= 2) {
+        tryPlay();
+        AOS.refresh();
+      } else {
+        video.addEventListener('loadeddata', () => {
+          tryPlay();
+          AOS.refresh();
+        });
+      }
     }
   }
 }
