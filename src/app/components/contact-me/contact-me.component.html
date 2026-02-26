@@ -25,11 +25,16 @@
         </span>
       </div>
       <div data-aos="zoom-out" class="form-action">
-        <button type="submit" [disabled]="isSending || !f.valid">
+        <button
+          type="submit"
+          [disabled]="isSending || !f.valid"
+          [class.loading]="isSending"
+        >
           <ng-container *ngIf="!isSending; else sending">
             {{ 'contact.sendMessage' | translate }}
           </ng-container>
           <ng-template #sending>
+            <span class="spinner"></span>
             Sending...
           </ng-template>
         </button>
