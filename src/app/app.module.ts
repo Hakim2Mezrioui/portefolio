@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
@@ -35,6 +36,7 @@ import { TemoignagesSectionComponent } from './components/temoignages-section/te
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 import { ScrollProgressComponent } from './components/scroll-progress/scroll-progress.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
+import { AboutSectionComponent } from './components/about-section/about-section.component';
 
 @NgModule({
   declarations: [
@@ -66,9 +68,11 @@ import { PreloaderComponent } from './components/preloader/preloader.component';
     ScrollToTopComponent,
     ScrollProgressComponent,
     PreloaderComponent,
+    AboutSectionComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ToastrModule.forRoot({

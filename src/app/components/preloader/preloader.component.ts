@@ -17,6 +17,6 @@ export class PreloaderComponent implements OnInit {
   private hide(): void {
     if (this.hiding) return;
     this.hiding = true;
-    setTimeout(() => this.loaded.emit(), 600);
+    this.loaded.emit();
   }
 }

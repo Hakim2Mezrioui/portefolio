@@ -25,7 +25,14 @@
         </span>
       </div>
       <div data-aos="zoom-out" class="form-action">
-        <button type="submit">{{ 'contact.sendMessage' | translate }}</button>
+        <button type="submit" [disabled]="isSending || !f.valid">
+          <ng-container *ngIf="!isSending; else sending">
+            {{ 'contact.sendMessage' | translate }}
+          </ng-container>
+          <ng-template #sending>
+            Sending...
+          </ng-template>
+        </button>
       </div>
     </form>
   </div>

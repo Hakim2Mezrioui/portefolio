@@ -10,6 +10,7 @@ export const translations: Record<Lang, Record<string, string | Record<string, s
       career: 'Career',
       certificats: 'Certifications',
       temoignages: 'Testimonials',
+      about: 'About',
       contactMe: 'Contact me',
     },
     hero: {
@@ -94,6 +95,11 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       edu4Desc: "Studies in physics and chemistry, developing skills in scientific analysis and logical reasoning.",
       edu4Societe: 'Technical High School',
     },
+    about: {
+      sectionTitle: 'ABOUT ME',
+      intro: 'I am a Full Stack Software Engineer and IoT Specialist based in Morocco, with a dual background in Digital IT and Electromechanics. I focus on building secure web platforms and smart hardware integrations, and I enjoy bridging the physical and digital worlds—whether through facial recognition systems or AI-driven applications. I am looking for opportunities where I can solve complex technical challenges and deliver user-centric solutions.',
+      cta: 'Want to discuss?',
+    },
     contact: {
       sectionTitle: 'CONTACT ME',
       firstName: 'First Name',
@@ -163,6 +169,7 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       career: 'Parcours',
       certificats: 'Certifications',
       temoignages: 'Témoignages',
+      about: 'À propos',
       contactMe: 'Contact',
     },
     hero: {
@@ -246,6 +253,11 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
       edu4Title: 'Baccalauréat Sciences Physiques et Chimiques',
       edu4Desc: "Études en physique et chimie, développant des compétences en analyse scientifique et raisonnement logique.",
       edu4Societe: 'Lycée Technique',
+    },
+    about: {
+      sectionTitle: 'À PROPOS',
+      intro: 'Ingénieur Full Stack et spécialiste IoT basé au Maroc, je cumule une formation en informatique et en électromécanique. Je conçois des plateformes web sécurisées et des intégrations matériel intelligent, et j’aime faire le lien entre le physique et le numérique—que ce soit via des systèmes de reconnaissance faciale ou des applications pilotées par l’IA. Je recherche des opportunités où je peux relever des défis techniques complexes et livrer des solutions centrées utilisateur.',
+      cta: 'Envie d’en discuter ?',
     },
     contact: {
       sectionTitle: 'ME CONTACTER',
