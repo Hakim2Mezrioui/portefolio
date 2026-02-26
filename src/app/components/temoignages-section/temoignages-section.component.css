@@ -1,13 +1,16 @@
 .temoignages-body {
   width: 100%;
-  background-color: #f1f5f9;
+  background-color: transparent;
   position: relative;
+  z-index: 10;
   padding-block: 5em;
   overflow: hidden;
 }
 
 .temoignages-content {
   margin-top: 2em;
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -22,6 +25,8 @@
 
 app-temoignage-card {
   display: block;
+  position: relative;
+  z-index: 2;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
