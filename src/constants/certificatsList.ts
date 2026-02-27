@@ -162,5 +162,23 @@ export const certificatsList: CertificatModel[] = [
     '#', // verifyLink (Pas de lien de vérification sur ce document)
     '../assets/images/Logo-walid-issa-academy.png', // logo (à remplacer par votre lien/chemin)
     '../assets/certificats/certificat_walid_issa_electronique.png' // image (à remplacer par votre lien/chemin)
+  ),
+  new CertificatModel(
+    'Intro to Machine Learning',
+    'Kaggle',
+    'Fondamentaux du Machine Learning : exploration de données, création de modèles prédictifs (arbres de décision, forêts aléatoires) et validation avec Python.',
+    'certificats.kaggleIntroMLDesc', // descriptionKey → clé de traduction
+    'https://www.kaggle.com/learn/certification/hakimmezrioui/intro-to-machine-learning', // verifyLink (à remplacer par le lien de votre profil Kaggle)
+    '../assets/images/kaggle-logo.png', // logo (à remplacer par votre lien/chemin)
+    '../assets/certificats/hakim mezrioui - Intro to Machine Learning.png' // image (à remplacer par votre lien/chemin)
+  ),
+  new CertificatModel(
+    'Pandas',
+    'Kaggle',
+    'Maîtrise de la manipulation de données avec Pandas : création de DataFrames, indexation, regroupement, tri et traitement des données manquantes en Python.',
+    'certificats.kagglePandasDesc', // descriptionKey → clé de traduction
+    'https://www.kaggle.com/learn/certification/hakimmezrioui/pandas', // verifyLink (à remplacer par le lien de votre profil Kaggle)
+    '../assets/images/kaggle-logo.png', // logo (à remplacer par votre lien/chemin)
+    '../assets/certificats/hakim mezrioui - Pandas.png' // image (à remplacer par votre lien/chemin)
   )
 ];
