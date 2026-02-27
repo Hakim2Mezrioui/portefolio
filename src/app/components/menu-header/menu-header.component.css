@@ -126,35 +126,47 @@ ul a:hover::after {
 
 /* ── Responsive ── */
 
+/* 2 blocs en colonne, même point de départ */
 @media (max-width: 900px) {
   .menu-header {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: fit-content;
     padding-block: 1.5em;
     gap: 1.25em;
   }
+
+  .menu-header ul {
+    flex-wrap: wrap;
+    gap: 0.5em 1.5rem;
+  }
 }
 
+/* 1 colonne : tout part du même point (alignement à gauche) */
 @media (max-width: 750px) {
   .menu-header {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding-block: 2em;
+    gap: 1.5rem;
   }
 
   .menu-header ul {
     flex-direction: column;
+    gap: 0.5em;
+    padding-left: 0;
   }
 
   ul a {
-    display: block;
+    display: inline-flex;
+    align-items: center;
   }
 
   .menu-right-group {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 1rem;
   }
 }
@@ -162,7 +174,7 @@ ul a:hover::after {
 @media (max-width: 500px) {
   .menu-header {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.5em;
     padding-block: 2em;
     padding-inline: 1.5em;
@@ -174,7 +186,7 @@ ul a:hover::after {
     gap: 0.5em;
     transform: none;
     padding-block: 0;
-    padding-left: 1em;
+    padding-left: 0;
   }
 
   ul a {
@@ -183,7 +195,7 @@ ul a:hover::after {
 
   .menu-right-group {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
   }
 }
