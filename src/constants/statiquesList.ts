@@ -1,6 +1,15 @@
 import { StatiqueModel } from 'src/app/models/statiqueModel';
 import { projects } from './projectsList';
-import { databases, designeTools, electronicsSkills, Frameworks, Languages, montageTools, othersSkills } from './skillsList';
+import {
+  databases,
+  designeTools,
+  electronicsSkills,
+  Frameworks,
+  Languages,
+  montageTools,
+  othersSkills,
+} from './skillsList';
+import { certificatsList } from './certificatsList';
 
 export const statiquesList: StatiqueModel[] = [
   new StatiqueModel(
@@ -15,7 +24,7 @@ export const statiquesList: StatiqueModel[] = [
   ),
   new StatiqueModel(
     'statiques.certifications',
-    '20',
+    certificatsList.length.toString(),
     'bi bi-award fs-1'
   ),
   new StatiqueModel(

@@ -2,6 +2,29 @@ import { ProjectModel } from 'src/app/models/projectModel';
 
 export const projects: ProjectModel[] = [
   new ProjectModel(
+    'projects.smartCaravanTitle',
+    'projects.smartCaravanDesc',
+    './assets/demos/presentation_of_caravan.mp4',
+    'https://github.com/Hakim2Mezrioui',
+    'https://www.linkedin.com/posts/hakim-mezrioui_ia-iot-smartcaravane-activity-7367617270568677376--rqH?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfAJw4BTEqh4S6K_knB28t2ecKi2rcVzGQ',
+    [
+      'Flutter',
+      'Dart',
+      'Angular',
+      'Tailwind CSS',
+      'Java',
+      'Spring Boot',
+      'Python',
+      'ESP32',
+      'Arduino Mega',
+      'UDP',
+      'UART',
+      'Ollama (LLaMA3)',
+      'AI Agents',
+    ],
+    '../assets/demos/thumbnail_Smart_Caravane.png'
+  ),
+  new ProjectModel(
     'projects.velvetTableTitle',
     'projects.velvetTableDesc',
     './assets/demos/restaurant.mp4',

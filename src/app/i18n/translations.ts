@@ -46,6 +46,9 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       reseauxProDesc: 'This platform provides valuable insights into the importance of professional networks, offering essential information on their benefits, tips for effective networking, and objectives for building and maintaining professional relationships. Users can explore various resources that highlight how a robust network can enhance career opportunities, facilitate collaboration, and foster personal growth. With a focus on actionable advice and strategic networking practices, this website aims to empower individuals to leverage their connections and thrive in their professional journeys.',
       infobibliophileTitle: 'INFOBIBLIOPHILE',
       infobibliophileDesc: 'Infobibliophile is a unique platform dedicated to the complete management of books, divided into a web version and a mobile application. The web platform enables users to efficiently manage users, books, categories, and other content.',
+      smartCaravanTitle: 'SMART CARAVAN',
+      smartCaravanDesc:
+        'Smart Caravan is an all-in-one connected caravan ecosystem designed to solve both transportation and accommodation challenges for supporters during AFCON 2026 and the 2030 World Cup in Morocco. A fleet of IoT-enabled caravans is managed through a web-based admin dashboard and a mobile reservation app, while on-device AI agents assist users autonomously throughout their journey and stay.',
     },
     expertises: {
       sectionTitle: 'MY EXPERTISES',
@@ -214,6 +217,9 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
       reseauxProDesc: 'Cette plateforme présente l’importance des réseaux professionnels : bénéfices, conseils pour un networking efficace et objectifs pour construire et entretenir des relations professionnelles. Les utilisateurs peuvent explorer des ressources montrant comment un réseau solide favorise les opportunités de carrière, la collaboration et la croissance personnelle. Avec des conseils concrets et des pratiques de networking stratégiques, le site vise à aider chacun à s’appuyer sur ses relations et à progresser professionnellement.',
       infobibliophileTitle: 'INFOBIBLIOPHILE',
       infobibliophileDesc: 'Infobibliophile est une plateforme dédiée à la gestion complète des livres, avec une version web et une application mobile. La version web permet de gérer utilisateurs, livres, catégories et autres contenus.',
+      smartCaravanTitle: "SMART CARAVAN",
+      smartCaravanDesc:
+        'Face aux défis logistiques majeurs attendus lors de la CAN 2026 et de la Coupe du Monde 2030 au Maroc, Smart Caravan apporte une solution tout-en-un innovante aux problématiques de transport et de logement des supporters. Une flotte de caravanes connectées, pilotée via un tableau de bord administrateur web et une application mobile de réservation, s’appuie sur des agents d’IA embarqués pour assister les utilisateurs de manière autonome tout au long de leur trajet et de leur séjour.',
     },
     expertises: {
       sectionTitle: 'MES EXPERTISES',
