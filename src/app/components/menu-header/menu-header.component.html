@@ -1,53 +1,57 @@
 <div class="menu-header">
-  <ul>
-    <li (click)="close()">
-      <a href="#home">
-        <i class="bi bi-house-fill"></i>
-        <span> {{ 'nav.home' | translate }} </span>
-      </a>
-    </li>
-    <li (click)="close()">
-      <a href="#myCareer">
-        <i class="bi bi-briefcase-fill"></i>
-        <span> {{ 'nav.career' | translate }} </span>
-      </a>
-    </li>
-    <li (click)="close()">
-      <a href="#mySkills">
-        <i class="bi bi-tools"></i>
-        <span> {{ 'nav.mySkills' | translate }} </span>
-      </a>
-    </li>
-    <li (click)="close()">
-      <a href="#myProjects">
-        <i class="bi bi-clipboard2-pulse-fill"></i>
-        <span> {{ 'nav.myProjects' | translate }} </span>
-      </a>
-    </li>
-    <li (click)="close()">
-      <a href="#myCertificats">
-        <i class="bi bi-award-fill"></i>
-        <span> {{ 'nav.certificats' | translate }} </span>
-      </a>
-    </li>
-    <li (click)="close()">
-      <a href="#myTemoignages">
-        <i class="bi bi-chat-quote-fill"></i>
-        <span> {{ 'nav.temoignages' | translate }} </span>
-      </a>
-    </li>
-    <li (click)="close()">
-      <a href="#contactMe">
-        <i class="bi bi-envelope-at-fill"></i>
-        <span> {{ 'nav.contactMe' | translate }} </span>
-      </a>
-    </li>
-  </ul>
+  <div class="menu-header-inner">
+  <nav class="menu-header-nav" aria-label="Main navigation">
+    <ul>
+      <li (click)="close()">
+        <a href="#home">
+          <i class="bi bi-house-fill"></i>
+          <span>{{ 'nav.home' | translate }}</span>
+        </a>
+      </li>
+      <li (click)="close()">
+        <a href="#mySkills">
+          <i class="bi bi-tools"></i>
+          <span>{{ 'nav.mySkills' | translate }}</span>
+        </a>
+      </li>
+      <li (click)="close()">
+        <a href="#myProjects">
+          <i class="bi bi-clipboard2-pulse-fill"></i>
+          <span>{{ 'nav.myProjects' | translate }}</span>
+        </a>
+      </li>
+      <li (click)="close()">
+        <a href="#myCareer">
+          <i class="bi bi-briefcase-fill"></i>
+          <span>{{ 'nav.career' | translate }}</span>
+        </a>
+      </li>
+      <li (click)="close()">
+        <a href="#myCertificats">
+          <i class="bi bi-award-fill"></i>
+          <span>{{ 'nav.certificats' | translate }}</span>
+        </a>
+      </li>
+      <li (click)="close()">
+        <a href="#myTemoignages">
+          <i class="bi bi-chat-quote-fill"></i>
+          <span>{{ 'nav.temoignages' | translate }}</span>
+        </a>
+      </li>
+      <li (click)="close()">
+        <a href="#contactMe">
+          <i class="bi bi-envelope-at-fill"></i>
+          <span>{{ 'nav.contactMe' | translate }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
   <div class="menu-right-group">
     <div class="menu-lang-switcher">
       <button type="button" class="menu-lang-btn" [class.active]="currentLang === 'en'" (click)="setLang('en')" aria-label="English">EN</button>
       <button type="button" class="menu-lang-btn" [class.active]="currentLang === 'fr'" (click)="setLang('fr')" aria-label="Français">FR</button>
     </div>
     <app-icons-link></app-icons-link>
+  </div>
   </div>
 </div>

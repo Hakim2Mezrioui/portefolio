@@ -3,7 +3,7 @@
 .menu-header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   height: 7em;
   padding-inline: 3em;
@@ -15,12 +15,24 @@
   box-sizing: border-box;
 }
 
+.menu-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 /* ── Navigation links ── */
+
+.menu-header-nav {
+  display: flex;
+  align-items: center;
+}
 
 .menu-header ul {
   list-style: none;
   display: flex;
-  gap: 1em;
+  flex-wrap: wrap;
+  gap: 0.75em 1.5em;
   margin: 0;
   padding: 0;
 }
@@ -29,7 +41,7 @@
   padding: 0;
 }
 
-ul a {
+.menu-header ul a {
   text-decoration: none;
   color: #011d41;
   position: relative;
@@ -38,14 +50,14 @@ ul a {
   gap: 0.4em;
 }
 
-ul a i {
+.menu-header ul a i {
   display: inline-flex;
   justify-content: center;
   width: 1.5em;
   flex-shrink: 0;
 }
 
-ul a::after {
+.menu-header ul a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -56,7 +68,7 @@ ul a::after {
   transition: all 0.1s ease;
 }
 
-ul a:hover::after {
+.menu-header ul a:hover::after {
   width: 100%;
 }
 
@@ -66,6 +78,7 @@ ul a:hover::after {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  margin-left: 2rem;
 }
 
 /* ── Lang switcher pill ── */
@@ -126,14 +139,22 @@ ul a:hover::after {
 
 /* ── Responsive ── */
 
-/* 2 blocs en colonne, même point de départ */
+/* 2 blocs en colonne, même indentation à gauche */
 @media (max-width: 900px) {
   .menu-header {
-    flex-direction: column;
     justify-content: flex-start;
+    flex-direction: column;
     align-items: flex-start;
     height: fit-content;
     padding-block: 1.5em;
+    padding-inline: 2em;
+    gap: 1.25em;
+  }
+
+  .menu-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
     gap: 1.25em;
   }
 
@@ -141,16 +162,31 @@ ul a:hover::after {
     flex-wrap: wrap;
     gap: 0.5em 1.5rem;
   }
+
+  .menu-right-group {
+    margin-left: 0;
+  }
 }
 
-/* 1 colonne : tout part du même point (alignement à gauche) */
+/* 1 colonne : même indentation pour tous les blocs */
 @media (max-width: 750px) {
   .menu-header {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding-block: 2em;
+    padding-inline: 2em;
     gap: 1.5rem;
+  }
+
+  .menu-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu-header-nav {
+    width: 100%;
   }
 
   .menu-header ul {
@@ -159,7 +195,7 @@ ul a:hover::after {
     padding-left: 0;
   }
 
-  ul a {
+  .menu-header ul a {
     display: inline-flex;
     align-items: center;
   }
@@ -168,6 +204,7 @@ ul a:hover::after {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+    margin-left: 0;
   }
 }
 
@@ -180,6 +217,14 @@ ul a:hover::after {
     padding-inline: 1.5em;
   }
 
+  .menu-header-inner {
+    width: 100%;
+  }
+
+  .menu-header-nav {
+    width: 100%;
+  }
+
   .menu-header ul {
     flex-direction: column;
     align-items: flex-start;
@@ -189,7 +234,7 @@ ul a:hover::after {
     padding-left: 0;
   }
 
-  ul a {
+  .menu-header ul a {
     display: inline-flex;
   }
 
@@ -197,6 +242,7 @@ ul a:hover::after {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+    margin-left: 0;
   }
 }
 
