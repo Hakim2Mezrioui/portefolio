@@ -153,5 +153,14 @@ export const certificatsList: CertificatModel[] = [
     'https://www.typing.com/apiv1/student/tests/388929822/173295640/certificate?language=en&product_id=typing', // verifyLink
     'https://pbs.twimg.com/profile_images/1489346106165272577/PrPRCB4k_400x400.jpg', // logo (à remplacer par votre lien/chemin)
     '../assets/certificats/typing-certificate.png' // image (à remplacer par votre lien/chemin)
+  ),
+  new CertificatModel(
+    'Professional Practical Electronics Design Courses',
+    'Walid Issa Academy',
+    'Fondamentaux de l\'ingénierie matérielle : participation active aux cours professionnels dédiés à la conception pratique de circuits électroniques.',
+    'certificats.walidIssaDesc', // descriptionKey → clé de traduction
+    '#', // verifyLink (Pas de lien de vérification sur ce document)
+    '../assets/images/Logo-walid-issa-academy.png', // logo (à remplacer par votre lien/chemin)
+    '../assets/certificats/certificat_walid_issa_electronique.png' // image (à remplacer par votre lien/chemin)
   )
 ];
