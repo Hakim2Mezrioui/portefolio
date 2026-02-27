@@ -1,16 +1,25 @@
 .temoignages-body {
   width: 100%;
-  background-color: transparent;
   position: relative;
-  z-index: 10;
   padding-block: 5em;
   overflow: hidden;
+}
+
+.temoignages-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: rgb(241, 245, 249);
+}
+
+.temoignages-fg {
+  position: relative;
+  z-index: 10;
 }
 
 .temoignages-content {
   margin-top: 2em;
   position: relative;
-  z-index: 1;
 }
 
 
