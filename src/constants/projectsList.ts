@@ -25,6 +25,15 @@ export const projects: ProjectModel[] = [
     '../assets/demos/thumbnail_Smart_Caravane.png'
   ),
   new ProjectModel(
+    'projects.htechTitle',
+    'projects.htechDesc',
+    '../assets/demos/h-tech_demo.mp4',
+    'https://github.com/Hakim2Mezrioui',
+    'https://h-tech-two.vercel.app/',
+    ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Radix UI', 'React Router', 'Laravel', 'Vercel'],
+    '../assets/demos/h-tech.png'
+  ),
+  new ProjectModel(
     'projects.velvetTableTitle',
     'projects.velvetTableDesc',
     './assets/demos/restaurant.mp4',

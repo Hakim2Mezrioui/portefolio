@@ -49,6 +49,9 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       smartCaravanTitle: 'SMART CARAVAN',
       smartCaravanDesc:
         'Smart Caravan is an all-in-one connected caravan ecosystem designed to solve both transportation and accommodation challenges for supporters during AFCON 2026 and the 2030 World Cup in Morocco. A fleet of IoT-enabled caravans is managed through a web-based admin dashboard and a mobile reservation app, while on-device AI agents assist users autonomously throughout their journey and stay.',
+      htechTitle: 'H-Tech',
+      htechDesc:
+        'Full-featured e-commerce application for selling tech products. The platform delivers an optimal user experience with an intuitive interface, fully responsive design, and smooth navigation from product catalog to cart management. Continuous deployment is handled via Vercel.',
     },
     expertises: {
       sectionTitle: 'MY EXPERTISES',
@@ -220,6 +223,9 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
       smartCaravanTitle: "SMART CARAVAN",
       smartCaravanDesc:
         'Face aux défis logistiques majeurs attendus lors de la CAN 2026 et de la Coupe du Monde 2030 au Maroc, Smart Caravan apporte une solution tout-en-un innovante aux problématiques de transport et de logement des supporters. Une flotte de caravanes connectées, pilotée via un tableau de bord administrateur web et une application mobile de réservation, s’appuie sur des agents d’IA embarqués pour assister les utilisateurs de manière autonome tout au long de leur trajet et de leur séjour.',
+      htechTitle: 'H-Tech',
+      htechDesc:
+        "Développement d'une application e-commerce complète et performante dédiée à la vente d'articles technologiques. La plateforme a été pensée pour offrir une expérience utilisateur optimale, avec une interface intuitive, un design entièrement responsive et une navigation fluide dans le catalogue produit jusqu'à la gestion du panier d'achat. Le déploiement continu est assuré via Vercel.",
     },
     expertises: {
       sectionTitle: 'MES EXPERTISES',
