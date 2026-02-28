@@ -17,7 +17,7 @@ export const temoignagesList: TemoignageModel[] = [
     '',
     'temoignages.temo2Text',
     '',
-    'https://www.linkedin.com/in/roumaissaa-tahrany-a73993266',
+    'https://www.linkedin.com/in/roumaissa%C3%A2-tahrany-a73993266/',
     'Juin 2024',
     'Collègue'
   ),
