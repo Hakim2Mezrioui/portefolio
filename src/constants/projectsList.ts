@@ -27,7 +27,7 @@ export const projects: ProjectModel[] = [
   new ProjectModel(
     'projects.htechTitle',
     'projects.htechDesc',
-    '../assets/demos/h-tech_demo.mp4',
+    './assets/demos/h-tech_demo.mp4',
     'https://github.com/Hakim2Mezrioui',
     'https://h-tech-two.vercel.app/',
     ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Radix UI', 'React Router', 'Laravel', 'Vercel'],
@@ -36,7 +36,7 @@ export const projects: ProjectModel[] = [
   new ProjectModel(
     'projects.um6ssHelpdeskTitle',
     'projects.um6ssHelpdeskDesc',
-    '../assets/demos/tickets-app.mp4',
+    './assets/demos/tickets-app.mp4',
     'https://github.com/AnasOudadsse/ticketing-app',
     '#',
     ['React', 'Vite', 'Tailwind CSS', 'Radix UI', 'Chakra UI', 'Recharts', 'Axios'],
