@@ -34,6 +34,15 @@ export const projects: ProjectModel[] = [
     '../assets/demos/h-tech.png'
   ),
   new ProjectModel(
+    'projects.um6ssHelpdeskTitle',
+    'projects.um6ssHelpdeskDesc',
+    '../assets/demos/tickets-app.mp4',
+    'https://github.com/AnasOudadsse/ticketing-app',
+    '#',
+    ['React', 'Vite', 'Tailwind CSS', 'Radix UI', 'Chakra UI', 'Recharts', 'Axios'],
+    '../assets/demos/tickets-app.png'
+  ),
+  new ProjectModel(
     'projects.velvetTableTitle',
     'projects.velvetTableDesc',
     './assets/demos/restaurant.mp4',

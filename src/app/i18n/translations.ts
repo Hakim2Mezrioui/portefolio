@@ -52,6 +52,9 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       htechTitle: 'H-Tech',
       htechDesc:
         'Full-featured e-commerce application for selling tech products. The platform delivers an optimal user experience with an intuitive interface, fully responsive design, and smooth navigation from product catalog to cart management. Continuous deployment is handled via Vercel.',
+      um6ssHelpdeskTitle: 'Ticketing App',
+      um6ssHelpdeskDesc:
+        'Web platform developed for UM6SS University to digitize and streamline IT support request management. Users can create support tickets while the IT team benefits from a structured handling tool. The system provides full traceability of interventions and advanced analytical dashboards to monitor team performance (resolution time, workload per technician) and generate exportable reports.',
     },
     expertises: {
       sectionTitle: 'MY EXPERTISES',
@@ -226,6 +229,9 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
       htechTitle: 'H-Tech',
       htechDesc:
         "Développement d'une application e-commerce complète et performante dédiée à la vente d'articles technologiques. La plateforme a été pensée pour offrir une expérience utilisateur optimale, avec une interface intuitive, un design entièrement responsive et une navigation fluide dans le catalogue produit jusqu'à la gestion du panier d'achat. Le déploiement continu est assuré via Vercel.",
+      um6ssHelpdeskTitle: 'Ticketing App',
+      um6ssHelpdeskDesc:
+        "Plateforme web développée pour l'Université UM6SS visant à digitaliser et optimiser la gestion des réclamations informatiques. L'application permet aux utilisateurs de créer des tickets d'assistance et offre au support IT un outil de prise en charge structuré. Elle intègre un système de traçabilité totale des interventions et des tableaux de bord analytiques avancés pour suivre les performances de l'équipe (temps de résolution, charge de travail par technicien) et générer des rapports exportables.",
     },
     expertises: {
       sectionTitle: 'MES EXPERTISES',
