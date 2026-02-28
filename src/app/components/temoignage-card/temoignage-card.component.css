@@ -75,6 +75,31 @@
   margin: 0;
   font-style: italic;
   position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quote-read-more {
+  font-size: 0.75em;
+  margin-top: 0.5em;
+  font-style: normal;
+}
+
+.quote-read-more a {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.quote-read-more a:hover {
+  text-decoration: underline;
 }
 
 .author-section {
@@ -121,6 +146,12 @@
   color: #555;
   margin: 0.1em 0 0;
   font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .author-company {

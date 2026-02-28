@@ -4,10 +4,10 @@ export const temoignagesList: TemoignageModel[] = [
   new TemoignageModel(
     'Nadia ABIDI',
     'temoignages.temo1Position',
-    'ISTA Hay Hassani I',
+    '',
     'temoignages.temo1Text',
     '',
-    'https://www.linkedin.com/in/',
+    'https://www.linkedin.com/in/nadia-abidi-manager',
     'Juin 2024',
     'Manager'
   ),
@@ -17,7 +17,7 @@ export const temoignagesList: TemoignageModel[] = [
     '',
     'temoignages.temo2Text',
     '',
-    'https://www.linkedin.com/in/',
+    'https://www.linkedin.com/in/roumaissaa-tahrany-a73993266',
     'Juin 2024',
     'Collègue'
   ),
@@ -27,7 +27,7 @@ export const temoignagesList: TemoignageModel[] = [
     '',
     'temoignages.temo3Text',
     '',
-    'https://www.linkedin.com/in/',
+    'https://www.linkedin.com/in/anass-essadikine',
     'Juin 2024',
     'Collègue'
   ),
@@ -37,18 +37,28 @@ export const temoignagesList: TemoignageModel[] = [
     '',
     'temoignages.temo4Text',
     '',
-    'https://www.linkedin.com/in/',
+    'https://www.linkedin.com/in/anass-azeroual-it',
     'Juin 2024',
     'Senior'
   ),
+  // new TemoignageModel(
+  //   'Fatima-ezzahra EL KAWKABI',
+  //   'temoignages.temo5Position',
+  //   '',
+  //   'temoignages.temo5Text',
+  //   '',
+  //   'https://www.linkedin.com/in/',
+  //   'Juin 2024',
+  //   'Collègue'
+  // ),
   new TemoignageModel(
-    'Fatima-ezzahra EL KAWKABI',
-    'temoignages.temo5Position',
+    'Zakaria BOUTOUIL',
+    'temoignages.temo6Position',
     '',
-    'temoignages.temo5Text',
+    'temoignages.temo6Text',
     '',
-    'https://www.linkedin.com/in/',
-    'Juin 2024',
-    'Collègue'
+    'https://www.linkedin.com/in/zakaria-boutouil',
+    'Fév. 2026',
+    'Senior'
   ),
 ];

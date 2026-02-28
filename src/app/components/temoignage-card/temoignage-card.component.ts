@@ -9,6 +9,8 @@ import { TemoignageModel } from 'src/app/models/temoignageModel';
 export class TemoignageCardComponent {
   @Input() temoignage!: TemoignageModel;
 
+  readonly recommendationsUrl = 'https://www.linkedin.com/in/hakim-mezrioui/details/recommendations/?detailScreenTabIndex=0';
+
   get initials(): string {
     return this.temoignage.name
       .split(' ')

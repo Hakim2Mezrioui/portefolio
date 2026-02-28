@@ -49,12 +49,17 @@ export const projects: ProjectModel[] = [
     'https://github.com/Hakim2Mezrioui',
     '#',
     [
-      'Angular 20 (SSR)',
+      'Angular',
       'Tailwind CSS',
       'Angular Material',
+      'Biostar',
+      'Biostar API',
       'jsPDF',
       'xlsx',
       'html5-qrcode',
+      'Laravel',
+      'MySQL',
+      'SqlServer',
     ],
     '../assets/demos/absence-app.png'
   ),

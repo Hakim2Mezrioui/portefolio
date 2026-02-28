@@ -11,6 +11,12 @@
     <div class="quote-block">
       <i class="bi bi-quote quote-bg"></i>
       <p class="quote-text">{{ temoignage.textKey | translate }}</p>
+      <p class="quote-read-more">
+        <a [href]="recommendationsUrl" target="_blank" rel="noopener noreferrer">
+          {{ 'temoignages.readMoreOnLinkedin' | translate }}
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+      </p>
     </div>
     <div class="author-section">
       <div class="author-avatar">
