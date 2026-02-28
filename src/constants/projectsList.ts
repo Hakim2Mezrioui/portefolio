@@ -43,6 +43,22 @@ export const projects: ProjectModel[] = [
     '../assets/demos/tickets-app.png'
   ),
   new ProjectModel(
+    'projects.absenceAppTitle',
+    'projects.absenceAppDesc',
+    '../assets/demos/absence-demo.mp4',
+    '#',
+    '#',
+    [
+      'Angular 20 (SSR)',
+      'Tailwind CSS',
+      'Angular Material',
+      'jsPDF',
+      'xlsx',
+      'html5-qrcode',
+    ],
+    '../assets/demos/absence-app.png'
+  ),
+  new ProjectModel(
     'projects.velvetTableTitle',
     'projects.velvetTableDesc',
     './assets/demos/restaurant.mp4',

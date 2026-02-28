@@ -55,6 +55,9 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       um6ssHelpdeskTitle: 'Ticketing App',
       um6ssHelpdeskDesc:
         'Web platform developed for UM6SS University to digitize and streamline IT support request management. Users can create support tickets while the IT team benefits from a structured handling tool. The system provides full traceability of interventions and advanced analytical dashboards to monitor team performance (resolution time, workload per technician) and generate exportable reports.',
+      absenceAppTitle: 'Absence-App',
+      absenceAppDesc:
+        'Modern web application for streamlined, automated management of student absences, with direct integration to the Biostar access control system. Built with a strong focus on UX/UI, the platform secures attendance tracking for regular classes and exam sessions, including QR code scanning. It includes an advanced reporting module allowing administrators to generate and export detailed reports (PDF and Excel) per student over selected periods.',
     },
     expertises: {
       sectionTitle: 'MY EXPERTISES',
@@ -232,6 +235,9 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
       um6ssHelpdeskTitle: 'Ticketing App',
       um6ssHelpdeskDesc:
         "Plateforme web développée pour l'Université UM6SS visant à digitaliser et optimiser la gestion des réclamations informatiques. L'application permet aux utilisateurs de créer des tickets d'assistance et offre au support IT un outil de prise en charge structuré. Elle intègre un système de traçabilité totale des interventions et des tableaux de bord analytiques avancés pour suivre les performances de l'équipe (temps de résolution, charge de travail par technicien) et générer des rapports exportables.",
+      absenceAppTitle: 'Absence-App',
+      absenceAppDesc:
+        "Développement d'une application web moderne dédiée à la gestion fluide et automatisée des absences étudiantes, en interfaçage direct avec le système de contrôle d'accès Biostar. Conçue avec une attention particulière portée à l'expérience utilisateur (UX/UI), la plateforme sécurise le suivi des présences pour les cours réguliers et les sessions d'examens, notamment via un système de scan de QR codes. Elle intègre un module de reporting avancé permettant aux administrateurs de générer et d'exporter des bilans détaillés (PDF et Excel) pour chaque étudiant sur des périodes ciblées.",
     },
     expertises: {
       sectionTitle: 'MES EXPERTISES',
