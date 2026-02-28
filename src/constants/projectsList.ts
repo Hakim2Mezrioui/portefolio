@@ -46,7 +46,7 @@ export const projects: ProjectModel[] = [
     'projects.absenceAppTitle',
     'projects.absenceAppDesc',
     '../assets/demos/absence-demo.mp4',
-    '#',
+    'https://github.com/Hakim2Mezrioui',
     '#',
     [
       'Angular 20 (SSR)',
