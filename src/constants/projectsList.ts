@@ -134,7 +134,7 @@ export const projects: ProjectModel[] = [
     'projects.infobibliophileDesc',
     './assets/demos/infobibliophile_plateform.mp4',
     'https://github.com/Hakim2Mezrioui/infobibliophile-app',
-    '# ',
+    '#',
     [
       'Angular',
       'TypeScript',
