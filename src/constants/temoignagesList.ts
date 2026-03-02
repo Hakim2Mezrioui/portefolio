@@ -2,6 +2,16 @@ import { TemoignageModel } from 'src/app/models/temoignageModel';
 
 export const temoignagesList: TemoignageModel[] = [
   new TemoignageModel(
+    'Driss CHARAI',
+    'temoignages.temo7Position',
+    '',
+    'temoignages.temo7Text',
+    '',
+    'https://www.linkedin.com/in/driss-charai-42b001222/',
+    'Mars 2026',
+    'Manager'
+  ),
+  new TemoignageModel(
     'Nadia ABIDI',
     'temoignages.temo1Position',
     '',

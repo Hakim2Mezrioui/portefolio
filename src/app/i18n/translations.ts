@@ -189,6 +189,11 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
         'I had the opportunity to work regularly with Hakim and can attest to his professionalism and the quality of his work. He is a highly competent developer with excellent technical mastery and a real ability to solve problems effectively. He quickly understands requirements and always proposes clear, well-suited solutions. Beyond his technical skills, Hakim is a person who listens, is collaborative and always ready to help his team. He maintains excellent professional relationships and contributes to a positive work environment. I highly recommend Hakim to any organization looking for a serious, committed and reliable developer.',
       temo6Date: 'February 2026',
       temo6Relation: 'Colleague',
+      temo7Position: 'Certified PMP® Project Manager | Information Systems Engineer',
+      temo7Text:
+        "I had the pleasure of working with Hakim Mezrioui at UM6SS, where he holds the position of IT & IoT developer. As a project manager, I appreciated his professionalism, technical rigor, and strong sense of responsibility. Hakim stands out through his solid command of development environments, his ability to quickly understand business needs, and his talent for proposing relevant and effective technical solutions. He is highly autonomous while remaining collaborative and team-oriented, which greatly facilitates project progress. His involvement in IT and IoT projects, as well as his ability to solve complex technical problems in a structured and efficient way, make him a valuable asset for any organization. I highly recommend Hakim for any opportunity requiring technical expertise, reliability, and commitment.",
+      temo7Date: 'March 2026',
+      temo7Relation: 'Manager',
       verifiedCount: 'verified LinkedIn recommendations',
     },
   },
@@ -380,6 +385,11 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
         "J'ai eu l'occasion d'échanger régulièrement avec Hakim, et je peux témoigner de son professionnalisme et de la qualité de son travail. C'est un développeur très compétent, avec une excellente maîtrise technique et une vraie capacité à résoudre des problèmes de manière efficace. Il comprend rapidement les besoins et propose toujours des solutions claires et adaptées. Au-delà de ses compétences techniques, Hakim est une personne à l'écoute, collaborative et toujours prête à aider son équipe. Il entretient d'excellentes relations professionnelles et contribue à créer un environnement de travail positif. Je recommande vivement Hakim à toute organisation à la recherche d'un développeur sérieux, engagé et fiable.",
       temo6Date: 'Fév. 2026',
       temo6Relation: 'Collègue',
+      temo7Position: 'Chef de projet certifié PMP® | Ingénieur SI en Systèmes d’Information',
+      temo7Text:
+        "J’ai eu le plaisir de travailler avec Hakim Mezrioui au sein de l’UM6SS, où il occupe le poste de développeur IT & IoT. En tant que chef de projet, j’ai pu apprécier son professionnalisme, sa rigueur technique et son sens des responsabilités. Hakim se distingue par sa solide maîtrise des environnements de développement, sa capacité à comprendre rapidement les besoins métiers et à proposer des solutions techniques pertinentes et efficaces. Il fait preuve d’une grande autonomie tout en restant collaboratif et orienté équipe, ce qui facilite considérablement l’avancement des projets. Son implication dans les projets IT et IoT, ainsi que sa capacité à résoudre des problématiques techniques complexes avec méthode et efficacité, en font un atout précieux pour toute organisation. Je recommande vivement Hakim pour toute opportunité nécessitant expertise technique, fiabilité et engagement.",
+      temo7Date: 'Mars 2026',
+      temo7Relation: 'Manager',
       verifiedCount: 'recommandations LinkedIn vérifiées',
     },
   },
