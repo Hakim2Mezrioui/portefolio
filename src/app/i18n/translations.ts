@@ -194,6 +194,11 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
         "I had the pleasure of working with Hakim Mezrioui at UM6SS, where he holds the position of IT & IoT developer. As a project manager, I appreciated his professionalism, technical rigor, and strong sense of responsibility. Hakim stands out through his solid command of development environments, his ability to quickly understand business needs, and his talent for proposing relevant and effective technical solutions. He is highly autonomous while remaining collaborative and team-oriented, which greatly facilitates project progress. His involvement in IT and IoT projects, as well as his ability to solve complex technical problems in a structured and efficient way, make him a valuable asset for any organization. I highly recommend Hakim for any opportunity requiring technical expertise, reliability, and commitment.",
       temo7Date: 'March 2026',
       temo7Relation: 'Manager',
+      temo8Position: 'FULL-STACK Web and Mobile Developer | AI & Workflow Automation Builder',
+      temo8Text:
+        "Hakim Mezrioui and I have built a partnership that spans both the classroom and the workplace. We've collaborated on multiple projects, and honestly, whatever we build, we build better together. Hakim has a unique ability to stay grounded and focused, no matter what technical or logistical hurdles a project throws our way. From late-night problem-solving to successfully delivering end-to-end solutions, we've overcome every challenge as a team. He's a highly skilled, dedicated professional and an amazing friend. Any organization would be incredibly lucky to have his drive and talent.",
+      temo8Date: 'March 2026',
+      temo8Relation: 'Colleague',
       verifiedCount: 'verified LinkedIn recommendations',
     },
   },
@@ -390,6 +395,11 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
         "J’ai eu le plaisir de travailler avec Hakim Mezrioui au sein de l’UM6SS, où il occupe le poste de développeur IT & IoT. En tant que chef de projet, j’ai pu apprécier son professionnalisme, sa rigueur technique et son sens des responsabilités. Hakim se distingue par sa solide maîtrise des environnements de développement, sa capacité à comprendre rapidement les besoins métiers et à proposer des solutions techniques pertinentes et efficaces. Il fait preuve d’une grande autonomie tout en restant collaboratif et orienté équipe, ce qui facilite considérablement l’avancement des projets. Son implication dans les projets IT et IoT, ainsi que sa capacité à résoudre des problématiques techniques complexes avec méthode et efficacité, en font un atout précieux pour toute organisation. Je recommande vivement Hakim pour toute opportunité nécessitant expertise technique, fiabilité et engagement.",
       temo7Date: 'Mars 2026',
       temo7Relation: 'Manager',
+      temo8Position: 'Développeur Full-Stack Web et Mobile | Créateur de solutions IA et d’automatisation de workflows',
+      temo8Text:
+        "Hakim Mezrioui et moi avons construit un partenariat qui dépasse la salle de classe et le travail. Nous avons collaboré sur plusieurs projets, et honnêtement, tout ce que nous construisons, nous le construisons mieux ensemble. Hakim a une capacité unique à rester ancré et concentré, quels que soient les défis techniques ou logistiques d’un projet. Des sessions de résolution de problèmes en fin de soirée à la livraison de solutions de bout en bout, nous avons surmonté chaque défi en équipe. C’est un professionnel très compétent, dévoué, et un ami formidable. Toute organisation aurait une chance incroyable d’avoir son dynamisme et son talent.",
+      temo8Date: 'Mars 2026',
+      temo8Relation: 'Collègue',
       verifiedCount: 'recommandations LinkedIn vérifiées',
     },
   },
