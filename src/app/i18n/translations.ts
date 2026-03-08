@@ -20,6 +20,7 @@ export const translations: Record<Lang, Record<string, string | Record<string, s
       profile: `I am a Full Stack Software Engineer and IoT Specialist with a unique dual background in Digital IT and Electromechanics. Currently driving digital transformation initiatives, I specialize in building comprehensive systems—from secure, scalable web platforms to smart hardware integrations.
 
 My diverse expertise allows me to seamlessly connect the physical and digital worlds. Whether I am developing a facial recognition attendance system or architecting an AI-driven mobile application, I am deeply passionate about solving complex technical challenges and delivering impactful, user-centric technologies.`,
+      signature: "I don't just code interfaces; I connect the physical world to the digital.",
       viewMyWork: 'View my work',
     },
     skills: {
@@ -153,6 +154,10 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       cert4Title: 'Responsive Web Design',
       cert4Platform: 'freeCodeCamp',
       cert4Desc: 'HTML, CSS, Flexbox, Grid, and responsive design principles for building accessible and mobile-friendly web pages.',
+      cognitiveClassPythonDesc:
+        'Foundational Python for Data Science: data structures, object-oriented programming, file handling, Pandas, NumPy, and working with APIs.',
+      cognitiveClassDataVisDesc:
+        'Data visualization mastery: creating varied charts and interactive geospatial maps with Matplotlib, Seaborn, and Folium.',
     },
     temoignages: {
       sectionTitle: 'TESTIMONIALS',
@@ -199,6 +204,12 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
         "Hakim Mezrioui and I have built a partnership that spans both the classroom and the workplace. We've collaborated on multiple projects, and honestly, whatever we build, we build better together. Hakim has a unique ability to stay grounded and focused, no matter what technical or logistical hurdles a project throws our way. From late-night problem-solving to successfully delivering end-to-end solutions, we've overcome every challenge as a team. He's a highly skilled, dedicated professional and an amazing friend. Any organization would be incredibly lucky to have his drive and talent.",
       temo8Date: 'March 2026',
       temo8Relation: 'Colleague',
+      temo9Position:
+        'Full Stack Software Engineer // .NET Core, Azure Serverless, React, Angular // Design of Secure and Scalable Solutions',
+      temo9Text:
+        'I had the pleasure of teaching Hakim Mezrioui in my Cross-Platform Development with Flutter course as part of the DAISI program at Faculté des Sciences Ain Chock and he was, without a doubt, one of the most motivated and capable students I have had. From day one, Hakim stood out for his proactivity and eagerness to learn. He never just followed the curriculum he explored, experimented, and always came back with smart questions. His ability to grasp complex concepts quickly and apply them practically was genuinely impressive. This was confirmed brilliantly through his Final Year Project: SmartCaravane, a fully autonomous smart caravan ecosystem with real-time IoT control via both a Flutter mobile app and a Spring Boot/Angular web platform. The project combined embedded systems (ESP32, Arduino, multiple sensors), AI/ML integration, and clean full-stack development—all delivered with a real-world vision tied to Morocco’s upcoming World Cup 2030. It was one of the most complete and ambitious PFE projects I have seen. Hakim is technically versatile, proactive, and professionally minded. He will be a strong asset to any team working in mobile development, IoT, or AI-driven systems. I recommend him without hesitation.',
+      temo9Date: 'March 2026',
+      temo9Relation: 'Mentor',
       verifiedCount: 'verified LinkedIn recommendations',
     },
   },
@@ -221,6 +232,7 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       profile: `Je suis ingénieur Full Stack et spécialiste IoT, avec une double formation en informatique et en électromécanique. Je pilote des projets de transformation numérique et conçois des systèmes complets—des plateformes web sécurisées et scalables à l’intégration de matériel intelligent.
 
 Mon expertise me permet de faire le lien entre le monde physique et le numérique. Que ce soit pour un système de présence par reconnaissance faciale ou une application mobile pilotée par l’IA, je suis passionné par la résolution de défis techniques complexes et la livraison de solutions centrées utilisateur.`,
+      signature: "Je ne me contente pas de coder des interfaces ; je connecte le monde physique au digital.",
       viewMyWork: 'Voir mes réalisations',
     },
     skills: {
@@ -354,6 +366,10 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
       cert4Title: 'Responsive Web Design',
       cert4Platform: 'freeCodeCamp',
       cert4Desc: 'HTML, CSS, Flexbox, Grid et principes de design responsive pour créer des pages web accessibles et adaptées au mobile.',
+      cognitiveClassPythonDesc:
+        "Fondamentaux de Python pour la Data Science : structures de données, programmation orientée objet, manipulation de fichiers, Pandas, NumPy et utilisation d'APIs.",
+      cognitiveClassDataVisDesc:
+        'Maîtrise de la visualisation de données : création de graphiques variés et de cartes géospatiales interactives avec Matplotlib, Seaborn et Folium.',
     },
     temoignages: {
       sectionTitle: 'TÉMOIGNAGES',
@@ -400,6 +416,12 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
         "Hakim Mezrioui et moi avons construit un partenariat qui dépasse la salle de classe et le travail. Nous avons collaboré sur plusieurs projets, et honnêtement, tout ce que nous construisons, nous le construisons mieux ensemble. Hakim a une capacité unique à rester ancré et concentré, quels que soient les défis techniques ou logistiques d’un projet. Des sessions de résolution de problèmes en fin de soirée à la livraison de solutions de bout en bout, nous avons surmonté chaque défi en équipe. C’est un professionnel très compétent, dévoué, et un ami formidable. Toute organisation aurait une chance incroyable d’avoir son dynamisme et son talent.",
       temo8Date: 'Mars 2026',
       temo8Relation: 'Collègue',
+      temo9Position:
+        'Ingénieur logiciel Full Stack // .NET Core, Azure Serverless, React, Angular // Conception de solutions sécurisées et scalables',
+      temo9Text:
+        "J’ai eu le plaisir d’enseigner à Hakim Mezrioui dans mon module de Développement Cross-Platform avec Flutter dans le cadre du programme DAISI à la Faculté des Sciences Ain Chock, et il a été, sans aucun doute, l’un des étudiants les plus motivés et les plus capables que j’aie rencontrés. Dès le premier jour, Hakim s’est distingué par sa proactivité et sa soif d’apprendre. Il ne se contentait pas de suivre le programme : il explorait, expérimentait et revenait toujours avec des questions pertinentes. Sa capacité à assimiler rapidement des concepts complexes et à les appliquer concrètement était réellement impressionnante. Cela s’est confirmé brillamment à travers son Projet de Fin d’Études : SmartCaravane, un écosystème de caravane intelligente entièrement autonome, avec pilotage IoT en temps réel via une application mobile Flutter et une plateforme web Spring Boot/Angular. Le projet combinait systèmes embarqués (ESP32, Arduino, capteurs multiples), intégration IA/ML et un développement full stack propre, le tout porté par une vision réelle liée à la Coupe du Monde 2030 au Maroc. C’était l’un des PFE les plus complets et ambitieux que j’aie vus, et j’en étais vraiment fier. Hakim est techniquement polyvalent, proactif et très professionnel. Il sera un atout majeur pour toute équipe travaillant sur des projets mobiles, IoT ou systèmes pilotés par l’IA. Je le recommande sans hésitation.",
+      temo9Date: 'Mars 2026',
+      temo9Relation: 'Mentor',
       verifiedCount: 'recommandations LinkedIn vérifiées',
     },
   },

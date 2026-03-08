@@ -118,6 +118,12 @@
     margin: 0;
 }
 
+.footer-signature {
+    font-style: italic;
+    opacity: 0.95;
+    margin-bottom: 0.75em;
+}
+
 /* 2 colonnes à partir de 992px */
 @media (max-width: 992px) {
     .footer-menu {

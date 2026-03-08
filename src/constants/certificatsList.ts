@@ -180,5 +180,23 @@ export const certificatsList: CertificatModel[] = [
     'https://www.kaggle.com/learn/certification/hakimmezrioui/pandas', // verifyLink (à remplacer par le lien de votre profil Kaggle)
     '../assets/images/kaggle-logo.png', // logo (à remplacer par votre lien/chemin)
     '../assets/certificats/hakim mezrioui - Pandas.png' // image (à remplacer par votre lien/chemin)
+  ),
+  new CertificatModel(
+    'Python 101 for Data Science',
+    'Cognitive Class (IBM)',
+    'Mars 2026',
+    'certificats.cognitiveClassPythonDesc',
+    'https://courses.cognitiveclass.ai/certificates/65c43e10ada44288900cb90a63afa10d', // verifyLink
+    'https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/644bcxng43h754iyqftkagb7aen1', // logo (à remplacer par votre lien/chemin)
+    '../assets/certificats/python-for-data-science-ibm.png' // image (à remplacer par votre lien/chemin)
+  ),
+  new CertificatModel(
+    'Data Visualization with Python',
+    'Cognitive Class (IBM)',
+    'Mars 2026',
+    'certificats.cognitiveClassDataVisDesc',
+    'https://courses.cognitiveclass.ai/certificates/ba13b3894d464604a63665546b6b4401',
+    'https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/644bcxng43h754iyqftkagb7aen1',
+    '../assets/certificats/data-visualization-with-python.png'
   )
 ];

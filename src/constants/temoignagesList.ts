@@ -81,4 +81,14 @@ export const temoignagesList: TemoignageModel[] = [
     'Fév. 2026',
     'Senior'
   ),
+  new TemoignageModel(
+    'Anasse Demnati',
+    'temoignages.temo9Position',
+    '',
+    'temoignages.temo9Text',
+    '',
+    'https://www.linkedin.com/in/anassedemnati/',
+    'Mars 2026',
+    'Mentor'
+  ),
 ];
