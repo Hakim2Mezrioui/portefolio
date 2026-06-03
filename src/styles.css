@@ -1,15 +1,189 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+   Design tokens — light (default) & dark (html.dark)
+   ========================================================================== */
+:root {
+  color-scheme: light;
+
+  /* Alternance signature du portfolio : #f1f5f9 (fond) ↔ #ffffff (surfaces) */
+  --bg-primary: #f1f5f9;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-primary: #011d41;
+  --text-secondary: #444444;
+
+  --color-bg: #f1f5f9;
+  --color-bg-elevated: #ffffff;
+  --color-bg-nav: rgba(241, 245, 249, 0.5);
+  --color-bg-menu: rgba(255, 255, 255, 0.8);
+  --color-bg-card: #ffffff;
+  --color-bg-chip: #000000;
+  --color-bg-chip-hover: #111111;
+  --color-bg-input-focus: #000000;
+  --color-bg-button: #021526;
+  --color-bg-button-hover: #03346e;
+  --color-bg-accent: #03346e;
+  --color-bg-footer: #333333;
+
+  --color-text: #011d41;
+  --color-text-secondary: #222222;
+  --color-text-muted: #444444;
+  --color-text-body: #333333;
+  --color-text-subtle: #64748b;
+  --color-text-on-dark: #ffffff;
+  --color-text-on-chip: #ffffff;
+  --color-text-accent: #03346e;
+  --color-text-slate: #1e293b;
+
+  --color-accent: #011d41;
+  --color-accent-muted: rgba(1, 29, 65, 0.06);
+  --color-accent-soft: rgba(1, 29, 65, 0.08);
+  --color-border: rgba(30, 41, 59, 0.12);
+  --color-border-light: #cccccc;
+  --color-underline: #111111;
+  --color-skill-accent: #6eacda;
+  --color-icon-line: #1e293b;
+  --color-decoration-line: #000000;
+  --color-shadow: rgba(0, 0, 0, 0.12);
+  --color-shadow-soft: rgba(0, 0, 0, 0.06);
+  --color-hero-blob: linear-gradient(135deg, #b8d4ec 0%, #c4b5e0 45%, #d4c8e8 100%);
+  --color-hero-border: rgba(255, 255, 255, 0.6);
+
+  --color-theme-toggle-bg: rgba(1, 29, 65, 0.06);
+  --color-theme-toggle-bg-hover: rgba(1, 29, 65, 0.12);
+  --color-theme-toggle-icon: #011d41;
+
+  --color-modal-bg: linear-gradient(160deg, #ffffff 0%, #f1f5f9 100%);
+  --color-modal-close: #64748b;
+  --color-modal-close-hover: #1e293b;
+
+  --color-linkedin: #0a66c2;
+  --color-stat-face: #f1f5f9;
+  --color-stat-shadow: #011d41;
+  --color-stat-text: #000000;
+  --color-stat-border: #011d41;
+
+  --transition-theme:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+html.dark {
+  color-scheme: dark;
+
+  /* Dark : même logique d'alternance (#0f172a ↔ #1e293b) */
+  --bg-primary: #0f172a;
+  --bg-secondary: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+
+  --color-bg: #0f172a;
+  --color-bg-elevated: #1e293b;
+  --color-bg-nav: rgba(15, 23, 42, 0.88);
+  --color-bg-menu: rgba(30, 41, 59, 0.95);
+  --color-bg-card: #1e293b;
+  --color-bg-chip: #334155;
+  --color-bg-chip-hover: #475569;
+  --color-bg-input-focus: #475569;
+  --color-bg-button: #1e3a5f;
+  --color-bg-button-hover: #2563eb;
+  --color-bg-accent: #2563eb;
+  --color-bg-footer: #020617;
+
+  --color-text: #e2e8f0;
+  --color-text-secondary: #f1f5f9;
+  --color-text-muted: #cbd5e1;
+  --color-text-body: #cbd5e1;
+  --color-text-subtle: #94a3b8;
+  --color-text-on-dark: #f8fafc;
+  --color-text-on-chip: #f8fafc;
+  --color-text-accent: #93c5fd;
+  --color-text-slate: #cbd5e1;
+
+  --color-accent: #93c5fd;
+  --color-accent-muted: rgba(147, 197, 253, 0.12);
+  --color-accent-soft: rgba(147, 197, 253, 0.18);
+  --color-border: rgba(148, 163, 184, 0.2);
+  --color-border-light: rgba(148, 163, 184, 0.25);
+  --color-underline: #93c5fd;
+  --color-skill-accent: #38bdf8;
+  --color-icon-line: #94a3b8;
+  --color-decoration-line: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.35);
+  --color-shadow-soft: rgba(0, 0, 0, 0.2);
+  --color-hero-blob: linear-gradient(135deg, #1e3a5f 0%, #312e81 45%, #1e293b 100%);
+  --color-hero-border: rgba(148, 163, 184, 0.25);
+
+  --color-theme-toggle-bg: rgba(147, 197, 253, 0.12);
+  --color-theme-toggle-bg-hover: rgba(147, 197, 253, 0.22);
+  --color-theme-toggle-icon: #fbbf24;
+
+  --color-modal-bg: linear-gradient(160deg, #1e293b 0%, #0f172a 100%);
+  --color-modal-close: #94a3b8;
+  --color-modal-close-hover: #e2e8f0;
+
+  --color-linkedin: #0a66c2;
+  --color-stat-face: #334155;
+  --color-stat-shadow: #0f172a;
+  --color-stat-text: #f1f5f9;
+  --color-stat-border: rgba(148, 163, 184, 0.35);
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html {
+  transition: var(--transition-theme);
+}
+
+html,
+body {
   overflow-x: hidden;
   max-width: 100vw;
 }
 
 body {
-  background-color: #f1f5f9;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: var(--transition-theme);
+}
+
+/* Sections / composants partagés via variables */
+section,
+.skills-body,
+.contact-body,
+.certificats-body,
+.temoignages-body,
+app-statistiques {
+  transition: var(--transition-theme);
+}
+
+/* Titres globaux : lisibles dans les deux thèmes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: inherit;
+}
+
+/* Modale CV — contraste boutons FR / EN (évite texte clair sur fond clair) */
+html.dark app-cv-language-modal .cv-lang-btn {
+  background-color: var(--color-bg-elevated);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+html.dark app-cv-language-modal .cv-lang-btn__label {
+  color: var(--color-text);
 }

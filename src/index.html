@@ -10,6 +10,36 @@
     <meta name="author" content="Hakim Mezrioui" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#03346e" />
+    <!-- Thème avant bootstrap Angular — évite le flash clair/sombre -->
+    <script>
+      (function () {
+        var STORAGE_KEY = 'portfolio_theme';
+        var isDark = false;
+        try {
+          var stored = localStorage.getItem(STORAGE_KEY);
+          if (stored === 'dark') {
+            isDark = true;
+          } else if (stored === 'light') {
+            isDark = false;
+          } else if (
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+          ) {
+            isDark = true;
+          }
+        } catch (e) {
+          if (
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+          ) {
+            isDark = true;
+          }
+        }
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <link rel="canonical" href="https://mezrioui-hakim.web.app/" />
 
     <meta property="og:title" content="Hakim Mezrioui | Full Stack & IoT Engineer" />

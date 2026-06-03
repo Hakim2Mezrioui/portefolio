@@ -1,0 +1,16 @@
+<button
+  type="button"
+  class="theme-toggle"
+  (click)="toggle()"
+  [attr.aria-label]="ariaLabel"
+  [attr.aria-pressed]="isDark"
+>
+  <span class="theme-toggle__track" aria-hidden="true">
+    <i
+      class="bi theme-toggle__icon"
+      [class.bi-sun-fill]="!isDark"
+      [class.bi-moon-fill]="isDark"
+      [class.theme-toggle__icon--active]="true"
+    ></i>
+  </span>
+</button>

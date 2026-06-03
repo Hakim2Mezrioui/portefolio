@@ -1,0 +1,170 @@
+.cv-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  background-color: #0f172a;
+  animation: cv-viewer-in 0.28s ease forwards;
+}
+
+.cv-viewer-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
+  padding: 0.85rem 1.25rem;
+  background: rgba(241, 245, 249, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(30, 41, 59, 0.12);
+  box-shadow: 0 4px 20px rgba(2, 21, 38, 0.08);
+}
+
+.cv-viewer-toolbar__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.02em;
+  min-width: 0;
+}
+
+.cv-viewer-toolbar__title i {
+  color: #b91c1c;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.cv-viewer-toolbar__title span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cv-viewer-toolbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.cv-viewer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cv-viewer-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.cv-viewer-btn--secondary {
+  background-color: #fff;
+  border-color: rgba(30, 41, 59, 0.14);
+  color: #0f172a;
+}
+
+.cv-viewer-btn--secondary:hover {
+  background-color: rgba(1, 29, 65, 0.04);
+  border-color: rgba(1, 29, 65, 0.25);
+  transform: translateY(-1px);
+}
+
+.cv-viewer-btn--primary {
+  background-color: #021526;
+  color: #fff;
+}
+
+.cv-viewer-btn--primary:hover {
+  background-color: #03346e;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(2, 21, 38, 0.2);
+}
+
+.cv-viewer-body {
+  flex: 1;
+  min-height: 0;
+  padding: 0.75rem;
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+}
+
+.cv-viewer-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes cv-viewer-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-viewer-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.75rem;
+  }
+
+  .cv-viewer-toolbar__actions {
+    flex-wrap: wrap;
+    justify-content: stretch;
+  }
+
+  .cv-viewer-btn {
+    flex: 1 1 calc(50% - 0.25rem);
+    min-width: 0;
+  }
+
+  .cv-viewer-btn--primary {
+    flex-basis: 100%;
+  }
+
+  .cv-viewer-btn span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cv-viewer-body {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .cv-viewer-btn span {
+    display: none;
+  }
+
+  .cv-viewer-btn {
+    flex: 1 1 auto;
+    padding: 0.6rem;
+  }
+}

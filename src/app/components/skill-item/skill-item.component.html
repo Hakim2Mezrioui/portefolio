@@ -1,7 +1,21 @@
 <div class="skill">
-  <h3 data-aos="fade-right" class="titleOfSkill">{{ title }}</h3>
+  <h3
+    data-aos="fade-right"
+    data-aos-duration="500"
+    data-aos-easing="ease-out-cubic"
+    class="titleOfSkill"
+  >
+    {{ title }}
+  </h3>
   <div class="my-skills">
-    <div data-aos="fade-left" *ngFor="let skill of skills" class="skill-item">
+    <div
+      data-aos="fade-left"
+      data-aos-duration="500"
+      data-aos-easing="ease-out-cubic"
+      [attr.data-aos-delay]="i * 40"
+      *ngFor="let skill of skills; let i = index"
+      class="skill-item"
+    >
       <img alt="" width="20px" height="20px" [src]="skill.path" />
       <p>{{ skill.title }}</p>
     </div>

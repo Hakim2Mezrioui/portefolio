@@ -1,18 +1,22 @@
-<div id="myCertificats" class="certificats-body">
-  <app-custom-title
-    [title]="'certificats.sectionTitle' | translate"
-    [subtitle]="'Validated knowledge & skills'">
-  </app-custom-title>
-  <div class="certificats-content">
-    <div class="certificats-grid">
-      <div
-        class="cert-card-wrapper"
-        *ngFor="let cert of certificats; let i = index"
-        data-aos="fade-up"
-        data-aos-duration="500"
-        [attr.data-aos-delay]="i * 100"
-      >
-        <app-certificat-card [certificat]="cert"></app-certificat-card>
+<div id="myCertificats" class="certificats-shell">
+  <div class="certificats-bg" aria-hidden="true"></div>
+  <app-decoration></app-decoration>
+  <div class="certificats-body">
+    <app-custom-title
+      [title]="'certificats.sectionTitle' | translate"
+      [subtitle]="'Validated knowledge & skills'">
+    </app-custom-title>
+    <div class="certificats-content">
+      <div class="certificats-grid">
+        <div
+          class="cert-card-wrapper"
+          *ngFor="let cert of certificats; let i = index"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          [attr.data-aos-delay]="i * 100"
+        >
+          <app-certificat-card [certificat]="cert"></app-certificat-card>
+        </div>
       </div>
     </div>
   </div>

@@ -39,6 +39,8 @@
   <div class="nav-right-group">
     <app-icons-link></app-icons-link>
     <span class="nav-group-sep" aria-hidden="true">|</span>
+    <app-theme-toggle></app-theme-toggle>
+    <span class="nav-group-sep" aria-hidden="true">|</span>
     <div class="lang-switcher">
       <button type="button" class="lang-btn" [class.active]="currentLang === 'en'" (click)="setLang('en')" aria-label="English">EN</button>
       <button type="button" class="lang-btn" [class.active]="currentLang === 'fr'" (click)="setLang('fr')" aria-label="Français">FR</button>

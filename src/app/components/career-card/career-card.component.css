@@ -2,19 +2,33 @@
   width: 30em;
   height: 10em;
   padding: 1em 1em;
-  border: 1px solid rgb(205, 205, 205);
+  border: 1px solid #03346e;
   margin-block: 1em;
-  box-shadow: 0 0 0px 0px;
   border-radius: 0;
-  transition: all .15s ease;
+  box-shadow: 0 4px 16px var(--color-shadow-soft);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    border-radius 0.25s ease,
+    background-color 0.3s ease;
   position: relative;
   z-index: 3;
-  background-color: #f1f5f9;
+  background-color: var(--color-bg);
 }
 
 .card-career:hover {
-  box-shadow: 0 0 10px 0px;
-  border-radius: .3em;
+  border-radius: 0.3em;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px var(--color-shadow);
+  z-index: 5;
+}
+
+:host-context(html.dark) .card-career {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+:host-context(html.dark) .card-career:hover {
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55);
 }
 
 .card-career::before {
@@ -24,9 +38,13 @@
   top: 0;
   width: 1em;
   height: 1em;
-  background-color: black;
+  background-color: var(--color-bg-chip);
   border-radius: 50%;
-  transition: all .15s ease;
+  transition: all 0.15s ease, background-color 0.3s ease;
+}
+
+:host-context(html.dark) .card-career::before {
+  background-color: #ffffff;
 }
 
 .card-career:hover::before {
@@ -40,7 +58,7 @@
 
 .header-card img {
   border-radius: .5em;
-  background-color: white;
+  background-color: var(--color-bg-elevated);
 }
 
 .dateAndSociete {
@@ -52,23 +70,23 @@
 .societe{
   font-weight: bold;
   font-size: .8em;
-  color: #6EACDA;
+  color: var(--color-skill-accent);
 }
 
 .date {
-  color: #6EACDA;
+  color: var(--color-skill-accent);
   font-weight: bold;
   font-size: .8em;
 }
 
 .title {
   font-weight: bold;
-  color: #03346E;
+  color: var(--color-text-accent);
   font-size: 1.2em;
 }
 
 .desc {
-  color: #03346E;
+  color: var(--color-text-accent);
   font-size: .8em;
 }
 

@@ -4,7 +4,10 @@
   z-index: 12;
   overflow: hidden;
   cursor: pointer;
-  background-color: white;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px var(--color-shadow-soft);
+  transition: var(--transition-theme);
 }
 
 .cert-image {
@@ -13,6 +16,8 @@
   display: block;
   position: relative;
   z-index: 1;
+  /* Fond clair derrière le visuel du certificat (Udemy, etc.) */
+  background-color: #ffffff;
   transition: transform 0.4s ease;
 }
 

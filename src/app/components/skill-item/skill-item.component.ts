@@ -8,7 +8,5 @@ import { SkillModel } from 'src/app/models/SkillModel';
 })
 export class SkillItemComponent {
   @Input('skills') skills!: SkillModel[];
-  @Input('title') title!: String;
-
-  constructor() {}
+  @Input('title') title!: string;
 }

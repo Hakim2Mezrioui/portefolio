@@ -1,0 +1,39 @@
+<div *ngIf="isOpen" class="cv-viewer" role="dialog" aria-modal="true" [attr.aria-label]="'cv.viewerTitle' | translate">
+  <header class="cv-viewer-toolbar">
+    <div class="cv-viewer-toolbar__title">
+      <i class="bi bi-file-earmark-person-fill" aria-hidden="true"></i>
+      <span>{{ 'cv.viewerTitle' | translate }}</span>
+    </div>
+
+    <div class="cv-viewer-toolbar__actions">
+      <button type="button" class="cv-viewer-btn cv-viewer-btn--secondary" (click)="changeLanguage()">
+        <i class="bi bi-translate" aria-hidden="true"></i>
+        <span>{{ 'cv.changeLanguage' | translate }}</span>
+      </button>
+
+      <button type="button" class="cv-viewer-btn cv-viewer-btn--secondary" (click)="downloadCv()">
+        <i class="bi bi-download" aria-hidden="true"></i>
+        <span>{{ 'cv.download' | translate }}</span>
+      </button>
+
+      <button
+        type="button"
+        class="cv-viewer-btn cv-viewer-btn--primary"
+        (click)="close()"
+        [attr.aria-label]="'cv.close' | translate"
+      >
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+        <span>{{ 'cv.close' | translate }}</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="cv-viewer-body">
+    <iframe
+      *ngIf="safePdfUrl"
+      class="cv-viewer-frame"
+      [src]="safePdfUrl"
+      [title]="'cv.viewerTitle' | translate"
+    ></iframe>
+  </div>
+</div>

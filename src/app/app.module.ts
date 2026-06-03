@@ -37,6 +37,9 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
 import { ScrollProgressComponent } from './components/scroll-progress/scroll-progress.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { AboutSectionComponent } from './components/about-section/about-section.component';
+import { CvLanguageModalComponent } from './components/cv-language-modal/cv-language-modal.component';
+import { CvViewerComponent } from './components/cv-viewer/cv-viewer.component';
+import { ThemeToggleComponent } from './shared/components/theme-toggle/theme-toggle.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +72,9 @@ import { AboutSectionComponent } from './components/about-section/about-section.
     ScrollProgressComponent,
     PreloaderComponent,
     AboutSectionComponent,
+    CvLanguageModalComponent,
+    CvViewerComponent,
+    ThemeToggleComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,11 +13,12 @@
 .skill-item {
   gap: 0.5em;
   display: inline-flex;
-  background-color: black;
+  background-color: var(--color-bg-chip);
+  transition: var(--transition-theme);
   width: fit-content;
   min-width: fit-content;
   flex-shrink: 0;
-  color: white;
+  color: var(--color-text-on-chip);
   padding: 0.5em 1em;
   align-items: center;
   justify-content: center;
@@ -27,7 +28,7 @@
 
 .skill-item::before {
   content: "";
-  background-color: #6eacda;
+  background-color: var(--color-skill-accent);
   position: absolute;
   left: 0;
   top: 0;
@@ -68,6 +69,14 @@
   position: relative;
   flex: 0 0 7em;
   min-width: 7em;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+  /* Laisser AOS gérer transform/opacity (fade-right) */
+  will-change: transform, opacity;
+}
+
+:host-context(html.dark) .titleOfSkill {
+  color: #ffffff;
 }
 .titleOfSkill:before {
   content: "";
@@ -76,7 +85,7 @@
   bottom: .35em;
   height: 5px;
   width: 55px;
-  background-color: #111;
+  background-color: var(--color-underline);
   transition: all .1s ease;
 }
 .titleOfSkill:after {
@@ -86,7 +95,7 @@
   bottom: .4em;
   height: 1px;
   width: 190px;
-  background-color: #111;
+  background-color: var(--color-underline);
 }
 .titleOfSkill:hover::before {
   width: 90px;
