@@ -8,8 +8,9 @@
 .footer {
     font-size: 18px;
     width: 100%;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-bg-footer);
+    color: var(--color-text-on-dark);
+    transition: var(--transition-theme);
     padding: 40px 0;
     z-index: 1000;
     position: relative;

@@ -1,16 +1,29 @@
-.certificats-body {
-  width: 100%;
-  background-color: transparent;
+.certificats-shell {
   position: relative;
-  z-index: 2;
+  width: 100%;
   padding-block: 5em;
   overflow: hidden;
+}
+
+/* Fond de section — sous la décoration */
+.certificats-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--color-bg-elevated);
+  transition: var(--transition-theme);
+}
+
+/* Contenu + cartes — au-dessus de la décoration (z-index 1 dans app-decoration) */
+.certificats-body {
+  position: relative;
+  z-index: 2;
+  color: var(--text-primary, var(--color-text));
 }
 
 .certificats-content {
   margin-top: 2em;
   position: relative;
-  z-index: 1;
 }
 
 .certificats-grid {
@@ -24,7 +37,6 @@
 
 .cert-card-wrapper {
   position: relative;
-  z-index: 2;
 }
 
 app-certificat-card {

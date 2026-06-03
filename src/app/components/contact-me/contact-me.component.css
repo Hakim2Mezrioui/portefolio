@@ -1,5 +1,6 @@
 .contact-body {
-  background-color: rgb(241, 245, 249);
+  background-color: var(--color-bg);
+  transition: var(--transition-theme);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -24,12 +25,27 @@
 
 .form-group input,
 .form-group textarea {
-  border: 1px solid #03346E;
   display: block;
   width: 100%;
-  padding: 0.5em 1em;
+  padding: 0.65em 1em;
   position: relative;
   outline: none;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text);
+  transition: var(--transition-theme);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-subtle);
+  opacity: 1;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-bg-accent);
+  box-shadow: 0 0 0 2px var(--color-accent-muted);
 }
 
 /* .form-group::before {
@@ -37,7 +53,7 @@
   position: absolute;
   left: -0.2em;
   top: 0.2em;
-  background-color: black;
+  background-color: var(--color-bg-input-focus);
   height: 100%;
   width: 100%;
 } */
@@ -51,26 +67,31 @@ span:hover::before {
   position: absolute;
   left: -0.2em;
   top: 0.2em;
-  /* background-color: black; */
-  border: 1px solid black;
+  border: 1px solid var(--color-border);
   height: 100%;
   width: 100%;
 }
 
-span:focus::before {
+span:focus-within::before {
   content: "";
   position: absolute;
   left: -0.2em;
   top: 0.2em;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: var(--color-accent-muted);
+  border: 1px solid var(--color-bg-accent);
+}
+
+.form-action {
+  position: relative;
+  z-index: 3;
 }
 
 .form-action button {
   display: block;
   width: 100%;
-  background-color: #021526;
+  background-color: var(--color-bg-button);
   color: white;
   border: none;
   padding-block: 0.4em;
@@ -80,7 +101,7 @@ span:focus::before {
 }
 
 .form-action button:hover:not(:disabled):not(.loading) {
-  background-color: #03346e;
+  background-color: var(--color-bg-button-hover);
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   letter-spacing: 0.03em;
@@ -119,11 +140,30 @@ span:focus::before {
   height: 100%;
   left: -0.2em;
   top: 0.2em;
-  background-color: #03346E;
+  background-color: var(--color-bg-accent);
   z-index: -1;
 }
 
 input:focus + .backdrop,
 textarea:focus + .backdrop {
   display: block;
+}
+
+/* Dark mode : champs plus clairs, texte blanc */
+:host-context(html.dark) .form-group input,
+:host-context(html.dark) .form-group textarea {
+  background-color: #334155;
+  color: #ffffff;
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+:host-context(html.dark) .form-group input::placeholder,
+:host-context(html.dark) .form-group textarea::placeholder {
+  color: #cbd5e1;
+}
+
+:host-context(html.dark) .form-group input:focus,
+:host-context(html.dark) .form-group textarea:focus {
+  background-color: #475569;
+  border-color: var(--color-skill-accent);
 }

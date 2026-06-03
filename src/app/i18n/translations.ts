@@ -133,6 +133,24 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
     footer: {
       message: "I'm working on something new — watch this space for my updated portfolio!",
     },
+    theme: {
+      switchToDark: 'Switch to dark mode',
+      switchToLight: 'Switch to light mode',
+      shortcutHint: 'Keyboard shortcut: Ctrl or Cmd + Shift + L',
+    },
+    cv: {
+      tooltip: 'CV',
+      modalTitle: 'Choose your language',
+      modalSubtitle: 'Select the version of my resume you would like to view.',
+      french: 'Français',
+      english: 'English',
+      ariaOpen: 'View my CV',
+      ariaClose: 'Close language selection',
+      viewerTitle: 'My resume',
+      changeLanguage: 'Change language',
+      download: 'Download',
+      close: 'Close',
+    },
     statiques: {
       projects: 'PROJECTS',
       skills: 'SKILLS',
@@ -344,6 +362,24 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
     },
     footer: {
       message: 'Je travaille sur de nouveaux projets — restez à l’écoute pour les mises à jour !',
+    },
+    theme: {
+      switchToDark: 'Passer en mode sombre',
+      switchToLight: 'Passer en mode clair',
+      shortcutHint: 'Raccourci clavier : Ctrl ou Cmd + Maj + L',
+    },
+    cv: {
+      tooltip: 'CV',
+      modalTitle: 'Choisissez votre langue',
+      modalSubtitle: 'Sélectionnez la version de mon CV que vous souhaitez consulter.',
+      french: 'Français',
+      english: 'English',
+      ariaOpen: 'Voir mon CV',
+      ariaClose: 'Fermer la sélection de langue',
+      viewerTitle: 'Mon CV',
+      changeLanguage: 'Changer de langue',
+      download: 'Télécharger',
+      close: 'Fermer',
     },
     statiques: {
       projects: 'PROJETS',

@@ -1,0 +1,54 @@
+<div
+  *ngIf="isVisible"
+  class="cv-modal-backdrop"
+  role="presentation"
+  (click)="close()"
+>
+  <div
+    class="cv-modal-panel"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-labelledby]="'cv-modal-title'"
+    (click)="onPanelClick($event)"
+  >
+    <button
+      type="button"
+      class="cv-modal-close"
+      (click)="close()"
+      [attr.aria-label]="'cv.ariaClose' | translate"
+    >
+      <i class="bi bi-x-lg" aria-hidden="true"></i>
+    </button>
+
+    <div class="cv-modal-icon" aria-hidden="true">
+      <i class="bi bi-file-earmark-person-fill"></i>
+    </div>
+
+    <h2 id="cv-modal-title" class="cv-modal-title">
+      {{ 'cv.modalTitle' | translate }}
+    </h2>
+    <p class="cv-modal-subtitle">
+      {{ 'cv.modalSubtitle' | translate }}
+    </p>
+
+    <div class="cv-modal-actions">
+      <button
+        type="button"
+        class="cv-lang-btn cv-lang-btn--fr"
+        (click)="selectLanguage('fr')"
+      >
+        <span class="cv-lang-btn__label">{{ 'cv.french' | translate }}</span>
+        <span class="cv-lang-btn__code" aria-hidden="true">FR</span>
+      </button>
+
+      <button
+        type="button"
+        class="cv-lang-btn cv-lang-btn--en"
+        (click)="selectLanguage('en')"
+      >
+        <span class="cv-lang-btn__label">{{ 'cv.english' | translate }}</span>
+        <span class="cv-lang-btn__code" aria-hidden="true">EN</span>
+      </button>
+    </div>
+  </div>
+</div>

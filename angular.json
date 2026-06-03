@@ -28,7 +28,7 @@
               "node_modules/ngx-toastr/toastr.css",
               "node_modules/aos/dist/aos.css"
             ],
-            "allowedCommonJsDependencies": ["vanilla-tilt", "aos"],
+            "allowedCommonJsDependencies": ["aos"],
             "scripts": []
           },
           "configurations": {

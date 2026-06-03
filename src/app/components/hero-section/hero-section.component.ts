@@ -1,13 +1,4 @@
-import {
-  AfterContentChecked,
-  AfterContentInit,
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
-import VanillaTilt from 'vanilla-tilt';
+import { Component, OnInit } from '@angular/core';
 import { HeroSectionModel } from 'src/app/models/heroSectionModel';
 import { TranslateService } from 'src/app/services/translate.service';
 
@@ -16,9 +7,7 @@ import { TranslateService } from 'src/app/services/translate.service';
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.css'],
 })
-export class HeroSectionComponent implements OnInit, AfterViewInit {
-  @ViewChild('tiltElement', { static: false }) tiltElement!: ElementRef;
-
+export class HeroSectionComponent implements OnInit {
   heroSectionContent!: HeroSectionModel;
 
   constructor(private translate: TranslateService) {}
@@ -36,19 +25,5 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       t.translate('hero.jobTitle'),
       t.translate('hero.profile')
     );
-  }
-
-  ngAfterViewInit() {
-    const isTouchOrSmallScreen =
-      window.matchMedia('(max-width: 900px)').matches ||
-      'ontouchstart' in window;
-    if (!isTouchOrSmallScreen && this.tiltElement?.nativeElement) {
-      VanillaTilt.init(this.tiltElement.nativeElement, {
-        max: 25,
-        speed: 400,
-        glare: true,
-        'max-glare': 0.5,
-      });
-    }
   }
 }

@@ -1,5 +1,6 @@
 .career-body {
-  background-color: white;
+  background-color: var(--color-bg-elevated);
+  transition: var(--transition-theme);
   padding-block: 4em;
 }
 
@@ -21,16 +22,22 @@
   position: absolute;
   left: -2em;
   top: 1em;
-  background-color: #03346e;
+  background-color: var(--color-bg-accent);
   height: 95.5%;
   width: 0.1em;
+  transition: background-color 0.3s ease;
+}
+
+:host-context(html.dark) .experiences::before,
+:host-context(html.dark) .education::before {
+  background-color: #ffffff;
 }
 
 .title {
   font-weight: bold;
   font-size: 1.3em;
   margin-bottom: 1em;
-  color: #03346e;
+  color: var(--color-text-accent);
 }
 
 @media (max-width: 600px) {

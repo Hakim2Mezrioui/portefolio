@@ -1,3 +1,12 @@
+:host {
+  display: block;
+  width: 100%;
+  /* Bande alternée blanche (light) / slate-800 (dark) */
+  background-color: var(--color-bg-elevated);
+  color: var(--text-primary, var(--color-text));
+  transition: var(--transition-theme);
+}
+
 .statistiques {
   display: flex;
   flex-wrap: wrap;

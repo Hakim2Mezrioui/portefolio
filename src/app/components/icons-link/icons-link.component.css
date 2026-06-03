@@ -20,7 +20,7 @@
   bottom: 0;
   width: 100%;
   height: 1px;
-  background-color: #1e293b;
+  background-color: var(--color-icon-line);
   box-sizing: border-box;
 }
 
@@ -62,6 +62,7 @@
 }
 
 .icons-group a,
+.icons-group button.icon-link-btn,
 .icons .icon-link {
   display: inline-flex;
   align-items: center;
@@ -69,7 +70,10 @@
   width: 40px;
   height: 40px;
   padding: 0;
+  border: none;
   border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
@@ -79,9 +83,16 @@
 }
 
 .icons-group a:hover,
+.icons-group button.icon-link-btn:hover,
 .icons .icon-link:hover {
   transform: scale(1.08) translateY(-2px);
   background-color: rgba(30, 41, 59, 0.08);
+}
+
+:host-context(html.dark) .icons-group a:hover,
+:host-context(html.dark) .icons-group button.icon-link-btn:hover,
+:host-context(html.dark) .icons .icon-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Header : pas de bordure en bas, entrée en cascade */
@@ -153,8 +164,9 @@
 }
 
 .icons-group a:focus-visible,
+.icons-group button.icon-link-btn:focus-visible,
 .icons .icon-link:focus-visible {
-  outline: 2px solid #1e293b;
+  outline: 2px solid var(--color-icon-line);
   outline-offset: 2px;
 }
 
@@ -171,7 +183,7 @@
   transform: translateX(-50%);
   margin-bottom: 8px;
   padding: 4px 10px;
-  background-color: #1e293b;
+  background-color: var(--color-icon-line);
   color: #fff;
   font-size: 0.75rem;
   font-weight: 500;
@@ -199,21 +211,29 @@
   color: #0a5f82;
 }
 
-.icons .bi-github.text-dark,
-.icons .bi-github {
-  color: #1e293b;
-}
-
-.icons-group a:hover .bi-github {
-  color: #0f172a;
-}
-
 .icons .bi-file-earmark-person-fill {
   color: #b91c1c;
 }
 
-.icons-group a:hover .bi-file-earmark-person-fill {
+.icons-group a:hover .bi-file-earmark-person-fill,
+.icons-group button.icon-link-btn:hover .bi-file-earmark-person-fill {
   color: #991b1b;
+}
+
+:host-context(html.dark) .icons .bi-file-earmark-person-fill {
+  color: #f87171;
+}
+
+:host-context(html.dark) .icons-group button.icon-link-btn:hover .bi-file-earmark-person-fill {
+  color: #fca5a5;
+}
+
+.icons .bi-github {
+  color: var(--color-text-slate);
+}
+
+.icons-group a:hover .bi-github {
+  color: #0f172a;
 }
 
 .icons .bi-envelope-fill {
@@ -222,4 +242,29 @@
 
 .icons .icon-link:hover .bi-envelope-fill {
   color: #475569;
+}
+
+/* Dark mode : icônes lisibles sur fond sombre */
+:host-context(html.dark) .icons .bi-github {
+  color: #f1f5f9;
+}
+
+:host-context(html.dark) .icons-group a:hover .bi-github {
+  color: #ffffff;
+}
+
+:host-context(html.dark) .icons .bi-envelope-fill {
+  color: #cbd5e1;
+}
+
+:host-context(html.dark) .icons .icon-link:hover .bi-envelope-fill {
+  color: #ffffff;
+}
+
+:host-context(html.dark) .icons .bi-linkedin {
+  color: #60a5fa;
+}
+
+:host-context(html.dark) .icons-group a:hover .bi-linkedin {
+  color: #93c5fd;
 }

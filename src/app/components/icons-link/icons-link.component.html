@@ -23,20 +23,19 @@
           rel="noopener noreferrer"
           href="https://github.com/Hakim2Mezrioui"
         >
-          <i class="bi bi-github text-dark"></i>
+          <i class="bi bi-github"></i>
         </a>
       </li>
       <li>
-        <a
-          class="icon-link-has-tooltip"
-          data-tooltip="CV"
-          aria-label="Download my CV"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/10E3xwoFG5cTnxILrR-Is7Oh_SFjyYxz7/view?usp=sharing"
+        <button
+          type="button"
+          class="icon-link-btn icon-link-has-tooltip"
+          [attr.data-tooltip]="'cv.tooltip' | translate"
+          [attr.aria-label]="'cv.ariaOpen' | translate"
+          (click)="openCvModal()"
         >
           <i class="bi bi-file-earmark-person-fill"></i>
-        </a>
+        </button>
       </li>
     </ul>
   </div>

@@ -1,5 +1,6 @@
 .projects-body {
-  background-color: #f1f5f9;
+  background-color: var(--color-bg);
+  transition: var(--transition-theme);
   padding-block: 5em;
   width: 100%;
   overflow: hidden;

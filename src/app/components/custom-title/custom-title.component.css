@@ -2,7 +2,7 @@
   text-align: center;
   font-size: 50px;
   text-transform: uppercase;
-  color: #222;
+  color: var(--color-text-secondary);
   letter-spacing: 1px;
   font-family: "Playfair Display", serif;
   font-weight: 400;
@@ -10,7 +10,7 @@
 .title h3 span {
   margin-top: 5px;
   font-size: 15px;
-  color: #444;
+  color: var(--color-text-muted);
   word-spacing: 1px;
   font-weight: normal;
   letter-spacing: 2px;
@@ -29,10 +29,22 @@
 .title h3 span:before {
   content: " ";
   display: block;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-border-light);
+  border-top: 1px solid var(--color-border-light);
   height: 5px;
-  background-color: #f8f8f8;
+  /* Par défaut : bande blanche sur sections #f1f5f9 */
+  background-color: var(--color-bg-elevated);
+  transition: var(--transition-theme);
+}
+
+/* Sections blanches → bande #f1f5f9 pour conserver l'alternance */
+:host-context(.skills-body) .title h3 span:after,
+:host-context(.skills-body) .title h3 span:before,
+:host-context(.certificats-body) .title h3 span:after,
+:host-context(.certificats-body) .title h3 span:before,
+:host-context(.career-body) .title h3 span:after,
+:host-context(.career-body) .title h3 span:before {
+  background-color: var(--color-bg);
 }
 
 h3 {
@@ -42,7 +54,7 @@ h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 40px;
-  color: #080808;
+  color: var(--color-text);
   -webkit-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;

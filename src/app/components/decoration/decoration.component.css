@@ -5,6 +5,7 @@
   width: 25em;
   overflow: hidden;
   z-index: 1;
+  pointer-events: none;
   animation: decoration-enter 0.8s ease-out forwards;
 }
 
@@ -22,9 +23,10 @@
 .carre {
   width: 84px;
   height: 84px;
-  border: 1px solid black;
+  border: 1px solid var(--color-decoration-line);
   transform: rotate(17deg);
   position: relative;
+  transition: border-color 0.3s ease;
 }
 
 .carre1 {

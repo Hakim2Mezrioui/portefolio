@@ -1,11 +1,5 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
-import { title } from 'process';
+import { AfterViewInit, Component } from '@angular/core';
+import * as AOS from 'aos';
 import { SkillModel } from 'src/app/models/SkillModel';
 import {
   databases,
@@ -22,9 +16,7 @@ import {
   templateUrl: './skills-section.component.html',
   styleUrls: ['./skills-section.component.css'],
 })
-export class SkillsSectionComponent implements AfterViewInit, OnInit {
-  @ViewChild('skills') skills!: ElementRef;
-
+export class SkillsSectionComponent implements AfterViewInit {
   languages!: SkillModel[];
   frameworks!: SkillModel[];
   databases!: SkillModel[];
@@ -43,29 +35,13 @@ export class SkillsSectionComponent implements AfterViewInit, OnInit {
     this.electronicsSkills = electronicsSkills;
   }
 
-  ngOnInit(): void {
-  }
-
+  /**
+   * Recalcule AOS après rendu des app-skill-item (*ngFor internes).
+   * Sans refresh, fade-right / fade-left peuvent ne plus se déclencher.
+   */
   ngAfterViewInit(): void {
-    // Récupère les enfants du carrousel une fois le composant initialisé
-    const skills = this.skills.nativeElement
-      .children as HTMLCollectionOf<HTMLElement>;
-
-    // Appelle la fonction de carrousel chaque 2 secondes
-    setInterval(() => {
-      this.carousel(skills);
-    }, 2000);
-  }
-
-  carousel(skills: HTMLCollectionOf<HTMLElement>) {
-    const firstSkill = skills[0]; // Prend le premier élément
-    firstSkill.style.transition = 'transform 0.5s ease'; // Applique la transition
-    firstSkill.style.transform = 'translateX(-220px)'; // Déplace l'élément vers la gauche
-
-    setTimeout(() => {
-      firstSkill.style.transition = 'none'; // Enlève la transition pour éviter l'effet de "saut"
-      firstSkill.style.transform = 'none'; // Réinitialise la position de l'élément
-      this.skills.nativeElement.appendChild(firstSkill); // Remet l'élément à la fin du conteneur
-    }, 500); // Durée doit correspondre à celle de la transition CSS
+    // refreshHard force AOS à rescanner tous les noeuds data-aos
+    // après que les composants enfants aient été rendus.
+    setTimeout(() => AOS.refreshHard(), 150);
   }
 }
