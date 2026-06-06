@@ -68,7 +68,7 @@ export const projects: ProjectModel[] = [
     'projects.velvetTableDesc',
     './assets/demos/restaurant.mp4',
     'https://github.com/Hakim2Mezrioui/VelvetTable',
-    'http://velvettable.42web.io',
+    'https://velvet-table.free.nf/src/home/home.php',
     ['PHP', 'Mysql', 'AOS', 'PDO', 'HTML', 'JavaScript', 'Bootstrap'],
     '../assets/demos/restaurant.png'
   ),
