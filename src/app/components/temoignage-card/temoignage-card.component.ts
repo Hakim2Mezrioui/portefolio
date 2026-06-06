@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
+import { AosService } from 'src/app/core/services/aos.service';
 import { TemoignageModel } from 'src/app/models/temoignageModel';
 
 @Component({
@@ -6,8 +7,16 @@ import { TemoignageModel } from 'src/app/models/temoignageModel';
   templateUrl: './temoignage-card.component.html',
   styleUrls: ['./temoignage-card.component.css'],
 })
-export class TemoignageCardComponent {
+export class TemoignageCardComponent implements AfterViewInit {
   @Input() temoignage!: TemoignageModel;
+  /** Délai AOS échelonné (ms), fourni par *ngFor dans la section. */
+  @Input() aosDelay = '0';
+
+  constructor(private readonly aos: AosService) {}
+
+  ngAfterViewInit(): void {
+    this.aos.requestRefresh();
+  }
 
   readonly recommendationsUrl = 'https://www.linkedin.com/in/hakim-mezrioui/details/recommendations/?detailScreenTabIndex=0';
 

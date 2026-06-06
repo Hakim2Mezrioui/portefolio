@@ -3,7 +3,11 @@
   color: var(--text-primary, var(--color-text));
   border: 1px solid var(--color-border);
   box-shadow: 0 2px 12px var(--color-shadow-soft);
-  transition: var(--transition-theme);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
   z-index: 2;

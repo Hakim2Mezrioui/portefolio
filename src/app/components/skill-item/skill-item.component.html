@@ -1,7 +1,8 @@
-<div class="skill">
+<div class="skill-row">
   <h3
     data-aos="fade-right"
     data-aos-duration="500"
+    data-aos-offset="80"
     data-aos-easing="ease-out-cubic"
     class="titleOfSkill"
   >
@@ -11,8 +12,9 @@
     <div
       data-aos="fade-left"
       data-aos-duration="500"
+      data-aos-offset="80"
       data-aos-easing="ease-out-cubic"
-      [attr.data-aos-delay]="i * 40"
+      [attr.data-aos-delay]="(i * 50).toString()"
       *ngFor="let skill of skills; let i = index"
       class="skill-item"
     >

@@ -187,3 +187,13 @@ html.dark app-cv-language-modal .cv-lang-btn {
 html.dark app-cv-language-modal .cv-lang-btn__label {
   color: var(--color-text);
 }
+
+/* My Skills : AOS fade-left / fade-right — pas de transition CSS sur transform */
+#mySkills [data-aos^='fade'].skill-item,
+#mySkills [data-aos^='fade'].titleOfSkill {
+  transition-property: opacity, transform !important;
+}
+
+#myTemoignages [data-aos='fade-up'].temo-card {
+  transition-property: opacity, transform !important;
+}
