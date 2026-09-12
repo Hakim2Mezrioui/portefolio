@@ -11,7 +11,7 @@ section {
 
 @media (max-width: 1200px) {
   section {
-    zoom: 0.8;
+    gap: 40px;
   }
 }
 
@@ -564,4 +564,92 @@ section ul {
   justify-content: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+}
+
+/* Keep responsive overrides after the base typography rules. */
+@media (max-width: 900px) {
+  section {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: auto;
+    margin-top: 0;
+    padding: 104px clamp(20px, 4vw, 24px) 48px;
+    gap: 32px;
+  }
+
+  section .content {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 600px;
+    padding-inline: 0;
+  }
+
+  .hero-image-wrapper {
+    width: min(100%, 320px);
+    min-width: 0;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .welcome-word { overflow: visible; }
+  .welcome-word::before { width: 100%; }
+  .content h2 {
+    font-size: clamp(32px, 8.5vw, 56px);
+    line-height: 1.12;
+    margin: 16px 0 24px;
+    overflow-wrap: anywhere;
+    animation: none;
+    top: auto;
+  }
+
+  .my-name-word { overflow: visible; padding-left: 12px; }
+  .content h3 {
+    font-size: clamp(21px, 5.5vw, 28px);
+    line-height: 1.25;
+    left: auto;
+    animation: none;
+    overflow-wrap: anywhere;
+  }
+
+  .job-title {
+    font-size: clamp(16px, 4vw, 19px);
+    font-weight: 500;
+    line-height: 1.45;
+    margin-top: 8px;
+    padding-left: 0;
+    left: auto;
+    top: auto;
+    animation: none;
+  }
+
+  .para { margin-top: 24px; overflow: visible; }
+  .para::after { display: none; }
+  section .content p {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: left;
+    overflow-wrap: break-word;
+    left: auto;
+    animation: none;
+  }
+
+  .explore { margin-top: 28px; flex-direction: column; align-items: flex-start; gap: 20px; }
+  .projects-link { max-width: 100%; overflow: visible; text-align: left; }
+  .projects-link a { animation: none; }
+  .see-project-link { font-size: 18px; line-height: 1.4; padding: 10px 0; overflow-wrap: anywhere; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image-wrapper, .hero-image-bg, .profile-image,
+  .content h2, .content h3, .job-title, .content p, .projects-link a {
+    animation: none;
+    opacity: 1;
+  }
+  .content h2 { top: 0; }
+  .content h3, .job-title, .content p { left: 0; }
 }

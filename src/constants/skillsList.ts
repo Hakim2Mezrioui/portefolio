@@ -54,6 +54,7 @@ export const Frameworks: SkillModel[] = [
     'React',
     'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png'
   ),
+  new SkillModel('Next.js', 'assets/images/skills/nextjs.svg'),
   new SkillModel(
     'Flutter',
     'https://img.icons8.com/color/512/flutter.png'
@@ -78,6 +79,7 @@ export const Frameworks: SkillModel[] = [
 
 export const databases: SkillModel[] = [
   new SkillModel('MySql', 'https://upload.wikimedia.org/wikipedia/de/d/dd/MySQL_logo.svg'),
+  new SkillModel('PostgreSQL', 'assets/images/skills/postgresql.svg'),
   new SkillModel(
     'Sql Server',
     'https://www.geekandjob.com/uploads/wiki/43b8c92d2a8fcd2a95ae6bf30c18494dae92467a.png'

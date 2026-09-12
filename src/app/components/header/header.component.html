@@ -1,62 +1,41 @@
-<nav>
-  <ul>
-    <li>
-      <a href="#home"><i class="bi bi-house-fill fs-6"></i> {{ 'nav.home' | translate }}</a>
-    </li>
-    <li>
-      <a href="#mySkills"><i class="bi bi-tools fs-6"></i> {{ 'nav.mySkills' | translate }}</a>
-    </li>
-    <li>
-      <a href="#myProjects"><i class="bi bi-clipboard2-pulse-fill fs-6"></i> {{ 'nav.myProjects' | translate }}</a>
-    </li>
-    <li>
-      <a href="#myCareer"><i class="bi bi-briefcase-fill fs-6"></i> {{ 'nav.career' | translate }}</a>
-    </li>
-    <li>
-      <a href="#myCertificats"><i class="bi bi-award-fill fs-6"></i> {{ 'nav.certificats' | translate }}</a>
-    </li>
-    <li>
-      <a href="#myTemoignages"><i class="bi bi-chat-quote-fill fs-6"></i> {{ 'nav.temoignages' | translate }}</a>
-    </li>
-    <li>
-      <a href="#contactMe"><i class="bi bi-envelope-at-fill fs-6"></i> {{ 'nav.contactMe' | translate }}</a>
-    </li>
-  </ul>
-
-  <i
-    #menuIcon
-    *ngIf="!showMenuHeader"
-    (click)="toogle()"
-    class="bi bi-list fs-1"
-  ></i>
-  <i
-    #menuIcon
-    *ngIf="showMenuHeader"
-    (click)="toogle()"
-    class="bi bi-arrow-left fs-3"
-  ></i>
-  <img alt="logo" src="./assets/images/LOGO_PORFOLIO.png" />
-  <div class="nav-right-group">
-    <app-icons-link></app-icons-link>
-    <span class="nav-group-sep" aria-hidden="true">|</span>
-    <app-theme-toggle></app-theme-toggle>
-    <span class="nav-group-sep" aria-hidden="true">|</span>
-    <div class="lang-switcher">
-      <button type="button" class="lang-btn" [class.active]="currentLang === 'en'" (click)="setLang('en')" aria-label="English">EN</button>
-      <button type="button" class="lang-btn" [class.active]="currentLang === 'fr'" (click)="setLang('fr')" aria-label="Français">FR</button>
+<header class="site-header" (keydown.escape)="closeMenuHeader(true)">
+  <div class="header-inner">
+    <a class="brand" href="#home" (click)="closeMenuHeader()" [attr.aria-label]="'Mezrioui Hakim - ' + ('nav.home' | translate)">
+      <img src="assets/images/LOGO_PORFOLIO.png" alt="HM" width="52" height="52" />
+    </a>
+    <nav id="header-navigation" class="header-navigation" [class.is-open]="showMenuHeader" [attr.aria-label]="currentLang === 'fr' ? 'Navigation principale' : 'Main navigation'">
+      <ul>
+        <li *ngFor="let item of links"><a [href]="item.href" (click)="closeMenuHeader()"><i class="bi nav-icon" [ngClass]="item.icon" aria-hidden="true"></i><span>{{ item.label | translate }}</span></a></li>
+      </ul>
+      <div class="mobile-theme-setting">
+        <span>{{ currentLang === 'fr' ? 'Thème' : 'Theme' }}</span>
+        <app-theme-toggle></app-theme-toggle>
+      </div>
+      <div class="mobile-menu-actions">
+        <div class="mobile-language-setting">
+          <span>{{ currentLang === 'fr' ? 'Langue' : 'Language' }}</span>
+          <div class="lang-switcher" role="group" [attr.aria-label]="currentLang === 'fr' ? 'Langue' : 'Language'">
+            <button type="button" [class.active]="currentLang === 'en'" [attr.aria-pressed]="currentLang === 'en'" (click)="setLang('en')" aria-label="English" lang="en">EN</button>
+            <button type="button" [class.active]="currentLang === 'fr'" [attr.aria-pressed]="currentLang === 'fr'" (click)="setLang('fr')" aria-label="Français" lang="fr">FR</button>
+          </div>
+        </div>
+        <button type="button" class="cv-button" (click)="openCv()" [attr.aria-label]="'cv.ariaOpen' | translate"><i class="bi bi-file-earmark-text" aria-hidden="true"></i><span>{{ currentLang === 'fr' ? 'Voir mon CV' : 'View my CV' }}</span></button>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/hakim-mezrioui" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/Hakim2Mezrioui" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+      </div>
+      <div class="header-settings">
+      <app-theme-toggle></app-theme-toggle>
+      <div class="lang-switcher" role="group" [attr.aria-label]="currentLang === 'fr' ? 'Langue' : 'Language'">
+        <button type="button" [class.active]="currentLang === 'en'" [attr.aria-pressed]="currentLang === 'en'" (click)="setLang('en')" aria-label="English" lang="en">EN</button>
+        <button type="button" [class.active]="currentLang === 'fr'" [attr.aria-pressed]="currentLang === 'fr'" (click)="setLang('fr')" aria-label="Français" lang="fr">FR</button>
+      </div>
+      </div>
+      <button type="button" class="cv-button" (click)="openCv()" [attr.aria-label]="'cv.ariaOpen' | translate"><i class="bi bi-file-earmark-text" aria-hidden="true"></i><span>CV</span></button>
+      <button #menuIcon type="button" class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="showMenuHeader" aria-controls="header-navigation" [attr.aria-label]="currentLang === 'fr' ? (showMenuHeader ? 'Fermer le menu' : 'Ouvrir le menu') : (showMenuHeader ? 'Close menu' : 'Open menu')"><i class="bi" [class.bi-list]="!showMenuHeader" [class.bi-x-lg]="showMenuHeader" aria-hidden="true"></i></button>
     </div>
   </div>
-</nav>
-
-<div #menuHeader>
-  <app-menu-header
-    appOutsideClick
-    [ngClass]="{
-      'menu-active': showMenuHeader,
-      'menu-hidden': !showMenuHeader && start
-    }"
-    class="menu"
-    (outsideClick)="closeMenuHeader()"
-    (isClose)="closeMenuHeader()"
-  ></app-menu-header>
-</div>
+</header>

@@ -15,8 +15,8 @@ export interface CvAsset {
 
 export const CV_ASSETS: Record<CvLang, CvAsset> = {
   fr: {
-    path: 'assets/CV/CV_Francais.pdf',
-    downloadName: 'CV_Francais.pdf',
+    path: 'assets/CV/CV_Français.pdf',
+    downloadName: 'CV_Français.pdf',
   },
   en: {
     path: 'assets/CV/CV_English.pdf',
