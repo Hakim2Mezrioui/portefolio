@@ -38,6 +38,15 @@ export const certificatsList: CertificatModel[] = [
     'https://udemy-certificate.s3.amazonaws.com/image/UC-d6c4843d-f1f3-48e3-8e1e-f20648fddb98.jpg' // image
   ),
   new CertificatModel(
+    'Docker from zero to hero (Arabic)',
+    'Udemy',
+    'July 2026',
+    'certificats.dockerDesc',
+    'https://www.udemy.com/certificate/UC-bbf8010a-2ef8-461b-a602-1d8ef5a55b36/',
+    'https://logo-marque.com/wp-content/uploads/2021/11/Udemy-Logo.png',
+    'https://udemy-certificate.s3.amazonaws.com/image/UC-bbf8010a-2ef8-461b-a602-1d8ef5a55b36.jpg'
+  ),
+  new CertificatModel(
     'Flutter & Dart - The Complete Guide [2024 Edition]',
     'Udemy',
     'Maîtrise du développement mobile : Flutter, Dart, création d\'interfaces (Widgets), gestion d\'état, requêtes HTTP, Google Maps, caméra et notifications push.',

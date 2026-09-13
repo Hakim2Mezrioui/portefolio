@@ -75,6 +75,7 @@ export const Frameworks: SkillModel[] = [
     'n8n',
     'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/n8n.png'
   ),
+  new SkillModel('Docker', 'assets/images/skills/docker.svg'),
 ];
 
 export const databases: SkillModel[] = [
@@ -82,6 +83,7 @@ export const databases: SkillModel[] = [
   new SkillModel('PostgreSQL', 'assets/images/skills/postgresql.svg'),
   new SkillModel('SQL Server', 'assets/images/skills/sql-server.svg'),
   new SkillModel('MongoDB', 'assets/images/skills/mongodb.svg'),
+  new SkillModel('Firebase', 'assets/images/skills/firebase.svg'),
 ];
 
 export const designeTools: SkillModel[] = [

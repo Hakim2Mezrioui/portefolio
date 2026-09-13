@@ -172,6 +172,8 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       cert4Title: 'Responsive Web Design',
       cert4Platform: 'freeCodeCamp',
       cert4Desc: 'HTML, CSS, Flexbox, Grid, and responsive design principles for building accessible and mobile-friendly web pages.',
+      dockerDesc:
+        'Docker fundamentals: images, containers, volumes, networks, Dockerfiles, and deploying containerized applications.',
       cognitiveClassPythonDesc:
         'Foundational Python for Data Science: data structures, object-oriented programming, file handling, Pandas, NumPy, and working with APIs.',
       cognitiveClassDataVisDesc:
@@ -407,6 +409,8 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
       cert4Title: 'Responsive Web Design',
       cert4Platform: 'freeCodeCamp',
       cert4Desc: 'HTML, CSS, Flexbox, Grid et principes de design responsive pour créer des pages web accessibles et adaptées au mobile.',
+      dockerDesc:
+        'Fondamentaux de Docker : images, conteneurs, volumes, réseaux, Dockerfiles et déploiement d’applications conteneurisées.',
       cognitiveClassPythonDesc:
         "Fondamentaux de Python pour la Data Science : structures de données, programmation orientée objet, manipulation de fichiers, Pandas, NumPy et utilisation d'APIs.",
       cognitiveClassDataVisDesc:
