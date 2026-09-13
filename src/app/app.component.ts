@@ -10,6 +10,7 @@ import { ThemeService } from './core/services/theme.service';
 export class AppComponent implements OnInit {
   title = 'portefolio-app';
   isLoaded = false;
+  isPortfolioReady = false;
 
   constructor(
     private readonly themeService: ThemeService,
@@ -21,11 +22,13 @@ export class AppComponent implements OnInit {
   }
 
   onLoaded(): void {
-    this.aos.refreshAfterRender(100, 400, 900);
-
-    setTimeout(() => {
-      this.isLoaded = true;
-      this.aos.refreshHard();
-    }, 700);
+    this.isLoaded = true;
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        this.isPortfolioReady = true;
+        this.aos.refreshAfterRender(100, 400, 900);
+        this.aos.refreshHard();
+      });
+    });
   }
 }

@@ -1,4 +1,4 @@
-<div class="preloader" [class.hide]="hiding">
+<div class="preloader" [class.hide]="hiding" (transitionend)="onTransitionEnd($event)">
   <div class="loader-content">
     <div class="logo-text">HM</div>
     <div class="loader-bar">

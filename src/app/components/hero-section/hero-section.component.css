@@ -653,3 +653,60 @@ section ul {
   .content h2 { top: 0; }
   .content h3, .job-title, .content p { left: 0; }
 }
+
+/* The hero waits until the preloader has completely faded out. */
+.hero-image-wrapper,
+.hero-image-bg,
+.profile-image,
+.content h2,
+.content h3,
+.job-title,
+.content p,
+.projects-link a {
+  animation: none;
+}
+
+:host-context(.portfolio-ready) .hero-image-wrapper {
+  animation: hero-card-circle-reveal 0.9s ease-out forwards;
+}
+
+:host-context(.portfolio-ready) .hero-image-bg {
+  animation: blob-grow 0.85s ease-out forwards, blob-float 14s ease-in-out 0.9s infinite;
+}
+
+:host-context(.portfolio-ready) .profile-image {
+  animation: profile-image-reveal 0.8s ease-out 0.9s forwards;
+}
+
+:host-context(.portfolio-ready) .content h2 {
+  animation: start-welcome 1s ease forwards;
+}
+
+:host-context(.portfolio-ready) .content h3 {
+  animation: start-my-name 1s ease forwards;
+}
+
+:host-context(.portfolio-ready) .job-title {
+  animation: start-job-title 1s ease forwards;
+}
+
+:host-context(.portfolio-ready) .content p {
+  animation: start-para 1s ease forwards;
+}
+
+:host-context(.portfolio-ready) .projects-link a {
+  animation: start-projects-link 1s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :host-context(.portfolio-ready) .hero-image-wrapper,
+  :host-context(.portfolio-ready) .hero-image-bg,
+  :host-context(.portfolio-ready) .profile-image,
+  :host-context(.portfolio-ready) .content h2,
+  :host-context(.portfolio-ready) .content h3,
+  :host-context(.portfolio-ready) .job-title,
+  :host-context(.portfolio-ready) .content p,
+  :host-context(.portfolio-ready) .projects-link a {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,7 @@
+.portfolio {
+  visibility: hidden;
+}
+
+.portfolio.portfolio-ready {
+  visibility: visible;
+}
