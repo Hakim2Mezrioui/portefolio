@@ -22,7 +22,7 @@ export const projects: ProjectModel[] = [
       'Ollama (LLaMA3)',
       'AI Agents',
     ],
-    '../assets/demos/thumbnail_Smart_Caravane.png'
+    '../assets/demos/thumbnail_Smart_Caravane.webp'
   ),
   new ProjectModel(
     'projects.htechTitle',
@@ -31,7 +31,7 @@ export const projects: ProjectModel[] = [
     'https://github.com/Hakim2Mezrioui',
     'https://h-tech-two.vercel.app/',
     ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Radix UI', 'React Router', 'Laravel', 'Vercel'],
-    '../assets/demos/h-tech.png'
+    '../assets/demos/h-tech.webp'
   ),
   new ProjectModel(
     'projects.um6ssHelpdeskTitle',
@@ -40,7 +40,7 @@ export const projects: ProjectModel[] = [
     'https://github.com/AnasOudadsse/ticketing-app',
     '#',
     ['React', 'Vite', 'Tailwind CSS', 'Radix UI', 'Chakra UI', 'Recharts', 'Axios'],
-    '../assets/demos/tickets-app.png'
+    '../assets/demos/tickets-app.webp'
   ),
   new ProjectModel(
     'projects.absenceAppTitle',
@@ -61,7 +61,7 @@ export const projects: ProjectModel[] = [
       'MySQL',
       'SqlServer',
     ],
-    '../assets/demos/absence-app.png'
+    '../assets/demos/absence-app.webp'
   ),
   new ProjectModel(
     'projects.velvetTableTitle',
@@ -70,7 +70,7 @@ export const projects: ProjectModel[] = [
     'https://github.com/Hakim2Mezrioui/VelvetTable',
     'https://velvet-table.free.nf/src/home/home.php',
     ['PHP', 'Mysql', 'AOS', 'PDO', 'HTML', 'JavaScript', 'Bootstrap'],
-    '../assets/demos/restaurant.png'
+    '../assets/demos/restaurant.webp'
   ),
   new ProjectModel(
     'projects.storElecTitle',
@@ -88,7 +88,7 @@ export const projects: ProjectModel[] = [
       'PrimeNg',
       'JavaScript',
     ],
-    '../assets/demos/stroeelec.png'
+    '../assets/demos/stroeelec.webp'
   ),
   new ProjectModel(
     'projects.iptvTitle',
@@ -97,7 +97,7 @@ export const projects: ProjectModel[] = [
     'https://github.com/Hakim2Mezrioui/iptv',
     'https://hakim2mezrioui.github.io/iptv-host/',
     ['React', 'JavaScript', 'HTML', 'CSS', 'Font Awesome', 'PHP', 'Laravel'],
-    '../assets/demos/iptv.png'
+    '../assets/demos/iptv.webp'
   ),
   new ProjectModel(
     'projects.forumEmploiTitle',
@@ -118,7 +118,7 @@ export const projects: ProjectModel[] = [
       'React-qr-code',
       'React-pdf',
     ],
-    '../assets/demos/forumEmploi.png'
+    '../assets/demos/forumEmploi.webp'
   ),
   new ProjectModel(
     'projects.reseauxProTitle',
@@ -127,7 +127,7 @@ export const projects: ProjectModel[] = [
     'https://github.com/Hakim2Mezrioui/devResPro',
     'https://hakim2mezrioui.github.io/devResPro/',
     ['Angular', 'TypeScript', 'Bootstrap', 'Font Awesome', 'HTML', 'CSS'],
-    '../assets/demos/devResPro.png'
+    '../assets/demos/devResPro.webp'
   ),
   new ProjectModel(
     'projects.infobibliophileTitle',
@@ -149,6 +149,6 @@ export const projects: ProjectModel[] = [
       'HTML',
       'CSS',
     ],
-    '../assets/demos/infobibliophile_plateform.png'
+    '../assets/demos/infobibliophile_plateform.webp'
   ),
 ];

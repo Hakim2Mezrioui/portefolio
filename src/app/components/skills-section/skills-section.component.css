@@ -26,11 +26,8 @@
   position: relative;
 } */
 
-.skill {
-  display: flex;
-}
-
-.skill h3 {
+/* .skill-row : classe dans skill-item (évite conflit avec ancien carousel #skills) */
+.skill-row h3.titleOfSkill {
   width: 7em;
 }
 

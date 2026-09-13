@@ -1,5 +1,5 @@
-import { AfterViewInit, Component } from '@angular/core';
-import * as AOS from 'aos';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AosService } from 'src/app/core/services/aos.service';
 import { SkillModel } from 'src/app/models/SkillModel';
 import {
   databases,
@@ -16,7 +16,7 @@ import {
   templateUrl: './skills-section.component.html',
   styleUrls: ['./skills-section.component.css'],
 })
-export class SkillsSectionComponent implements AfterViewInit {
+export class SkillsSectionComponent implements AfterViewInit, OnDestroy {
   languages!: SkillModel[];
   frameworks!: SkillModel[];
   databases!: SkillModel[];
@@ -25,7 +25,7 @@ export class SkillsSectionComponent implements AfterViewInit {
   othersSkills!: SkillModel[];
   electronicsSkills!: SkillModel[];
 
-  constructor() {
+  constructor(private readonly aos: AosService) {
     this.languages = Languages;
     this.frameworks = Frameworks;
     this.databases = databases;
@@ -35,13 +35,12 @@ export class SkillsSectionComponent implements AfterViewInit {
     this.electronicsSkills = electronicsSkills;
   }
 
-  /**
-   * Recalcule AOS après rendu des app-skill-item (*ngFor internes).
-   * Sans refresh, fade-right / fade-left peuvent ne plus se déclencher.
-   */
   ngAfterViewInit(): void {
-    // refreshHard force AOS à rescanner tous les noeuds data-aos
-    // après que les composants enfants aient été rendus.
-    setTimeout(() => AOS.refreshHard(), 150);
+    this.aos.watchSkillsSection();
+    this.aos.refreshAfterRender(300, 1000, 2500);
+  }
+
+  ngOnDestroy(): void {
+    this.aos.disconnectSkillsWatcher();
   }
 }

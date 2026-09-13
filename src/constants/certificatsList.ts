@@ -80,7 +80,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.angularEduonixDesc', // descriptionKey → clé de traduction
     'https://www.eduonix.com/certificate/d20087e36f', // verifyLink
     'https://cdn.eduonix.com/assets/images/profile_images/20200414074232555.png', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/anguler_certif_eduonix.jpg' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/anguler_certif_eduonix.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Apprendre à coder avec Python',
@@ -89,7 +89,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.pythonFunDesc', // descriptionKey → clé de traduction
     'https://www.fun-mooc.fr', // verifyLink (lien général de la plateforme)
     'https://1c1fef7b-2fa0-455a-987d-673bcdd072ae.svc.edge.scw.cloud/media/filer_public_thumbnails/filer_public/ed/a8/eda89e81-4444-48ca-96bd-a425cc807239/logo_plateforme_fun_600x400_wfktzri.jpg__776x3104_q85_replace_alpha-%23FFFFFF_subsampling-2.jpg', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/attestation-python.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/attestation-python.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Python : des fondamentaux aux concepts avancés du langage',
@@ -98,7 +98,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.pythonAvanceFunDesc', // descriptionKey → clé de traduction
     'https://www.fun-mooc.fr', // verifyLink
     'https://1c1fef7b-2fa0-455a-987d-673bcdd072ae.svc.edge.scw.cloud/media/filer_public_thumbnails/filer_public/ed/a8/eda89e81-4444-48ca-96bd-a425cc807239/logo_plateforme_fun_600x400_wfktzri.jpg__776x3104_q85_replace_alpha-%23FFFFFF_subsampling-2.jpg', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/attestation-python-avance.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/attestation-python-avance.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Legacy Responsive Web Design V8',
@@ -107,7 +107,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.fccResponsiveWebDesignDesc', // descriptionKey → clé de traduction
     'https://freecodecamp.org/certification/fcc231c4cd2-eb51-46a0-a6dd-fa8cd2fb2069/responsive-web-design', // verifyLink
     'https://design-style-guide.freecodecamp.org/img/fcc_secondary_small.svg', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/fcc-responsive-web-design.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/fcc-responsive-web-design.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Scientific Computing with Python',
@@ -116,7 +116,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.fccScientificPythonDesc', // descriptionKey → clé de traduction
     'https://freecodecamp.org/certification/fcc231c4cd2-eb51-46a0-a6dd-fa8cd2fb2069/scientific-computing-with-python-v7', // verifyLink
     'https://design-style-guide.freecodecamp.org/img/fcc_secondary_small.svg', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/fcc-scientific-computing-python.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/fcc-scientific-computing-python.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Legacy JavaScript Algorithms and Data Structures V7',
@@ -125,7 +125,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.fccJavascriptDesc', // descriptionKey → clé de traduction
     'https://freecodecamp.org/certification/fcc231c4cd2-eb51-46a0-a6dd-fa8cd2fb2069/javascript-algorithms-and-data-structures', // verifyLink
     'https://design-style-guide.freecodecamp.org/img/fcc_secondary_small.svg', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/fcc-javascript-algorithms.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/fcc-javascript-algorithms.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Angular',
@@ -134,7 +134,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.sololearnAngularDesc', // descriptionKey → clé de traduction
     'https://www.sololearn.com/en/certificates/CC-TIHHC6M0', // verifyLink
     'https://blob.sololearn.com/avatars/sololearn.png', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/sololearn-angular.png.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/sololearn-angular.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Python Essentials 1',
@@ -143,7 +143,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.pythonCiscoDesc', // descriptionKey → clé de traduction
     'https://www.credly.com/badges/dc1ad7d7-386e-47f6-9708-5ddda8821e98/linked_in_profile', // verifyLink (Scannez le QR code de votre certificat pour obtenir le lien exact)
     'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1280px-Cisco_logo_blue_2016.svg.png', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/python-cisco.jpg' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/python-cisco.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     '1 Minute Typing Test - 73 WPM',
@@ -152,7 +152,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.typingDesc', // descriptionKey → clé de traduction
     'https://www.typing.com/apiv1/student/tests/388929822/173295640/certificate?language=en&product_id=typing', // verifyLink
     'https://pbs.twimg.com/profile_images/1489346106165272577/PrPRCB4k_400x400.jpg', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/typing-certificate.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/typing-certificate.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Professional Practical Electronics Design Courses',
@@ -161,7 +161,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.walidIssaDesc', // descriptionKey → clé de traduction
     '#', // verifyLink (Pas de lien de vérification sur ce document)
     '../assets/images/Logo-walid-issa-academy.png', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/certificat_walid_issa_electronique.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/certificat_walid_issa_electronique.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Intro to Machine Learning',
@@ -170,7 +170,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.kaggleIntroMLDesc', // descriptionKey → clé de traduction
     'https://www.kaggle.com/learn/certification/hakimmezrioui/intro-to-machine-learning', // verifyLink (à remplacer par le lien de votre profil Kaggle)
     '../assets/images/kaggle-logo.png', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/hakim mezrioui - Intro to Machine Learning.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/hakim mezrioui - Intro to Machine Learning.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Pandas',
@@ -179,7 +179,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.kagglePandasDesc', // descriptionKey → clé de traduction
     'https://www.kaggle.com/learn/certification/hakimmezrioui/pandas', // verifyLink (à remplacer par le lien de votre profil Kaggle)
     '../assets/images/kaggle-logo.png', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/hakim mezrioui - Pandas.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/hakim mezrioui - Pandas.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Python 101 for Data Science',
@@ -188,7 +188,7 @@ export const certificatsList: CertificatModel[] = [
     'certificats.cognitiveClassPythonDesc',
     'https://courses.cognitiveclass.ai/certificates/65c43e10ada44288900cb90a63afa10d', // verifyLink
     'https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/644bcxng43h754iyqftkagb7aen1', // logo (à remplacer par votre lien/chemin)
-    '../assets/certificats/python-for-data-science-ibm.png' // image (à remplacer par votre lien/chemin)
+    '../assets/certificats/python-for-data-science-ibm.webp' // image (à remplacer par votre lien/chemin)
   ),
   new CertificatModel(
     'Data Visualization with Python',
@@ -197,6 +197,6 @@ export const certificatsList: CertificatModel[] = [
     'certificats.cognitiveClassDataVisDesc',
     'https://courses.cognitiveclass.ai/certificates/ba13b3894d464604a63665546b6b4401',
     'https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/644bcxng43h754iyqftkagb7aen1',
-    '../assets/certificats/data-visualization-with-python.png'
+    '../assets/certificats/data-visualization-with-python.webp'
   )
 ];

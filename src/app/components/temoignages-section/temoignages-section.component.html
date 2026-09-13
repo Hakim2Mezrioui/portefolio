@@ -10,6 +10,7 @@
       <app-temoignage-card
         *ngFor="let temo of temoignages; let i = index"
         [temoignage]="temo"
+        [aosDelay]="(i * 100).toString()"
       ></app-temoignage-card>
     </div>
     <div class="temoignages-cta" data-aos="fade-up">

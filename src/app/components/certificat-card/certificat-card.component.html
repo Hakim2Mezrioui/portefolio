@@ -1,5 +1,5 @@
 <div class="cert-card">
-  <img [src]="certificat.image" [alt]="certificat.titleKey | translate" class="cert-image" />
+  <img [src]="certificat.image" [alt]="certificat.titleKey | translate" class="cert-image" loading="lazy" decoding="async" />
   <div class="overlay">
     <div class="overlay-logo">
       <img [src]="certificat.logo" [alt]="certificat.platformKey | translate" />

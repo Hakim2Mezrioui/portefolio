@@ -228,6 +228,11 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
         'I had the pleasure of teaching Hakim Mezrioui in my Cross-Platform Development with Flutter course as part of the DAISI program at Faculté des Sciences Ain Chock and he was, without a doubt, one of the most motivated and capable students I have had. From day one, Hakim stood out for his proactivity and eagerness to learn. He never just followed the curriculum he explored, experimented, and always came back with smart questions. His ability to grasp complex concepts quickly and apply them practically was genuinely impressive. This was confirmed brilliantly through his Final Year Project: SmartCaravane, a fully autonomous smart caravan ecosystem with real-time IoT control via both a Flutter mobile app and a Spring Boot/Angular web platform. The project combined embedded systems (ESP32, Arduino, multiple sensors), AI/ML integration, and clean full-stack development—all delivered with a real-world vision tied to Morocco’s upcoming World Cup 2030. It was one of the most complete and ambitious PFE projects I have seen. Hakim is technically versatile, proactive, and professionally minded. He will be a strong asset to any team working in mobile development, IoT, or AI-driven systems. I recommend him without hesitation.',
       temo9Date: 'March 2026',
       temo9Relation: 'Mentor',
+      temo10Position: 'Full Stack Web Developer',
+      temo10Text:
+        'I highly recommend Hakim Mezrioui, with whom I had the pleasure of working at UM6SS – Faculty of Pharmacy. Hakim is a serious, committed and highly competent professional. Throughout our collaboration, he consistently demonstrated rigour, responsibility and an excellent team spirit. He is organised, reliable and fully invested in his work. Tasks were always completed under very good conditions, with efficiency and professionalism. I consider him one of the best colleagues I have worked with. I recommend him without hesitation for any professional opportunity.',
+      temo10Date: 'March 2026',
+      temo10Relation: 'Colleague',
       verifiedCount: 'verified LinkedIn recommendations',
     },
   },
@@ -458,6 +463,11 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
         "J’ai eu le plaisir d’enseigner à Hakim Mezrioui dans mon module de Développement Cross-Platform avec Flutter dans le cadre du programme DAISI à la Faculté des Sciences Ain Chock, et il a été, sans aucun doute, l’un des étudiants les plus motivés et les plus capables que j’aie rencontrés. Dès le premier jour, Hakim s’est distingué par sa proactivité et sa soif d’apprendre. Il ne se contentait pas de suivre le programme : il explorait, expérimentait et revenait toujours avec des questions pertinentes. Sa capacité à assimiler rapidement des concepts complexes et à les appliquer concrètement était réellement impressionnante. Cela s’est confirmé brillamment à travers son Projet de Fin d’Études : SmartCaravane, un écosystème de caravane intelligente entièrement autonome, avec pilotage IoT en temps réel via une application mobile Flutter et une plateforme web Spring Boot/Angular. Le projet combinait systèmes embarqués (ESP32, Arduino, capteurs multiples), intégration IA/ML et un développement full stack propre, le tout porté par une vision réelle liée à la Coupe du Monde 2030 au Maroc. C’était l’un des PFE les plus complets et ambitieux que j’aie vus, et j’en étais vraiment fier. Hakim est techniquement polyvalent, proactif et très professionnel. Il sera un atout majeur pour toute équipe travaillant sur des projets mobiles, IoT ou systèmes pilotés par l’IA. Je le recommande sans hésitation.",
       temo9Date: 'Mars 2026',
       temo9Relation: 'Mentor',
+      temo10Position: 'Développeur Web Full Stack',
+      temo10Text:
+        "Je recommande vivement Hakim Mezrioui avec qui j'ai eu le plaisir de travailler à l'UM6SS – Faculté de Pharmacie. Hakim est un professionnel sérieux, impliqué et très compétent. Durant notre collaboration, il a toujours fait preuve de rigueur, de responsabilité et d'un excellent esprit d'équipe. C'est une personne organisée, fiable et investie dans son travail. Les missions ont toujours été réalisées dans de très bonnes conditions, avec efficacité et professionnalisme. Je le considère comme l'un des meilleurs collègues avec qui j'ai travaillé. Je le recommande sans hésitation pour toute opportunité professionnelle.",
+      temo10Date: 'Mars 2026',
+      temo10Relation: 'Collègue',
       verifiedCount: 'recommandations LinkedIn vérifiées',
     },
   },

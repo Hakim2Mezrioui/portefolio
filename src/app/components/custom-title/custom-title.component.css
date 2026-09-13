@@ -55,9 +55,7 @@ h3 {
   font-weight: 300;
   font-size: 40px;
   color: var(--color-text);
-  -webkit-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  transition: color 0.3s ease;
   top: 0;
 }
 

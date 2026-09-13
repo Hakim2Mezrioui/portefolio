@@ -21,7 +21,7 @@ export const Languages: SkillModel[] = [
     'C-Sharp',
     'https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png'
   ),
-  new SkillModel('PHP', 'https://cdnlogo.com/logos/p/71/php.svg'),
+  new SkillModel('PHP', 'assets/images/skills/php.svg'),
 
   // 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png',
   new SkillModel(
@@ -80,11 +80,8 @@ export const Frameworks: SkillModel[] = [
 export const databases: SkillModel[] = [
   new SkillModel('MySql', 'https://upload.wikimedia.org/wikipedia/de/d/dd/MySQL_logo.svg'),
   new SkillModel('PostgreSQL', 'assets/images/skills/postgresql.svg'),
-  new SkillModel(
-    'Sql Server',
-    'https://www.geekandjob.com/uploads/wiki/43b8c92d2a8fcd2a95ae6bf30c18494dae92467a.png'
-  ),
-  new SkillModel('MongoDB', 'https://cdnlogo.com/logos/m/30/mongodb-icon.svg'),
+  new SkillModel('SQL Server', 'assets/images/skills/sql-server.svg'),
+  new SkillModel('MongoDB', 'assets/images/skills/mongodb.svg'),
 ];
 
 export const designeTools: SkillModel[] = [

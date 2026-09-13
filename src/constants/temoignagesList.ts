@@ -2,6 +2,16 @@ import { TemoignageModel } from 'src/app/models/temoignageModel';
 
 export const temoignagesList: TemoignageModel[] = [
   new TemoignageModel(
+    'Salma Lamsahel',
+    'temoignages.temo10Position',
+    'UM6SS – Faculté de Pharmacie',
+    'temoignages.temo10Text',
+    '',
+    'https://www.linkedin.com/in/salma-lamsahel/',
+    'Mars 2026',
+    'Collègue'
+  ),
+  new TemoignageModel(
     'Anas Oudadsse',
     'temoignages.temo8Position',
     '',
