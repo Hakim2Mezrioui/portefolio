@@ -128,7 +128,7 @@ export const montageTools: SkillModel[] = [
   ),
   new SkillModel(
     'FL Studio',
-    'https://play-lh.googleusercontent.com/Pxdgk7UjvfpihQv_WaAIndFJS0f_NcGvKGoKDN6HovXmnAQexYTgxDtPWdFRErJ_NRs'
+    'assets/images/skills/fl-studio.svg'
   ),
 ];
 
