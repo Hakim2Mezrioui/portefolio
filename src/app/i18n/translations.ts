@@ -50,6 +50,9 @@ My diverse expertise allows me to seamlessly connect the physical and digital wo
       smartCaravanTitle: 'SMART CARAVAN',
       smartCaravanDesc:
         'Smart Caravan is an all-in-one connected caravan ecosystem designed to solve both transportation and accommodation challenges for supporters during AFCON 2026 and the 2030 World Cup in Morocco. A fleet of IoT-enabled caravans is managed through a web-based admin dashboard and a mobile reservation app, while on-device AI agents assist users autonomously throughout their journey and stay.',
+      lumenSpaceTitle: 'LUMEN SPACE',
+      lumenSpaceDesc:
+        'Lumen Space is a responsive business website developed for a printing and visual communication studio based in Casablanca, Morocco. It showcases the studio’s services, from large-format printing and vehicle branding to signage and custom promotional products, through dedicated service pages and image galleries. Visitors can explore the studio’s work, request a quote through a contact form with file attachments, and connect directly via WhatsApp. The website includes email delivery and local SEO features to support the studio’s online presence.',
       htechTitle: 'H-Tech',
       htechDesc:
         'Full-featured e-commerce application for selling tech products. The platform delivers an optimal user experience with an intuitive interface, fully responsive design, and smooth navigation from product catalog to cart management. Continuous deployment is handled via Vercel.',
@@ -287,6 +290,9 @@ Mon expertise me permet de faire le lien entre le monde physique et le numériqu
       smartCaravanTitle: "SMART CARAVAN",
       smartCaravanDesc:
         'Face aux défis logistiques majeurs attendus lors de la CAN 2026 et de la Coupe du Monde 2030 au Maroc, Smart Caravan apporte une solution tout-en-un innovante aux problématiques de transport et de logement des supporters. Une flotte de caravanes connectées, pilotée via un tableau de bord administrateur web et une application mobile de réservation, s’appuie sur des agents d’IA embarqués pour assister les utilisateurs de manière autonome tout au long de leur trajet et de leur séjour.',
+      lumenSpaceTitle: 'LUMEN SPACE',
+      lumenSpaceDesc:
+        'Lumen Space est un site vitrine responsive conçu pour un studio d’impression et de communication visuelle basé à Casablanca, au Maroc. Il présente ses services, de l’impression grand format au marquage de véhicules, en passant par la signalétique et les objets publicitaires personnalisés, à travers des pages dédiées et des galeries d’images. Les visiteurs peuvent découvrir les réalisations du studio, demander un devis via un formulaire avec pièces jointes et le contacter directement sur WhatsApp. L’envoi d’e-mails et le référencement local renforcent sa présence en ligne.',
       htechTitle: 'H-Tech',
       htechDesc:
         "Développement d'une application e-commerce complète et performante dédiée à la vente d'articles technologiques. La plateforme a été pensée pour offrir une expérience utilisateur optimale, avec une interface intuitive, un design entièrement responsive et une navigation fluide dans le catalogue produit jusqu'à la gestion du panier d'achat. Le déploiement continu est assuré via Vercel.",

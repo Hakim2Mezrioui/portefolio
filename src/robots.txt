@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mezrioui-hakim.web.app/sitemap.xml
+Sitemap: https://mezrioui-hakim.com/sitemap-com.xml

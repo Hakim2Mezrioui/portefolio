@@ -34,7 +34,7 @@
 
 .desc-project {
   padding: 2.5em;
-  height: 426px;
+  min-height: 426px;
   width: 625px;
   display: flex;
   flex-direction: column;

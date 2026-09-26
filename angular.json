@@ -18,7 +18,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest", "src/sitemap.xml"],
+            "assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest", "src/sitemap.xml", "src/sitemap-com.xml", "src/robots.txt"],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json",
             "styles": [

@@ -25,6 +25,36 @@ export const projects: ProjectModel[] = [
     '../assets/demos/thumbnail_Smart_Caravane.webp'
   ),
   new ProjectModel(
+    'projects.lumenSpaceTitle',
+    'projects.lumenSpaceDesc',
+    './assets/demos/lumen-space.mp4',
+    'https://github.com/Hakim2Mezrioui/impression-project',
+    'https://lumen-space.com',
+    ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'CSS Modules', 'Nodemailer', 'Lucide React'],
+    './assets/demos/lumen-space.webp'
+  ),
+  new ProjectModel(
+    'projects.forumEmploiTitle',
+    'projects.forumEmploiDesc',
+    './assets/demos/forumEmploi.mp4',
+    'https://github.com/Hakim2Mezrioui/gestion-inscription',
+    'https://istahh1.com/',
+    [
+      'React',
+      'JavaScript',
+      'PHP',
+      'Laravel',
+      'React-Toastify',
+      'Swiper',
+      'Bootstrap',
+      'Font Awesome',
+      'React-Slick',
+      'React-qr-code',
+      'React-pdf',
+    ],
+    '../assets/demos/forumEmploi.webp'
+  ),
+  new ProjectModel(
     'projects.htechTitle',
     'projects.htechDesc',
     './assets/demos/h-tech_demo.mp4',
@@ -73,6 +103,28 @@ export const projects: ProjectModel[] = [
     '../assets/demos/restaurant.webp'
   ),
   new ProjectModel(
+    'projects.infobibliophileTitle',
+    'projects.infobibliophileDesc',
+    './assets/demos/infobibliophile_plateform.mp4',
+    'https://github.com/Hakim2Mezrioui/infobibliophile-app',
+    '#',
+    [
+      'Angular',
+      'TypeScript',
+      'FLUTTER',
+      'DART',
+      'LARAVEL',
+      'PHP',
+      'MYSQL',
+      'SQFLIT',
+      'Bootstrap',
+      'Font Awesome',
+      'HTML',
+      'CSS',
+    ],
+    '../assets/demos/infobibliophile_plateform.webp'
+  ),
+  new ProjectModel(
     'projects.storElecTitle',
     'projects.storElecDesc',
     './assets/demos/stroeelec.mp4',
@@ -100,27 +152,6 @@ export const projects: ProjectModel[] = [
     '../assets/demos/iptv.webp'
   ),
   new ProjectModel(
-    'projects.forumEmploiTitle',
-    'projects.forumEmploiDesc',
-    './assets/demos/forumEmploi.mp4',
-    'https://github.com/Hakim2Mezrioui/gestion-inscription',
-    'https://istahh1.com/',
-    [
-      'React',
-      'JavaScript',
-      'PHP',
-      'Laravel',
-      'React-Toastify',
-      'Swiper',
-      'Bootstrap',
-      'Font Awesome',
-      'React-Slick',
-      'React-qr-code',
-      'React-pdf',
-    ],
-    '../assets/demos/forumEmploi.webp'
-  ),
-  new ProjectModel(
     'projects.reseauxProTitle',
     'projects.reseauxProDesc',
     './assets/demos/devResPro.mp4',
@@ -128,27 +159,5 @@ export const projects: ProjectModel[] = [
     'https://hakim2mezrioui.github.io/devResPro/',
     ['Angular', 'TypeScript', 'Bootstrap', 'Font Awesome', 'HTML', 'CSS'],
     '../assets/demos/devResPro.webp'
-  ),
-  new ProjectModel(
-    'projects.infobibliophileTitle',
-    'projects.infobibliophileDesc',
-    './assets/demos/infobibliophile_plateform.mp4',
-    'https://github.com/Hakim2Mezrioui/infobibliophile-app',
-    '#',
-    [
-      'Angular',
-      'TypeScript',
-      'FLUTTER',
-      'DART',
-      'LARAVEL',
-      'PHP',
-      'MYSQL',
-      'SQFLIT',
-      'Bootstrap',
-      'Font Awesome',
-      'HTML',
-      'CSS',
-    ],
-    '../assets/demos/infobibliophile_plateform.webp'
   ),
 ];
