@@ -1,5 +1,6 @@
 .decoration {
   position: fixed;
+  left: 0;
   bottom: calc(0em - 50px);
   height: 17em;
   width: 25em;
@@ -92,5 +93,12 @@
 @media (max-width: 1200px) {
   .decoration {
     zoom: .7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .decoration,
+  .carre {
+    animation: none;
   }
 }

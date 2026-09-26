@@ -22,8 +22,10 @@ Header height is 80px on desktop and 72px on mobile. Avoid entrance cascades, re
 
 ## Responsive hero
 
-At widths up to 900px, the hero uses natural layout without CSS zoom, 20–24px outer horizontal padding and no nested content padding. The welcome heading scales with viewport width; the name is larger than the job title. Body copy is left-aligned at 16px with 1.7 line height. Mobile text entrance offsets are disabled to avoid clipping. Preserve the original copy, portrait, theme and project link. Respect reduced motion for the hero animations.
+At widths up to 900px, the hero uses natural layout without CSS zoom and 20–24px outer horizontal padding. The welcome heading scales with viewport width; the name is larger than the job title. Body copy is left-aligned at 16px with 1.7 line height. Mobile text entrance offsets are disabled to avoid clipping. Preserve the original copy, portrait, theme and project link. Respect reduced motion for the hero animations.
 
 ## Verification limits
+
+Per user preference, keep the square decoration visible at all viewport widths and do not add an opaque mask. Give the welcome content real padding: 24px vertically and 32px horizontally on desktop, 20px vertically and 16px horizontally up to 900px. Paragraphs fit the available inner width. Keep mobile text entrance animations disabled even after the preloader completes. Decorative squares are hidden from assistive technology and stop moving when reduced motion is requested.
 
 The supplied desktop and mobile screenshots ground these optimizations. No connected browser was available during implementation, so the revised rendering and responsive interactions still need a visual check in the user's browser.
