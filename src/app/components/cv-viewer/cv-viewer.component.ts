@@ -1,10 +1,11 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 import { CvLang } from 'src/constants/cvLinks';
 import { CvModalService, CvViewerState } from 'src/app/services/cv-modal.service';
+import { TranslateService } from 'src/app/services/translate.service';
 
-/** Viewer plein écran du CV (iframe) avec barre d'actions. */
+/** Full-screen CV reader backed by the locally hosted PDF.js viewer. */
 @Component({
   selector: 'app-cv-viewer',
   templateUrl: './cv-viewer.component.html',
@@ -16,10 +17,12 @@ export class CvViewerComponent implements OnInit, OnDestroy {
   safePdfUrl: SafeResourceUrl | null = null;
 
   private viewerSub?: Subscription;
+  @ViewChild('pdfFrame') private pdfFrame?: ElementRef<HTMLIFrameElement>;
 
   constructor(
     private readonly cvModalService: CvModalService,
-    private readonly sanitizer: DomSanitizer
+    private readonly sanitizer: DomSanitizer,
+    private readonly translate: TranslateService
   ) {}
 
   ngOnInit(): void {
@@ -61,13 +64,25 @@ export class CvViewerComponent implements OnInit, OnDestroy {
     }
   }
 
+  @HostListener('window:message', ['$event'])
+  onViewerMessage(event: MessageEvent): void {
+    if (this.isOpen && event.origin === window.location.origin &&
+        event.source === this.pdfFrame?.nativeElement.contentWindow &&
+        event.data?.type === 'cv-viewer-close') {
+      this.close();
+    }
+  }
+
   private applyViewerState(state: CvViewerState): void {
     this.isOpen = state.open;
     this.selectedLang = state.lang;
 
     if (state.open && state.lang) {
-      const pdfUrl = this.cvModalService.resolvePdfUrl(state.lang);
-      this.safePdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(pdfUrl);
+      const pdfUrl = new URL(this.cvModalService.resolvePdfUrl(state.lang), document.baseURI);
+      const viewerUrl = new URL('../pdf-viewer/index.html', pdfUrl);
+      viewerUrl.searchParams.set('file', pdfUrl.href);
+      viewerUrl.searchParams.set('locale', this.translate.currentLang);
+      this.safePdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(viewerUrl.href);
       return;
     }
 

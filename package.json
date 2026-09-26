@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:cv-viewer": "node --test tests/cv-viewer.e2e.cjs",
     "deploy": "ng build --configuration production --base-href=https://Hakim2Mezrioui.github.io/portefolio/ && npx angular-cli-ghpages --dir=dist/portefolio-app",
     "build:firebase": "ng build --configuration production",
     "deploy:firebase": "npm run build:firebase && npx firebase-tools deploy --only hosting"
@@ -32,6 +33,7 @@
     "bootstrap-icons": "^1.11.3",
     "emailjs-com": "^3.2.0",
     "ngx-toastr": "^15.2.2",
+    "pdfjs-dist": "6.3.289",
     "rxjs": "~7.5.0",
     "swiper": "^11.1.12",
     "tslib": "^2.3.0",
@@ -52,6 +54,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "playwright": "1.63.0",
     "typescript": "~4.7.2"
   }
 }

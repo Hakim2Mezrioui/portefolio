@@ -1,0 +1,67 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+  background: #1e293b;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+#toolbar {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 10;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: #f1f5f9;
+  border-bottom: 1px solid #cbd5e1;
+}
+button, #openPdf {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  color: #0f172a;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+#openPdf { margin-left: auto; display: inline-flex; align-items: center; }
+#zoomIn, #zoomOut { font-size: 22px; padding: 4px; }
+#zoomValue { min-width: 48px; font-size: 14px; text-align: center; font-variant-numeric: tabular-nums; }
+button:disabled { opacity: .45; cursor: default; }
+button:hover:not(:disabled), #openPdf:hover { background: #dbeafe; }
+:focus-visible { outline: 3px solid #2563eb; outline-offset: -3px; }
+#viewerContainer {
+  position: absolute;
+  inset: 53px 0 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: #94a3b8 #1e293b;
+  scrollbar-width: auto;
+}
+#viewerContainer::-webkit-scrollbar { width: 12px; height: 12px; }
+#viewerContainer::-webkit-scrollbar-thumb { background: #94a3b8; border: 3px solid #1e293b; border-radius: 8px; }
+#viewerContainer::-webkit-scrollbar-track { background: #1e293b; }
+#viewer .page { box-sizing: content-box; }
+#statusPanel {
+  position: absolute;
+  inset: 65px 12px auto;
+  z-index: 5;
+  padding: 16px;
+  text-align: center;
+  border-radius: 8px;
+  background: #f1f5f9;
+}
+[hidden] { display: none !important; }
+@media (max-width: 380px) {
+  #toolbar { gap: 3px; padding-inline: 4px; }
+  button, #openPdf { padding-inline: 6px; font-size: 12px; }
+  #zoomValue { min-width: 40px; }
+}

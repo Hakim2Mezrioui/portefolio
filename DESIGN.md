@@ -24,8 +24,14 @@ Header height is 80px on desktop and 72px on mobile. Avoid entrance cascades, re
 
 At widths up to 900px, the hero uses natural layout without CSS zoom and 20–24px outer horizontal padding. The welcome heading scales with viewport width; the name is larger than the job title. Body copy is left-aligned at 16px with 1.7 line height. Mobile text entrance offsets are disabled to avoid clipping. Preserve the original copy, portrait, theme and project link. Respect reduced motion for the hero animations.
 
+## CV reader
+
+Keep CvModalService as the owner of CV language selection, opening, closing and downloads. CvViewerComponent retains the outer toolbar and embeds the local `assets/pdf-viewer` HTML reader. PDF.js owns PDF rendering, selectable text and link annotations, replacing the platform's native PDF iframe renderer. Start at page width, center the page, and keep it fitted on resize/orientation changes until the visitor zooms manually. Provide zoom buttons, a fit-width reset, scrolling, localized loading/error/retry feedback and a direct PDF fallback. UI locale follows TranslateService; document language follows the user's CV choice. Use the existing slate/white viewer palette. Bound canvas memory for Retina tablets and load the reader dependencies only when the CV opens.
+
 ## Verification limits
 
 Per user preference, keep the square decoration visible at all viewport widths and do not add an opaque mask. Give the welcome content real padding: 24px vertically and 32px horizontally on desktop, 20px vertically and 16px horizontally up to 900px. Paragraphs fit the available inner width. Keep mobile text entrance animations disabled even after the preloader completes. Decorative squares are hidden from assistive technology and stop moving when reduced motion is requested.
 
 The supplied desktop and mobile screenshots ground these optimizations. No connected browser was available during implementation, so the revised rendering and responsive interactions still need a visual check in the user's browser.
+
+The CV reader was subsequently verified with Playwright Chromium and WebKit at tablet portrait/landscape and mobile widths. `npm run build` followed by `npm run test:cv-viewer` checks fitting, zoom, scrolling, FR/EN documents, download, Escape, base-path hosting and error/retry. Screenshots are saved under `tmp/cv-viewer-qa`. These automated engines do not replace a check on the user's physical iPad. The generic UI audit still flags existing Angular event bindings and the reader's externally bound retry button as actionless; the latter is exercised by the browser tests. Existing contact-form findings are outside this change.

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>CV</title>
+    <link rel="stylesheet" href="../pdfjs/legacy/web/pdf_viewer.css">
+    <link rel="stylesheet" href="viewer.css">
+    <link type="application/l10n" href="locale/locale.json">
+  </head>
+  <body>
+    <div id="toolbar" role="group" aria-label="Zoom">
+      <button id="zoomOut" type="button" disabled aria-label="Zoom out">−</button>
+      <output id="zoomValue" aria-live="polite">—</output>
+      <button id="zoomIn" type="button" disabled aria-label="Zoom in">+</button>
+      <button id="fitWidth" type="button" disabled>Fit width</button>
+      <a id="openPdf" target="_blank" rel="noopener">Open PDF</a>
+    </div>
+    <div id="viewerContainer" tabindex="0" role="region" aria-label="CV" aria-busy="true">
+      <div id="viewer" class="pdfViewer"></div>
+    </div>
+    <div id="statusPanel">
+      <p id="status" role="status">Loading PDF…</p>
+      <button id="retry" type="button" hidden>Retry</button>
+    </div>
+    <script src="viewer.js"></script>
+  </body>
+</html>

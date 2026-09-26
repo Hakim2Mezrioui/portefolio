@@ -6,12 +6,12 @@
     </div>
 
     <div class="cv-viewer-toolbar__actions">
-      <button type="button" class="cv-viewer-btn cv-viewer-btn--secondary" (click)="changeLanguage()">
+      <button type="button" class="cv-viewer-btn cv-viewer-btn--secondary" (click)="changeLanguage()" [attr.aria-label]="'cv.changeLanguage' | translate">
         <i class="bi bi-translate" aria-hidden="true"></i>
         <span>{{ 'cv.changeLanguage' | translate }}</span>
       </button>
 
-      <button type="button" class="cv-viewer-btn cv-viewer-btn--secondary" (click)="downloadCv()">
+      <button type="button" class="cv-viewer-btn cv-viewer-btn--secondary" (click)="downloadCv()" [attr.aria-label]="'cv.download' | translate">
         <i class="bi bi-download" aria-hidden="true"></i>
         <span>{{ 'cv.download' | translate }}</span>
       </button>
@@ -30,6 +30,7 @@
 
   <div class="cv-viewer-body">
     <iframe
+      #pdfFrame
       *ngIf="safePdfUrl"
       class="cv-viewer-frame"
       [src]="safePdfUrl"
