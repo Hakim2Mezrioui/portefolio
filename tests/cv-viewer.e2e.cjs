@@ -34,6 +34,16 @@ async function rendered(frame) {
   assert.ok(await frame.locator('.annotationLayer a[href]').count() > 0);
 }
 async function assertFit(frame) {
+  await frame.locator('#viewerContainer').evaluate(el => new Promise((resolve, reject) => {
+    const deadline = setTimeout(() => reject(new Error('PDF did not return to fitted width')), 3000);
+    const check = () => {
+      const page = el.querySelector('.page');
+      if (page && page.getBoundingClientRect().width <= el.clientWidth + 1 && el.scrollWidth <= el.clientWidth + 1) {
+        clearTimeout(deadline); resolve();
+      } else requestAnimationFrame(check);
+    };
+    check();
+  }));
   const size = await frame.locator('#viewerContainer').evaluate(el => ({
     width: el.clientWidth, scrollWidth: el.scrollWidth,
     pageWidth: el.querySelector('.page').getBoundingClientRect().width,
@@ -64,6 +74,8 @@ for (const engine of [chromium, webkit]) {
       await assertFit(frame);
       assert.equal(await page.locator('.cv-viewer-toolbar').count(), 1);
       assert.equal(await frame.locator('#toolbar').count(), 0);
+      assert.equal(await page.locator('.cv-viewer-zoom__value').evaluate(el => getComputedStyle(el).color), 'rgb(248, 250, 252)');
+      assert.equal(await page.locator('.cv-viewer-body').evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(43, 43, 43)');
       assert.ok(await page.locator('.cv-viewer-toolbar').evaluate(el => el.scrollWidth <= el.clientWidth));
       await page.screenshot({ path: `tmp/cv-viewer-qa/${engine.name()}-ipad.png` });
       const initialWidth = (await frame.locator('.page').boundingBox()).width;
@@ -94,7 +106,16 @@ for (const engine of [chromium, webkit]) {
       await page.getByRole('button', { name: 'Fit width' }).click();
       await assertFit(frame);
       await page.getByRole('button', { name: 'Zoom in' }).click({ clickCount: 7 });
-      await frame.locator('#viewerContainer').evaluate(el => { el.scrollTop = el.scrollHeight; });
+      await frame.locator('#viewerContainer').evaluate(el => new Promise((resolve, reject) => {
+        const deadline = setTimeout(() => reject(new Error('Zoomed PDF did not become scrollable')), 3000);
+        const check = () => {
+          if (el.scrollHeight > el.clientHeight) {
+            el.scrollTop = el.scrollHeight;
+            requestAnimationFrame(() => { clearTimeout(deadline); resolve(); });
+          } else requestAnimationFrame(check);
+        };
+        check();
+      }));
       assert.ok(await frame.locator('#viewerContainer').evaluate(el => el.scrollTop > 0));
       const downloadPromise = page.waitForEvent('download');
       await page.getByRole('button', { name: 'Download', exact: true }).click();

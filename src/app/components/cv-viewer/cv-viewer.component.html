@@ -1,4 +1,4 @@
-<div *ngIf="isOpen" class="cv-viewer" role="dialog" aria-modal="true" [attr.aria-label]="'cv.viewerTitle' | translate">
+<div *ngIf="isOpen" class="cv-viewer" [class.cv-viewer--touch]="!nativePdf" role="dialog" aria-modal="true" [attr.aria-label]="'cv.viewerTitle' | translate">
   <header class="cv-viewer-toolbar">
     <div class="cv-viewer-toolbar__title">
       <i class="bi bi-file-earmark-person-fill" aria-hidden="true"></i>

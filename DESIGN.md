@@ -32,6 +32,7 @@ Keep CvModalService as the owner of CV language selection, opening, closing and 
 
 Keep one compact site toolbar above the CV, with language, download and close controls. Show zoom and fit-width controls there for the PDF.js reader; the native desktop PDF toolbar appears inside the embedded frame. Begin fetching the compact PDF.js modules on touch devices when the language picker opens, before the reader is shown. Keep controls and status messages localized. At narrow widths, arrange title/actions above the zoom group without hiding accessible button names.
 On touch devices, start with the centered page fitted to width. The Read control switches directly to 150% and pans toward the CV's main text column; Fit width restores the whole-page view. This makes the small-print PDF easier to read on a phone without changing the original document or the iPad fit behavior.
+The touch reader uses a dark gray (#2b2b2b) canvas and a #383838 toolbar, matching the native desktop PDF reader's quiet surround. Keep PDF.js on iPhone and iPad because the embedded browser PDF can render blank in WebKit; retain the actual native browser PDF toolbar on desktop Chromium.
 Show the WebP preview derived from the selected CV while PDF.js loads, then remove it when the rendered page is ready. Keep the original PDF as the accessible, selectable final document and download source.
 
 ## Verification limits
