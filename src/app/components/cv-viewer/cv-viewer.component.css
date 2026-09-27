@@ -154,6 +154,7 @@
 .cv-viewer-zoom button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
 .cv-viewer-zoom__step { min-width: 38px; padding: 0 0.4rem; font-size: 1.25rem; }
 .cv-viewer-zoom__value { min-width: 48px; text-align: center; font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+.cv-viewer-zoom__read,
 .cv-viewer-zoom__fit { padding: 0 0.65rem; font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
 
 @media (prefers-reduced-motion: reduce) {

@@ -90,11 +90,21 @@
       container.scrollLeft = 0;
       syncControls();
     };
+    const read = () => {
+      fitting = false;
+      viewer.currentScale = 1.5;
+      requestAnimationFrame(() => {
+        const page = byId('viewer').querySelector('.page');
+        if (page) container.scrollLeft = page.offsetLeft + page.clientWidth * 0.34;
+        syncControls();
+      });
+    };
     window.addEventListener('message', event => {
       if (event.origin !== location.origin || event.source !== window.parent ||
           event.data?.type !== 'cv-viewer-zoom' || !ready) return;
       if (event.data.action === 'in') zoom(1.25);
       if (event.data.action === 'out') zoom(0.8);
+      if (event.data.action === 'read') read();
       if (event.data.action === 'fit') resetFit();
     });
     let resizeFrame = 0;

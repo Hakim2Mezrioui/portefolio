@@ -63,7 +63,7 @@ export class CvViewerComponent implements OnInit, OnDestroy {
     this.cvModalService.closeViewer();
   }
 
-  zoom(action: 'in' | 'out' | 'fit'): void {
+  zoom(action: 'in' | 'out' | 'fit' | 'read'): void {
     this.pdfFrame?.nativeElement.contentWindow?.postMessage(
       { type: 'cv-viewer-zoom', action }, window.location.origin
     );

@@ -81,6 +81,18 @@ for (const engine of [chromium, webkit]) {
       await assertFit(frame);
       assert.ok(await page.locator('.cv-viewer-toolbar').evaluate(el => el.scrollWidth <= el.clientWidth));
       await page.screenshot({ path: `tmp/cv-viewer-qa/${engine.name()}-mobile.png` });
+      await page.getByRole('button', { name: 'Read', exact: true }).click();
+      await page.waitForFunction(() => document.querySelector('.cv-viewer-zoom__value').textContent.includes('150%'));
+      await frame.locator('#viewerContainer').evaluate(el => new Promise((resolve, reject) => {
+        const deadline = setTimeout(() => reject(new Error('Read mode did not pan toward the text column')), 3000);
+        const check = () => {
+          if (el.scrollLeft > 0) { clearTimeout(deadline); resolve(); }
+          else requestAnimationFrame(check);
+        };
+        check();
+      }));
+      await page.getByRole('button', { name: 'Fit width' }).click();
+      await assertFit(frame);
       await page.getByRole('button', { name: 'Zoom in' }).click({ clickCount: 7 });
       await frame.locator('#viewerContainer').evaluate(el => { el.scrollTop = el.scrollHeight; });
       assert.ok(await frame.locator('#viewerContainer').evaluate(el => el.scrollTop > 0));

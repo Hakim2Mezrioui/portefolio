@@ -9,6 +9,7 @@
       <button type="button" class="cv-viewer-zoom__step" (click)="zoom('out')" [disabled]="!zoomReady || zoomPercent <= 25" [attr.aria-label]="'cv.zoomOut' | translate">−</button>
       <output class="cv-viewer-zoom__value" aria-live="polite">{{ zoomReady ? zoomPercent + '%' : '—' }}</output>
       <button type="button" class="cv-viewer-zoom__step" (click)="zoom('in')" [disabled]="!zoomReady || zoomPercent >= 400" [attr.aria-label]="'cv.zoomIn' | translate">+</button>
+      <button type="button" class="cv-viewer-zoom__read" (click)="zoom('read')" [disabled]="!zoomReady" [attr.aria-pressed]="!zoomFit && zoomPercent === 150">{{ 'cv.read' | translate }}</button>
       <button type="button" class="cv-viewer-zoom__fit" (click)="zoom('fit')" [disabled]="!zoomReady" [attr.aria-pressed]="zoomFit">{{ 'cv.fitWidth' | translate }}</button>
     </div>
 
