@@ -30,9 +30,9 @@ export class CvLanguageModalComponent implements OnInit, OnDestroy {
     this.cvModalService.close();
   }
 
-  /** Ouvre le PDF natif sur ordinateur et le lecteur adapté sur tablette/mobile. */
+  /** Ouvre le CV dans le portfolio, avec le lecteur adapté à l'appareil. */
   selectLanguage(lang: CvLang): void {
-    this.cvModalService.openSelectedCv(lang);
+    this.cvModalService.viewCv(lang);
   }
 
   /** Empêche la propagation pour ne pas fermer en cliquant dans le panneau. */

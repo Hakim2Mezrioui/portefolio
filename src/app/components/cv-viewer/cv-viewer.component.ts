@@ -5,7 +5,7 @@ import { CvLang } from 'src/constants/cvLinks';
 import { CvModalService, CvViewerState } from 'src/app/services/cv-modal.service';
 import { TranslateService } from 'src/app/services/translate.service';
 
-/** Full-screen CV reader backed by the locally hosted PDF.js viewer. */
+/** Full-screen CV reader: native PDF on desktop, PDF.js on touch devices. */
 @Component({
   selector: 'app-cv-viewer',
   templateUrl: './cv-viewer.component.html',
@@ -13,9 +13,9 @@ import { TranslateService } from 'src/app/services/translate.service';
 })
 export class CvViewerComponent implements OnInit, OnDestroy {
   isOpen = false;
+  nativePdf = false;
   selectedLang: CvLang | null = null;
   safePdfUrl: SafeResourceUrl | null = null;
-  pdfUrl: string | null = null;
   previewUrl: string | null = null;
   previewComplete = false;
   zoomReady = false;
@@ -93,6 +93,7 @@ export class CvViewerComponent implements OnInit, OnDestroy {
 
   private applyViewerState(state: CvViewerState): void {
     this.isOpen = state.open;
+    this.nativePdf = state.open && this.cvModalService.useNativePdf();
     this.selectedLang = state.lang;
     this.zoomReady = false;
     this.zoomFit = true;
@@ -101,7 +102,11 @@ export class CvViewerComponent implements OnInit, OnDestroy {
 
     if (state.open && state.lang) {
       const pdfUrl = new URL(this.cvModalService.resolvePdfUrl(state.lang), document.baseURI);
-      this.pdfUrl = pdfUrl.href;
+      if (this.nativePdf) {
+        this.previewUrl = null;
+        this.safePdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(pdfUrl.href);
+        return;
+      }
       this.previewUrl = new URL(
         `assets/CV/${state.lang === 'fr' ? 'CV_Français' : 'CV_English'}-preview.webp`,
         document.baseURI
@@ -114,7 +119,6 @@ export class CvViewerComponent implements OnInit, OnDestroy {
     }
 
     this.safePdfUrl = null;
-    this.pdfUrl = null;
     this.previewUrl = null;
   }
 }

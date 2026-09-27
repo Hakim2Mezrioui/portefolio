@@ -5,7 +5,7 @@
       <span>{{ 'cv.viewerTitle' | translate }}</span>
     </div>
 
-    <div class="cv-viewer-zoom" role="group" [attr.aria-label]="'cv.zoom' | translate">
+    <div *ngIf="!nativePdf" class="cv-viewer-zoom" role="group" [attr.aria-label]="'cv.zoom' | translate">
       <button type="button" class="cv-viewer-zoom__step" (click)="zoom('out')" [disabled]="!zoomReady || zoomPercent <= 25" [attr.aria-label]="'cv.zoomOut' | translate">−</button>
       <output class="cv-viewer-zoom__value" aria-live="polite">{{ zoomReady ? zoomPercent + '%' : '—' }}</output>
       <button type="button" class="cv-viewer-zoom__step" (click)="zoom('in')" [disabled]="!zoomReady || zoomPercent >= 400" [attr.aria-label]="'cv.zoomIn' | translate">+</button>
@@ -13,10 +13,6 @@
     </div>
 
     <div class="cv-viewer-toolbar__actions">
-      <a class="cv-viewer-btn cv-viewer-btn--secondary cv-viewer-btn--open" [href]="pdfUrl" target="_blank" rel="noopener" [attr.aria-label]="'cv.openPdf' | translate">
-        <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-        <span>{{ 'cv.openPdf' | translate }}</span>
-      </a>
       <button type="button" class="cv-viewer-btn cv-viewer-btn--secondary" (click)="changeLanguage()" [attr.aria-label]="'cv.changeLanguage' | translate">
         <i class="bi bi-translate" aria-hidden="true"></i>
         <span>{{ 'cv.changeLanguage' | translate }}</span>

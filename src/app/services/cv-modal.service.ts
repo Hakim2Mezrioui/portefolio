@@ -51,31 +51,13 @@ export class CvModalService {
 
   /** Affiche la modale de sélection FR / EN. */
   openLanguageModal(): void {
-    if (!this.prefersNativePdf()) this.prepareReader();
+    if (!this.useNativePdf()) this.prepareReader();
     this.languageModalVisible$.next(true);
     this.lockBodyScroll(true);
   }
 
-  /** Keep the browser's native PDF controls on desktop computers. */
-  openSelectedCv(lang: CvLang): void {
-    if (!this.prefersNativePdf()) {
-      this.viewCv(lang);
-      return;
-    }
-
-    // Trigger navigation synchronously from the language button's click, so
-    // browsers treat the new tab as a user action rather than a popup.
-    const link = document.createElement('a');
-    link.href = new URL(this.resolvePdfUrl(lang), document.baseURI).href;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    this.closeLanguageModal();
-  }
-
-  private prefersNativePdf(): boolean {
+  /** Use the native PDF toolbar in the embedded frame on desktop. */
+  useNativePdf(): boolean {
     const ipad = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     const android = /Android/.test(navigator.userAgent);

@@ -110,6 +110,8 @@ for (const engine of [chromium, webkit]) {
       await page.goto(url);
       await page.getByRole('button', { name: 'Réessayer' }).waitFor();
       assert.equal(await page.locator('#openPdf').getAttribute('href'), file);
+      assert.equal(await page.locator('#openPdf').getAttribute('target'), null);
+      assert.equal(await page.locator('#openPdf').getAttribute('download'), 'CV_English.pdf');
       assert.ok((await page.locator('#status').innerText()).includes('Impossible'));
       await page.unroute('**/CV_English.pdf');
       await Promise.all([
@@ -147,45 +149,33 @@ for (const engine of [chromium, webkit]) {
     } finally { await browser.close(); }
   });
 
-  test(`${engine.name()}: desktop opens the original PDF in a new tab`, { timeout: 60000 }, async () => {
+  test(`${engine.name()}: desktop embeds the native PDF viewer in the portfolio`, { timeout: 60000 }, async () => {
     const browser = await engine.launch();
     try {
       const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-      await page.addInitScript(() => {
-        const originalClick = HTMLAnchorElement.prototype.click;
-        HTMLAnchorElement.prototype.click = function () {
-          if (this.target === '_blank' && this.href.endsWith('.pdf')) {
-            window.__openedCv = { href: this.href, target: this.target, rel: this.rel };
-          }
-          return originalClick.call(this);
-        };
-      });
+      let popups = 0;
+      page.on('popup', () => popups++);
       await page.goto(origin);
       await page.locator('.portfolio-ready').waitFor();
       await page.locator('.cv-button:visible').first().click();
       assert.equal(await page.locator('link[rel="modulepreload"][href*="pdfjs"]').count(), 0);
-      const popupPromise = engine === chromium ? page.waitForEvent('popup') : null;
       await page.locator('.cv-lang-btn--fr').click();
-      if (popupPromise) {
-        const popup = await popupPromise;
-        // Headless Chromium creates a tab for its native PDF viewer without
-        // a document load event, so assert the tab and the clicked URL below.
-        assert.equal(popup.isClosed(), false);
-      }
-      assert.deepEqual(await page.evaluate(() => window.__openedCv), {
-        href: origin + '/assets/CV/CV_Fran%C3%A7ais.pdf',
-        target: '_blank',
-        rel: 'noopener noreferrer'
-      });
-      assert.equal(await page.locator('.cv-viewer').count(), 0);
+      await page.locator('.cv-viewer-frame').waitFor();
+      assert.equal(await page.locator('.cv-viewer-frame').getAttribute('src'), origin + '/assets/CV/CV_Fran%C3%A7ais.pdf');
+      assert.equal(await page.locator('.cv-viewer-zoom').count(), 0);
+      assert.equal(await page.locator('.cv-viewer-preview').count(), 0);
+      assert.equal(await page.locator('.cv-viewer a[target="_blank"]').count(), 0);
+      assert.equal(popups, 0);
       assert.equal(await page.locator('.cv-modal-backdrop').count(), 0);
-      assert.equal(await page.evaluate(() => document.body.style.overflow), '');
       const response = await page.request.get(origin + '/assets/CV/CV_Fran%C3%A7ais.pdf');
       assert.ok(response.headers()['content-type'].startsWith('application/pdf'));
-      await page.locator('.cv-button:visible').first().click();
+      await page.getByRole('button', { name: 'Change language', exact: true }).click();
       await page.locator('.cv-lang-btn--en').click();
-      assert.equal((await page.evaluate(() => window.__openedCv)).href, origin + '/assets/CV/CV_English.pdf');
-      assert.equal(await page.locator('.cv-viewer').count(), 0);
+      assert.equal(await page.locator('.cv-viewer-frame').getAttribute('src'), origin + '/assets/CV/CV_English.pdf');
+      assert.equal(popups, 0);
+      await page.getByRole('button', { name: 'Close', exact: true }).click();
+      await page.locator('.cv-viewer').waitFor({ state: 'detached' });
+      assert.equal(await page.evaluate(() => document.body.style.overflow), '');
     } finally { await browser.close(); }
   });
 }

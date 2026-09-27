@@ -3,11 +3,11 @@
   const params = new URLSearchParams(location.search);
   const locale = params.get('locale') === 'fr' ? 'fr' : 'en';
   const labels = locale === 'fr' ? {
-    title: 'Mon CV', loading: 'Chargement du CV…', error: 'Impossible d’afficher le CV. Réessayez ou ouvrez le PDF directement.',
-    zoomIn: 'Agrandir', zoomOut: 'Réduire', fitWidth: 'Pleine largeur', openPdf: 'Ouvrir le PDF', retry: 'Réessayer'
+    title: 'Mon CV', loading: 'Chargement du CV…', error: 'Impossible d’afficher le CV. Réessayez ou téléchargez le PDF.',
+    zoomIn: 'Agrandir', zoomOut: 'Réduire', fitWidth: 'Pleine largeur', openPdf: 'Télécharger le PDF', retry: 'Réessayer'
   } : {
-    title: 'My resume', loading: 'Loading resume…', error: 'Unable to display the resume. Retry or open the PDF directly.',
-    zoomIn: 'Zoom in', zoomOut: 'Zoom out', fitWidth: 'Fit width', openPdf: 'Open PDF', retry: 'Retry'
+    title: 'My resume', loading: 'Loading resume…', error: 'Unable to display the resume. Retry or download the PDF.',
+    zoomIn: 'Zoom in', zoomOut: 'Zoom out', fitWidth: 'Fit width', openPdf: 'Download PDF', retry: 'Retry'
   };
   const byId = id => document.getElementById(id);
   const container = byId('viewerContainer');
@@ -42,6 +42,7 @@
     const allowedFiles = ['CV_Français.pdf', 'CV_English.pdf'].map(name => new URL('../CV/' + name, location.href).href);
     if (!allowedFiles.includes(pdfUrl.href)) throw new Error('Unknown CV');
     openPdf.href = pdfUrl.href;
+    openPdf.download = decodeURIComponent(pdfUrl.pathname.split('/').pop());
     timeout = setTimeout(fail, 30000);
     const pdfjs = await import('../pdfjs/legacy/build/pdf.min.mjs');
     const { PDFViewer, PDFLinkService, EventBus, GenericL10n, LinkTarget } = await import('../pdfjs/legacy/web/pdf_viewer.mjs');
