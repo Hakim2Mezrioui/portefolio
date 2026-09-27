@@ -14,6 +14,7 @@ export interface CvViewerState {
  */
 @Injectable({ providedIn: 'root' })
 export class CvModalService {
+  private readerPrepared = false;
   private readonly languageModalVisible$ = new BehaviorSubject<boolean>(false);
   private readonly viewerState$ = new BehaviorSubject<CvViewerState>({
     open: false,
@@ -50,8 +51,25 @@ export class CvModalService {
 
   /** Affiche la modale de sélection FR / EN. */
   openLanguageModal(): void {
+    this.prepareReader();
     this.languageModalVisible$.next(true);
     this.lockBodyScroll(true);
+  }
+
+  /** Start fetching the renderer while the visitor chooses a CV language. */
+  private prepareReader(): void {
+    if (this.readerPrepared) return;
+    this.readerPrepared = true;
+    for (const file of [
+      'legacy/build/pdf.min.mjs',
+      'legacy/web/pdf_viewer.mjs',
+      'legacy/build/pdf.worker.min.mjs'
+    ]) {
+      const link = document.createElement('link');
+      link.rel = file.includes('worker') ? 'prefetch' : 'modulepreload';
+      link.href = new URL(`assets/pdfjs/${file}`, document.baseURI).href;
+      document.head.appendChild(link);
+    }
   }
 
   /** Ferme la modale sans afficher de CV. */

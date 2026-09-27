@@ -13,18 +13,12 @@
   const container = byId('viewerContainer');
   const panel = byId('statusPanel');
   const status = byId('status');
-  const zoomIn = byId('zoomIn');
-  const zoomOut = byId('zoomOut');
-  const fitWidth = byId('fitWidth');
   const openPdf = byId('openPdf');
   const retry = byId('retry');
   document.documentElement.lang = locale;
   document.title = labels.title;
   container.setAttribute('aria-label', labels.title);
   status.textContent = labels.loading;
-  zoomIn.setAttribute('aria-label', labels.zoomIn);
-  zoomOut.setAttribute('aria-label', labels.zoomOut);
-  fitWidth.textContent = labels.fitWidth;
   openPdf.textContent = labels.openPdf;
   retry.textContent = labels.retry;
   retry.addEventListener('click', () => location.reload());
@@ -40,6 +34,7 @@
     status.textContent = labels.error;
     panel.hidden = false;
     retry.hidden = false;
+    openPdf.hidden = false;
     container.setAttribute('aria-busy', 'false');
   }
   try {
@@ -48,9 +43,9 @@
     if (!allowedFiles.includes(pdfUrl.href)) throw new Error('Unknown CV');
     openPdf.href = pdfUrl.href;
     timeout = setTimeout(fail, 30000);
-    const pdfjs = await import('../pdfjs/legacy/build/pdf.mjs');
+    const pdfjs = await import('../pdfjs/legacy/build/pdf.min.mjs');
     const { PDFViewer, PDFLinkService, EventBus, GenericL10n, LinkTarget } = await import('../pdfjs/legacy/web/pdf_viewer.mjs');
-    pdfjs.GlobalWorkerOptions.workerSrc = new URL('../pdfjs/legacy/build/pdf.worker.mjs', location.href).href;
+    pdfjs.GlobalWorkerOptions.workerSrc = new URL('../pdfjs/legacy/build/pdf.worker.min.mjs', location.href).href;
     const eventBus = new EventBus();
     const linkService = new PDFLinkService({ eventBus, externalLinkTarget: LinkTarget.BLANK, externalLinkRel: 'noopener noreferrer' });
     const viewer = new PDFViewer({
@@ -65,11 +60,10 @@
     let ready = false;
     let fitting = true;
     const syncControls = () => {
-      byId('zoomValue').textContent = Math.round(viewer.currentScale * 100) + '%';
-      zoomOut.disabled = !ready || viewer.currentScale <= 0.25;
-      zoomIn.disabled = !ready || viewer.currentScale >= 4;
-      fitWidth.disabled = !ready;
-      fitWidth.setAttribute('aria-pressed', String(fitting));
+      window.parent.postMessage({
+        type: 'cv-viewer-state', ready,
+        percent: Math.round(viewer.currentScale * 100), fit: fitting
+      }, location.origin);
     };
     eventBus.on('pagesinit', () => {
       ready = true;
@@ -81,6 +75,7 @@
       clearTimeout(timeout);
       panel.hidden = true;
       container.setAttribute('aria-busy', 'false');
+      window.parent.postMessage({ type: 'cv-viewer-rendered' }, location.origin);
     });
     eventBus.on('scalechanging', syncControls);
     const zoom = factor => {
@@ -88,13 +83,18 @@
       viewer.currentScale = Math.min(4, Math.max(0.25, viewer.currentScale * factor));
       syncControls();
     };
-    zoomIn.addEventListener('click', () => zoom(1.25));
-    zoomOut.addEventListener('click', () => zoom(0.8));
-    fitWidth.addEventListener('click', () => {
+    const resetFit = () => {
       fitting = true;
       viewer.currentScaleValue = 'page-width';
       container.scrollLeft = 0;
       syncControls();
+    };
+    window.addEventListener('message', event => {
+      if (event.origin !== location.origin || event.source !== window.parent ||
+          event.data?.type !== 'cv-viewer-zoom' || !ready) return;
+      if (event.data.action === 'in') zoom(1.25);
+      if (event.data.action === 'out') zoom(0.8);
+      if (event.data.action === 'fit') resetFit();
     });
     let resizeFrame = 0;
     let lastWidth = container.clientWidth;

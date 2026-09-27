@@ -10,19 +10,13 @@
     <link type="application/l10n" href="locale/locale.json">
   </head>
   <body>
-    <div id="toolbar" role="group" aria-label="Zoom">
-      <button id="zoomOut" type="button" disabled aria-label="Zoom out">−</button>
-      <output id="zoomValue" aria-live="polite">—</output>
-      <button id="zoomIn" type="button" disabled aria-label="Zoom in">+</button>
-      <button id="fitWidth" type="button" disabled>Fit width</button>
-      <a id="openPdf" target="_blank" rel="noopener">Open PDF</a>
-    </div>
     <div id="viewerContainer" tabindex="0" role="region" aria-label="CV" aria-busy="true">
       <div id="viewer" class="pdfViewer"></div>
     </div>
     <div id="statusPanel">
       <p id="status" role="status">Loading PDF…</p>
       <button id="retry" type="button" hidden>Retry</button>
+      <a id="openPdf" target="_blank" rel="noopener" hidden>Open PDF</a>
     </div>
     <script src="viewer.js"></script>
   </body>
