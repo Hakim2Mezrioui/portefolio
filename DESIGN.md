@@ -26,6 +26,8 @@ At widths up to 900px, the hero uses natural layout without CSS zoom and 20–24
 
 ## CV reader
 
+On desktop computers, selecting FR or EN opens the actual PDF in a new browser tab, using that browser's native PDF toolbar. Keep the embedded PDF.js reader on iPad, Android tablets and phones, where the native inline PDF previously failed to center the page. The language selection remains the entry point on every device. Do not fetch the PDF.js modules on desktop when opening the language picker.
+
 Keep CvModalService as the owner of CV language selection, opening, closing and downloads. CvViewerComponent retains the outer toolbar and embeds the local `assets/pdf-viewer` HTML reader. PDF.js owns PDF rendering, selectable text and link annotations, replacing the platform's native PDF iframe renderer. Start at page width, center the page, and keep it fitted on resize/orientation changes until the visitor zooms manually. Provide zoom buttons, a fit-width reset, scrolling, localized loading/error/retry feedback and a direct PDF fallback. UI locale follows TranslateService; document language follows the user's CV choice. Use the existing slate/white viewer palette. Bound canvas memory for Retina tablets and load the reader dependencies only when the CV opens.
 
 Keep one compact toolbar above the CV. Put zoom, fit-width, language, download, direct PDF and close controls in that toolbar; the iframe displays the document without a second toolbar. Begin fetching the compact PDF.js modules when the language picker opens, before the reader is shown. Keep controls and status messages localized. At narrow widths, arrange title/actions above the zoom group without hiding accessible button names.

@@ -49,7 +49,7 @@ for (const engine of [chromium, webkit]) {
   test(`${engine.name()}: CV dialog, tablet/mobile layout, zoom, rotation, languages and download`, { timeout: 120000 }, async () => {
     const browser = await engine.launch();
     try {
-      const context = await browser.newContext({ viewport: { width: 960, height: 1140 }, deviceScaleFactor: 2, serviceWorkers: 'block', reducedMotion: 'reduce' });
+      const context = await browser.newContext({ viewport: { width: 960, height: 1140 }, deviceScaleFactor: 2, serviceWorkers: 'block', reducedMotion: 'reduce', userAgent: 'Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148 Safari/604.1' });
       const page = await context.newPage();
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
@@ -126,7 +126,7 @@ for (const engine of [chromium, webkit]) {
   test(`${engine.name()}: preview appears before the PDF renderer finishes`, { timeout: 60000 }, async () => {
     const browser = await engine.launch();
     try {
-      const page = await browser.newPage({ viewport: { width: 960, height: 1140 } });
+      const page = await browser.newPage({ viewport: { width: 960, height: 1140 }, userAgent: 'Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148 Safari/604.1' });
       await page.route('**/pdf.min.mjs', async route => {
         await new Promise(resolve => setTimeout(resolve, 1800));
         await route.continue();
@@ -144,6 +144,48 @@ for (const engine of [chromium, webkit]) {
       const pageBox = await page.frameLocator('.cv-viewer-frame').locator('.page').boundingBox();
       assert.ok(Math.abs(previewBox.width - pageBox.width) <= 8, `preview ${previewBox.width}, PDF ${pageBox.width}`);
       await preview.waitFor({ state: 'detached' });
+    } finally { await browser.close(); }
+  });
+
+  test(`${engine.name()}: desktop opens the original PDF in a new tab`, { timeout: 60000 }, async () => {
+    const browser = await engine.launch();
+    try {
+      const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+      await page.addInitScript(() => {
+        const originalClick = HTMLAnchorElement.prototype.click;
+        HTMLAnchorElement.prototype.click = function () {
+          if (this.target === '_blank' && this.href.endsWith('.pdf')) {
+            window.__openedCv = { href: this.href, target: this.target, rel: this.rel };
+          }
+          return originalClick.call(this);
+        };
+      });
+      await page.goto(origin);
+      await page.locator('.portfolio-ready').waitFor();
+      await page.locator('.cv-button:visible').first().click();
+      assert.equal(await page.locator('link[rel="modulepreload"][href*="pdfjs"]').count(), 0);
+      const popupPromise = engine === chromium ? page.waitForEvent('popup') : null;
+      await page.locator('.cv-lang-btn--fr').click();
+      if (popupPromise) {
+        const popup = await popupPromise;
+        // Headless Chromium creates a tab for its native PDF viewer without
+        // a document load event, so assert the tab and the clicked URL below.
+        assert.equal(popup.isClosed(), false);
+      }
+      assert.deepEqual(await page.evaluate(() => window.__openedCv), {
+        href: origin + '/assets/CV/CV_Fran%C3%A7ais.pdf',
+        target: '_blank',
+        rel: 'noopener noreferrer'
+      });
+      assert.equal(await page.locator('.cv-viewer').count(), 0);
+      assert.equal(await page.locator('.cv-modal-backdrop').count(), 0);
+      assert.equal(await page.evaluate(() => document.body.style.overflow), '');
+      const response = await page.request.get(origin + '/assets/CV/CV_Fran%C3%A7ais.pdf');
+      assert.ok(response.headers()['content-type'].startsWith('application/pdf'));
+      await page.locator('.cv-button:visible').first().click();
+      await page.locator('.cv-lang-btn--en').click();
+      assert.equal((await page.evaluate(() => window.__openedCv)).href, origin + '/assets/CV/CV_English.pdf');
+      assert.equal(await page.locator('.cv-viewer').count(), 0);
     } finally { await browser.close(); }
   });
 }

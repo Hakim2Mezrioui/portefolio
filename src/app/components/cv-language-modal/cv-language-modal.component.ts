@@ -30,9 +30,9 @@ export class CvLanguageModalComponent implements OnInit, OnDestroy {
     this.cvModalService.close();
   }
 
-  /** Ferme la modale et affiche le CV sur le site. */
+  /** Ouvre le PDF natif sur ordinateur et le lecteur adapté sur tablette/mobile. */
   selectLanguage(lang: CvLang): void {
-    this.cvModalService.viewCv(lang);
+    this.cvModalService.openSelectedCv(lang);
   }
 
   /** Empêche la propagation pour ne pas fermer en cliquant dans le panneau. */
